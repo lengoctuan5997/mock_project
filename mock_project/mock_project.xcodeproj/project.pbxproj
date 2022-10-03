@@ -20,9 +20,33 @@
 		9D36D49B28E5B443009B4061 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D49928E5B443009B4061 /* ListViewController.xib */; };
 		9D36D49F28E5B45A009B4061 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D49D28E5B45A009B4061 /* AccountViewController.swift */; };
 		9D36D4A028E5B45A009B4061 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D49E28E5B45A009B4061 /* AccountViewController.xib */; };
+		9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91028E9562F00319CCE /* HomeInstance.swift */; };
+		9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91328E9585800319CCE /* LibraryCell.swift */; };
+		9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA91428E9585800319CCE /* LibraryCell.xib */; };
+		9D7BA91A28E9595B00319CCE /* CategoriesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91828E9595B00319CCE /* CategoriesTableCell.swift */; };
+		9D7BA91B28E9595B00319CCE /* CategoriesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA91928E9595B00319CCE /* CategoriesTableCell.xib */; };
+		9D7BA92028E9599100319CCE /* FavoriteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91E28E9599100319CCE /* FavoriteTableCell.swift */; };
+		9D7BA92128E9599100319CCE /* FavoriteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA91F28E9599100319CCE /* FavoriteTableCell.xib */; };
+		9D7BA92528E959A600319CCE /* LibraryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA92328E959A600319CCE /* LibraryTableCell.swift */; };
+		9D7BA92628E959A600319CCE /* LibraryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA92428E959A600319CCE /* LibraryTableCell.xib */; };
+		9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA92728EA042700319CCE /* PinterestLayout.swift */; };
+		9D7BA92B28EA795E00319CCE /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA92928EA795E00319CCE /* LibraryCollectionViewController.swift */; };
+		9D7BA92C28EA795E00319CCE /* LibraryCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA92A28EA795E00319CCE /* LibraryCollectionViewController.xib */; };
+		9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA93128EADD1500319CCE /* HandBookViewController.swift */; };
+		9D7BA93428EADD1500319CCE /* HandBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA93228EADD1500319CCE /* HandBookViewController.xib */; };
+		9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA93628EAE9FF00319CCE /* SearchCell.swift */; };
+		9D7BA93928EAE9FF00319CCE /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA93728EAE9FF00319CCE /* SearchCell.xib */; };
+		9D7BA93E28EAEA2600319CCE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA93C28EAEA2600319CCE /* PostCell.swift */; };
+		9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA93D28EAEA2600319CCE /* PostCell.xib */; };
+		9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */; };
+		9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */; };
 		9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4328E5B75600718B19 /* TabbarController.swift */; };
 		9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4428E5B75600718B19 /* TabbarController.xib */; };
 		9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4828E5BE1100718B19 /* Extension.swift */; };
+		9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD17D328E6F62700296533 /* FavoriteCollectionCell.swift */; };
+		9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */; };
+		9DAD17DA28E6F69100296533 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD17D828E6F69100296533 /* CategoriesCell.swift */; };
+		9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD17D928E6F69100296533 /* CategoriesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +65,33 @@
 		9D36D49928E5B443009B4061 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		9D36D49D28E5B45A009B4061 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9D36D49E28E5B45A009B4061 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		9D7BA91028E9562F00319CCE /* HomeInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInstance.swift; sourceTree = "<group>"; };
+		9D7BA91328E9585800319CCE /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
+		9D7BA91428E9585800319CCE /* LibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCell.xib; sourceTree = "<group>"; };
+		9D7BA91828E9595B00319CCE /* CategoriesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableCell.swift; sourceTree = "<group>"; };
+		9D7BA91928E9595B00319CCE /* CategoriesTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableCell.xib; sourceTree = "<group>"; };
+		9D7BA91E28E9599100319CCE /* FavoriteTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableCell.swift; sourceTree = "<group>"; };
+		9D7BA91F28E9599100319CCE /* FavoriteTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableCell.xib; sourceTree = "<group>"; };
+		9D7BA92328E959A600319CCE /* LibraryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableCell.swift; sourceTree = "<group>"; };
+		9D7BA92428E959A600319CCE /* LibraryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTableCell.xib; sourceTree = "<group>"; };
+		9D7BA92728EA042700319CCE /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		9D7BA92928EA795E00319CCE /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
+		9D7BA92A28EA795E00319CCE /* LibraryCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCollectionViewController.xib; sourceTree = "<group>"; };
+		9D7BA93128EADD1500319CCE /* HandBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookViewController.swift; sourceTree = "<group>"; };
+		9D7BA93228EADD1500319CCE /* HandBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandBookViewController.xib; sourceTree = "<group>"; };
+		9D7BA93628EAE9FF00319CCE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		9D7BA93728EAE9FF00319CCE /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		9D7BA93C28EAEA2600319CCE /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		9D7BA93D28EAEA2600319CCE /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
+		9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableCell.xib; sourceTree = "<group>"; };
 		9DA6AB4328E5B75600718B19 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9DA6AB4428E5B75600718B19 /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
 		9DA6AB4828E5BE1100718B19 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9DAD17D328E6F62700296533 /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
+		9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionCell.xib; sourceTree = "<group>"; };
+		9DAD17D828E6F69100296533 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		9DAD17D928E6F69100296533 /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +124,8 @@
 		9D36D47328E5B20C009B4061 /* mock_project */ = {
 			isa = PBXGroup;
 			children = (
-				9D36D48B28E5B32F009B4061 /* ViewController */,
+				9D7BA90F28E9561A00319CCE /* Model */,
+				9D36D48B28E5B32F009B4061 /* ViewControl */,
 				9D36D47428E5B20C009B4061 /* AppDelegate.swift */,
 				9D36D47628E5B20C009B4061 /* SceneDelegate.swift */,
 				9D36D47A28E5B20C009B4061 /* Main.storyboard */,
@@ -88,9 +137,10 @@
 			path = mock_project;
 			sourceTree = "<group>";
 		};
-		9D36D48B28E5B32F009B4061 /* ViewController */ = {
+		9D36D48B28E5B32F009B4061 /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
+				9D7BA93028EADCE200319CCE /* HandBookVC */,
 				9DA6AB4728E5BDF700718B19 /* Extension */,
 				9DA6AB4228E5B6BD00718B19 /* TabbarController */,
 				9D36D49C28E5B446009B4061 /* AccountVC */,
@@ -98,13 +148,14 @@
 				9D36D49028E5B40A009B4061 /* HomeVC */,
 				9D36D47828E5B20C009B4061 /* HomeController.swift */,
 			);
-			name = ViewController;
+			name = ViewControl;
 			path = "ViewControllẻ";
 			sourceTree = "<group>";
 		};
 		9D36D49028E5B40A009B4061 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				9D7BA91728E9591D00319CCE /* TableCell */,
 				9D36D49128E5B426009B4061 /* HomeViewController.swift */,
 				9D36D49228E5B426009B4061 /* HomeViewController.xib */,
 			);
@@ -129,6 +180,105 @@
 			path = AccountVC;
 			sourceTree = "<group>";
 		};
+		9D7BA90F28E9561A00319CCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA91028E9562F00319CCE /* HomeInstance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D7BA91228E9584200319CCE /* LibraryCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA91328E9585800319CCE /* LibraryCell.swift */,
+				9D7BA91428E9585800319CCE /* LibraryCell.xib */,
+			);
+			path = LibraryCollectionCell;
+			sourceTree = "<group>";
+		};
+		9D7BA91728E9591D00319CCE /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA92228E9599300319CCE /* LibraryCell */,
+				9D7BA91D28E9597C00319CCE /* FavoriteCell */,
+				9D7BA91C28E9596B00319CCE /* CategoriesCell */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		9D7BA91C28E9596B00319CCE /* CategoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD17D728E6F64000296533 /* CategoriesCollectionCell */,
+				9D7BA91828E9595B00319CCE /* CategoriesTableCell.swift */,
+				9D7BA91928E9595B00319CCE /* CategoriesTableCell.xib */,
+			);
+			path = CategoriesCell;
+			sourceTree = "<group>";
+		};
+		9D7BA91D28E9597C00319CCE /* FavoriteCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD17D228E6F56700296533 /* FavoriteCollectionCell */,
+				9D7BA91E28E9599100319CCE /* FavoriteTableCell.swift */,
+				9D7BA91F28E9599100319CCE /* FavoriteTableCell.xib */,
+			);
+			path = FavoriteCell;
+			sourceTree = "<group>";
+		};
+		9D7BA92228E9599300319CCE /* LibraryCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA91228E9584200319CCE /* LibraryCollectionCell */,
+				9D7BA92328E959A600319CCE /* LibraryTableCell.swift */,
+				9D7BA92428E959A600319CCE /* LibraryTableCell.xib */,
+				9D7BA92728EA042700319CCE /* PinterestLayout.swift */,
+				9D7BA92928EA795E00319CCE /* LibraryCollectionViewController.swift */,
+				9D7BA92A28EA795E00319CCE /* LibraryCollectionViewController.xib */,
+			);
+			path = LibraryCell;
+			sourceTree = "<group>";
+		};
+		9D7BA93028EADCE200319CCE /* HandBookVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA93528EAE9C700319CCE /* TableCell */,
+				9D7BA93128EADD1500319CCE /* HandBookViewController.swift */,
+				9D7BA93228EADD1500319CCE /* HandBookViewController.xib */,
+			);
+			path = HandBookVC;
+			sourceTree = "<group>";
+		};
+		9D7BA93528EAE9C700319CCE /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA93B28EAEA0E00319CCE /* PostCell */,
+				9D7BA93A28EAEA0400319CCE /* SearchCell */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		9D7BA93A28EAEA0400319CCE /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA93628EAE9FF00319CCE /* SearchCell.swift */,
+				9D7BA93728EAE9FF00319CCE /* SearchCell.xib */,
+				9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */,
+				9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		9D7BA93B28EAEA0E00319CCE /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA93C28EAEA2600319CCE /* PostCell.swift */,
+				9D7BA93D28EAEA2600319CCE /* PostCell.xib */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
 		9DA6AB4228E5B6BD00718B19 /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +296,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		9DAD17D228E6F56700296533 /* FavoriteCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD17D328E6F62700296533 /* FavoriteCollectionCell.swift */,
+				9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */,
+			);
+			path = FavoriteCollectionCell;
+			sourceTree = "<group>";
+		};
+		9DAD17D728E6F64000296533 /* CategoriesCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD17D828E6F69100296533 /* CategoriesCell.swift */,
+				9DAD17D928E6F69100296533 /* CategoriesCell.xib */,
+			);
+			path = CategoriesCollectionCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +324,7 @@
 				9D36D46D28E5B20C009B4061 /* Sources */,
 				9D36D46E28E5B20C009B4061 /* Frameworks */,
 				9D36D46F28E5B20C009B4061 /* Resources */,
+				9D7BA92F28EAD72000319CCE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,17 +373,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7BA93428EADD1500319CCE /* HandBookViewController.xib in Resources */,
+				9D7BA92C28EA795E00319CCE /* LibraryCollectionViewController.xib in Resources */,
 				9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */,
 				9D36D48128E5B20E009B4061 /* Assets.xcassets in Resources */,
+				9D7BA92128E9599100319CCE /* FavoriteTableCell.xib in Resources */,
+				9D7BA93928EAE9FF00319CCE /* SearchCell.xib in Resources */,
+				9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */,
 				9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */,
+				9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */,
+				9D7BA92628E959A600319CCE /* LibraryTableCell.xib in Resources */,
 				9D36D49B28E5B443009B4061 /* ListViewController.xib in Resources */,
 				9D36D47C28E5B20C009B4061 /* Main.storyboard in Resources */,
 				9D36D4A028E5B45A009B4061 /* AccountViewController.xib in Resources */,
 				9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */,
+				9D7BA91B28E9595B00319CCE /* CategoriesTableCell.xib in Resources */,
+				9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */,
+				9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */,
+				9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D7BA92F28EAD72000319CCE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D36D46D28E5B20C009B4061 /* Sources */ = {
@@ -222,13 +422,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */,
+				9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */,
 				9D36D47928E5B20C009B4061 /* HomeController.swift in Sources */,
 				9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */,
+				9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */,
+				9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */,
+				9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */,
+				9DAD17DA28E6F69100296533 /* CategoriesCell.swift in Sources */,
 				9D36D47F28E5B20C009B4061 /* mock_project.xcdatamodeld in Sources */,
 				9D36D47528E5B20C009B4061 /* AppDelegate.swift in Sources */,
+				9D7BA91A28E9595B00319CCE /* CategoriesTableCell.swift in Sources */,
+				9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */,
+				9D7BA92B28EA795E00319CCE /* LibraryCollectionViewController.swift in Sources */,
+				9D7BA92028E9599100319CCE /* FavoriteTableCell.swift in Sources */,
 				9D36D49328E5B426009B4061 /* HomeViewController.swift in Sources */,
+				9D7BA93E28EAEA2600319CCE /* PostCell.swift in Sources */,
 				9D36D49A28E5B443009B4061 /* ListViewController.swift in Sources */,
 				9D36D47728E5B20C009B4061 /* SceneDelegate.swift in Sources */,
+				9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */,
+				9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */,
+				9D7BA92528E959A600319CCE /* LibraryTableCell.swift in Sources */,
 				9D36D49F28E5B45A009B4061 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
