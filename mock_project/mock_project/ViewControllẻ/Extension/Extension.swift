@@ -9,13 +9,13 @@ import UIKit
 
 extension UIColor {
     static var tabBarItemAccent: UIColor {
-        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        #colorLiteral(red: 0.9932342172, green: 0.9932342172, blue: 0.9932342172, alpha: 1)
     }
     static var tabBarColor: UIColor {
-        #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.5)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7882346854)
     }
     static var tabBarItemLight: UIColor {
-        #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+        #colorLiteral(red: 0.1132211015, green: 0.6089417934, blue: 0.9398133159, alpha: 1)
     }
 }
 
@@ -25,6 +25,34 @@ extension UIView {
         layer.shadowRadius = 3.0
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOpacity = 0.3
+    }
+
+    func applyGradient() -> CAGradientLayer {
+        let colours: [UIColor] = [
+            .orange,
+            .cyan,
+            .systemPink
+        ]
+        return self.applyGradient(colours: colours, locations: nil)
+    }
+
+    func applyGradient(
+        colours: [UIColor],
+        locations: [NSNumber]?
+    ) -> CAGradientLayer {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colours.map { $0.cgColor }
+        gradient.opacity = 0.1
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        self.layer.insertSublayer(gradient, at: 0)
+        return gradient
+    }
+
+    func setBorder() {
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.white.cgColor
     }
 }
 
