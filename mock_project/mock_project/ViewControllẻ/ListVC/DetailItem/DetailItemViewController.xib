@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailItemViewController" customModule="mock_project" customModuleProvider="target">
+            <connections>
+                <outlet property="listTableView" destination="wOE-zJ-BJR" id="zZu-4E-iEj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog3" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-Bf-FNL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="tic-Gv-jNg"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-bw-rQ6">
+                    <rect key="frame" x="0.0" y="318" width="414" height="578"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-zJ-BJR">
+                            <rect key="frame" x="0.0" y="-18" width="414" height="596"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="578" id="0sF-Ph-AXC"/>
+                        <constraint firstAttribute="bottom" secondItem="wOE-zJ-BJR" secondAttribute="bottom" id="5Fo-f2-yQJ"/>
+                        <constraint firstItem="wOE-zJ-BJR" firstAttribute="top" secondItem="TZG-bw-rQ6" secondAttribute="top" constant="-18" id="MOO-tv-r3d"/>
+                        <constraint firstItem="wOE-zJ-BJR" firstAttribute="leading" secondItem="TZG-bw-rQ6" secondAttribute="leading" id="YCy-jw-wvp"/>
+                        <constraint firstAttribute="trailing" secondItem="wOE-zJ-BJR" secondAttribute="trailing" id="rBv-Dp-k7R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gfy-Bf-FNL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8HL-d9-oZZ"/>
+                <constraint firstItem="gfy-Bf-FNL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8sY-cJ-CcJ"/>
+                <constraint firstItem="TZG-bw-rQ6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AKS-2X-qG9"/>
+                <constraint firstItem="gfy-Bf-FNL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RjA-Me-mod"/>
+                <constraint firstItem="gfy-Bf-FNL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="btC-01-Rn3"/>
+                <constraint firstItem="TZG-bw-rQ6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dv3-tU-qok"/>
+                <constraint firstAttribute="bottom" secondItem="TZG-bw-rQ6" secondAttribute="bottom" id="yez-bt-kbu"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dog3" width="3024" height="4032"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

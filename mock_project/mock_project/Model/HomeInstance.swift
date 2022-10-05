@@ -12,3 +12,8 @@ enum TableCellStyle: Int {
     case favorite
     case library
 }
+
+struct LibrariesContent {
+    let title: String
+    let image: String
+}

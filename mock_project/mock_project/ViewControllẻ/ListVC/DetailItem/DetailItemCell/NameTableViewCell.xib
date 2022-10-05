@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="140" id="KGk-i7-Jjw" customClass="NameTableViewCell" customModule="mock_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="427" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAp-h0-EBG">
+                        <rect key="frame" x="0.0" y="20" width="427" height="120"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oHR-2l-gpU">
+                                <rect key="frame" x="20" y="13.5" width="322" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bull dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-5D-jNs">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scotland, Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-3e-aQE">
+                                        <rect key="frame" x="0.0" y="44" width="106.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-qs-vXx">
+                                        <rect key="frame" x="0.0" y="72.5" width="81.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-yt-fuW">
+                                <rect key="frame" x="362" y="35" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.8840433955" green="0.45948863029999998" blue="0.44312143329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rDb-9s-oda"/>
+                                    <constraint firstAttribute="width" constant="50" id="uHH-xn-cvq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oHR-2l-gpU" firstAttribute="leading" secondItem="NAp-h0-EBG" secondAttribute="leading" constant="20" id="0V2-po-5gl"/>
+                            <constraint firstAttribute="trailing" secondItem="8Vb-yt-fuW" secondAttribute="trailing" constant="15" id="Xvb-f0-JWk"/>
+                            <constraint firstItem="8Vb-yt-fuW" firstAttribute="centerY" secondItem="NAp-h0-EBG" secondAttribute="centerY" id="tcI-Kg-yjZ"/>
+                            <constraint firstItem="oHR-2l-gpU" firstAttribute="centerY" secondItem="NAp-h0-EBG" secondAttribute="centerY" id="vUE-3a-DCx"/>
+                            <constraint firstItem="8Vb-yt-fuW" firstAttribute="leading" secondItem="oHR-2l-gpU" secondAttribute="trailing" constant="20" id="yI4-Wp-wGO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NAp-h0-EBG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="HTq-QO-AsN"/>
+                    <constraint firstItem="NAp-h0-EBG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dx6-pm-QlF"/>
+                    <constraint firstAttribute="bottom" secondItem="NAp-h0-EBG" secondAttribute="bottom" id="kSw-3Y-mgY"/>
+                    <constraint firstAttribute="trailing" secondItem="NAp-h0-EBG" secondAttribute="trailing" id="nLF-WI-kKW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="heartButton" destination="8Vb-yt-fuW" id="Qe9-NN-Kie"/>
+            </connections>
+            <point key="canvasLocation" x="267.39130434782612" y="123.21428571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -16,10 +16,6 @@
 		9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D48228E5B20E009B4061 /* LaunchScreen.storyboard */; };
 		9D36D49328E5B426009B4061 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D49128E5B426009B4061 /* HomeViewController.swift */; };
 		9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D49228E5B426009B4061 /* HomeViewController.xib */; };
-		9D36D49A28E5B443009B4061 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D49828E5B443009B4061 /* ListViewController.swift */; };
-		9D36D49B28E5B443009B4061 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D49928E5B443009B4061 /* ListViewController.xib */; };
-		9D36D49F28E5B45A009B4061 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D49D28E5B45A009B4061 /* AccountViewController.swift */; };
-		9D36D4A028E5B45A009B4061 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D49E28E5B45A009B4061 /* AccountViewController.xib */; };
 		9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91028E9562F00319CCE /* HomeInstance.swift */; };
 		9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91328E9585800319CCE /* LibraryCell.swift */; };
 		9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA91428E9585800319CCE /* LibraryCell.xib */; };
@@ -30,8 +26,6 @@
 		9D7BA92528E959A600319CCE /* LibraryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA92328E959A600319CCE /* LibraryTableCell.swift */; };
 		9D7BA92628E959A600319CCE /* LibraryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA92428E959A600319CCE /* LibraryTableCell.xib */; };
 		9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA92728EA042700319CCE /* PinterestLayout.swift */; };
-		9D7BA92B28EA795E00319CCE /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA92928EA795E00319CCE /* LibraryCollectionViewController.swift */; };
-		9D7BA92C28EA795E00319CCE /* LibraryCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA92A28EA795E00319CCE /* LibraryCollectionViewController.xib */; };
 		9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA93128EADD1500319CCE /* HandBookViewController.swift */; };
 		9D7BA93428EADD1500319CCE /* HandBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA93228EADD1500319CCE /* HandBookViewController.xib */; };
 		9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA93628EAE9FF00319CCE /* SearchCell.swift */; };
@@ -40,6 +34,47 @@
 		9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA93D28EAEA2600319CCE /* PostCell.xib */; };
 		9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */; };
 		9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */; };
+		9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */; };
+		9D8DD30B28EC081B002DEE57 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */; };
+		9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */; };
+		9D8DD31028EC083C002DEE57 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD30E28EC083C002DEE57 /* FavoriteCell.xib */; };
+		9D8DD34D28EC35F3002DEE57 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */; };
+		9D8DD34E28EC35F3002DEE57 /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD34628EC35F3002DEE57 /* PetTableViewCell.swift */; };
+		9D8DD34F28EC35F3002DEE57 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD34728EC35F3002DEE57 /* InformationTableViewCell.swift */; };
+		9D8DD35028EC35F3002DEE57 /* LogOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD34828EC35F3002DEE57 /* LogOutTableViewCell.swift */; };
+		9D8DD35128EC35F3002DEE57 /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD34928EC35F3002DEE57 /* PetTableViewCell.xib */; };
+		9D8DD35228EC35F3002DEE57 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD34A28EC35F3002DEE57 /* InformationTableViewCell.xib */; };
+		9D8DD35328EC35F3002DEE57 /* LogOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD34B28EC35F3002DEE57 /* LogOutTableViewCell.xib */; };
+		9D8DD35428EC35F3002DEE57 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */; };
+		9D8DD35A28EC35FA002DEE57 /* InforPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD35628EC35FA002DEE57 /* InforPetTableViewCell.swift */; };
+		9D8DD35B28EC35FA002DEE57 /* InformationPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD35728EC35FA002DEE57 /* InformationPetViewController.swift */; };
+		9D8DD35C28EC35FA002DEE57 /* InforPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD35828EC35FA002DEE57 /* InforPetTableViewCell.xib */; };
+		9D8DD35D28EC35FA002DEE57 /* InformationPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD35928EC35FA002DEE57 /* InformationPetViewController.xib */; };
+		9D8DD36328EC3602002DEE57 /* HealthBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD35F28EC3602002DEE57 /* HealthBookTableViewCell.xib */; };
+		9D8DD36428EC3602002DEE57 /* HealthBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD36028EC3602002DEE57 /* HealthBookTableViewCell.swift */; };
+		9D8DD36528EC3602002DEE57 /* PetHealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD36128EC3602002DEE57 /* PetHealthBookViewController.swift */; };
+		9D8DD36628EC3602002DEE57 /* PetHealthBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD36228EC3602002DEE57 /* PetHealthBookViewController.xib */; };
+		9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39228ED3573002DEE57 /* StretchyTableHeaderView.swift */; };
+		9D8DD39728ED9E54002DEE57 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39528ED9E54002DEE57 /* TrainingViewController.swift */; };
+		9D8DD39828ED9E54002DEE57 /* TrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD39628ED9E54002DEE57 /* TrainingViewController.xib */; };
+		9D8DD3AC28EDA034002DEE57 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39A28EDA034002DEE57 /* ItemCollectionViewCell.swift */; };
+		9D8DD3AD28EDA034002DEE57 /* ListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD39B28EDA034002DEE57 /* ListItemTableViewCell.xib */; };
+		9D8DD3AE28EDA034002DEE57 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD39C28EDA034002DEE57 /* SearchTableViewCell.xib */; };
+		9D8DD3AF28EDA034002DEE57 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD39D28EDA034002DEE57 /* ItemCollectionViewCell.xib */; };
+		9D8DD3B028EDA034002DEE57 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39E28EDA034002DEE57 /* ListItemTableViewCell.swift */; };
+		9D8DD3B128EDA034002DEE57 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39F28EDA034002DEE57 /* CategoryTableViewCell.swift */; };
+		9D8DD3B228EDA034002DEE57 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A028EDA034002DEE57 /* SearchTableViewCell.swift */; };
+		9D8DD3B328EDA034002DEE57 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A128EDA034002DEE57 /* CategoryTableViewCell.xib */; };
+		9D8DD3B428EDA034002DEE57 /* DetailItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A328EDA034002DEE57 /* DetailItemViewController.xib */; };
+		9D8DD3B528EDA034002DEE57 /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A428EDA034002DEE57 /* DetailItemViewController.swift */; };
+		9D8DD3B628EDA034002DEE57 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A628EDA034002DEE57 /* NameTableViewCell.swift */; };
+		9D8DD3B728EDA034002DEE57 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A728EDA034002DEE57 /* DescriptionTableViewCell.xib */; };
+		9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A828EDA034002DEE57 /* InforPetsCell.swift */; };
+		9D8DD3B928EDA034002DEE57 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD3A928EDA034002DEE57 /* DescriptionTableViewCell.swift */; };
+		9D8DD3BA28EDA034002DEE57 /* InforPetsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD3AA28EDA034002DEE57 /* InforPetsCell.xib */; };
+		9D8DD3BB28EDA034002DEE57 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD3AB28EDA034002DEE57 /* NameTableViewCell.xib */; };
+		9D8DD3CA28EDA178002DEE57 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD3C828EDA178002DEE57 /* ListViewController.swift */; };
+		9D8DD3CB28EDA178002DEE57 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD3C928EDA178002DEE57 /* ListViewController.xib */; };
 		9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4328E5B75600718B19 /* TabbarController.swift */; };
 		9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4428E5B75600718B19 /* TabbarController.xib */; };
 		9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4828E5BE1100718B19 /* Extension.swift */; };
@@ -61,10 +96,6 @@
 		9D36D48528E5B20E009B4061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D36D49128E5B426009B4061 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9D36D49228E5B426009B4061 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		9D36D49828E5B443009B4061 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		9D36D49928E5B443009B4061 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
-		9D36D49D28E5B45A009B4061 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		9D36D49E28E5B45A009B4061 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		9D7BA91028E9562F00319CCE /* HomeInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInstance.swift; sourceTree = "<group>"; };
 		9D7BA91328E9585800319CCE /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
 		9D7BA91428E9585800319CCE /* LibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCell.xib; sourceTree = "<group>"; };
@@ -75,8 +106,6 @@
 		9D7BA92328E959A600319CCE /* LibraryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableCell.swift; sourceTree = "<group>"; };
 		9D7BA92428E959A600319CCE /* LibraryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTableCell.xib; sourceTree = "<group>"; };
 		9D7BA92728EA042700319CCE /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
-		9D7BA92928EA795E00319CCE /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
-		9D7BA92A28EA795E00319CCE /* LibraryCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCollectionViewController.xib; sourceTree = "<group>"; };
 		9D7BA93128EADD1500319CCE /* HandBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookViewController.swift; sourceTree = "<group>"; };
 		9D7BA93228EADD1500319CCE /* HandBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandBookViewController.xib; sourceTree = "<group>"; };
 		9D7BA93628EAE9FF00319CCE /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -85,6 +114,47 @@
 		9D7BA93D28EAEA2600319CCE /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableCell.xib; sourceTree = "<group>"; };
+		9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		9D8DD30E28EC083C002DEE57 /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
+		9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		9D8DD34628EC35F3002DEE57 /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD34728EC35F3002DEE57 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD34828EC35F3002DEE57 /* LogOutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD34928EC35F3002DEE57 /* PetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD34A28EC35F3002DEE57 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD34B28EC35F3002DEE57 /* LogOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogOutTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9D8DD35628EC35FA002DEE57 /* InforPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforPetTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD35728EC35FA002DEE57 /* InformationPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPetViewController.swift; sourceTree = "<group>"; };
+		9D8DD35828EC35FA002DEE57 /* InforPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforPetTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD35928EC35FA002DEE57 /* InformationPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationPetViewController.xib; sourceTree = "<group>"; };
+		9D8DD35F28EC3602002DEE57 /* HealthBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthBookTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD36028EC3602002DEE57 /* HealthBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBookTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD36128EC3602002DEE57 /* PetHealthBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthBookViewController.swift; sourceTree = "<group>"; };
+		9D8DD36228EC3602002DEE57 /* PetHealthBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetHealthBookViewController.xib; sourceTree = "<group>"; };
+		9D8DD39228ED3573002DEE57 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
+		9D8DD39528ED9E54002DEE57 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		9D8DD39628ED9E54002DEE57 /* TrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingViewController.xib; sourceTree = "<group>"; };
+		9D8DD39A28EDA034002DEE57 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D8DD39B28EDA034002DEE57 /* ListItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListItemTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD39C28EDA034002DEE57 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD39D28EDA034002DEE57 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		9D8DD39E28EDA034002DEE57 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD39F28EDA034002DEE57 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD3A028EDA034002DEE57 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD3A128EDA034002DEE57 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD3A328EDA034002DEE57 /* DetailItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailItemViewController.xib; sourceTree = "<group>"; };
+		9D8DD3A428EDA034002DEE57 /* DetailItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
+		9D8DD3A628EDA034002DEE57 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD3A728EDA034002DEE57 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD3A828EDA034002DEE57 /* InforPetsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforPetsCell.swift; sourceTree = "<group>"; };
+		9D8DD3A928EDA034002DEE57 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		9D8DD3AA28EDA034002DEE57 /* InforPetsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforPetsCell.xib; sourceTree = "<group>"; };
+		9D8DD3AB28EDA034002DEE57 /* NameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		9D8DD3C828EDA178002DEE57 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9D8DD3C928EDA178002DEE57 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		9DA6AB4328E5B75600718B19 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9DA6AB4428E5B75600718B19 /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
 		9DA6AB4828E5BE1100718B19 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -140,7 +210,7 @@
 		9D36D48B28E5B32F009B4061 /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
-				9D7BA93028EADCE200319CCE /* HandBookVC */,
+				9D8DD31128EC0CF4002DEE57 /* Layout */,
 				9DA6AB4728E5BDF700718B19 /* Extension */,
 				9DA6AB4228E5B6BD00718B19 /* TabbarController */,
 				9D36D49C28E5B446009B4061 /* AccountVC */,
@@ -155,9 +225,9 @@
 		9D36D49028E5B40A009B4061 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				9D7BA91728E9591D00319CCE /* TableCell */,
-				9D36D49128E5B426009B4061 /* HomeViewController.swift */,
-				9D36D49228E5B426009B4061 /* HomeViewController.xib */,
+				9D8DD39428ED9E35002DEE57 /* TrainingVC */,
+				9D7BA93028EADCE200319CCE /* HandBookVC */,
+				9D8DD36A28EC4039002DEE57 /* HomeViewController */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -165,8 +235,10 @@
 		9D36D49528E5B42B009B4061 /* ListVC */ = {
 			isa = PBXGroup;
 			children = (
-				9D36D49828E5B443009B4061 /* ListViewController.swift */,
-				9D36D49928E5B443009B4061 /* ListViewController.xib */,
+				9D8DD3C828EDA178002DEE57 /* ListViewController.swift */,
+				9D8DD3C928EDA178002DEE57 /* ListViewController.xib */,
+				9D8DD3A228EDA034002DEE57 /* DetailItem */,
+				9D8DD39928EDA034002DEE57 /* ListCell */,
 			);
 			path = ListVC;
 			sourceTree = "<group>";
@@ -174,8 +246,10 @@
 		9D36D49C28E5B446009B4061 /* AccountVC */ = {
 			isa = PBXGroup;
 			children = (
-				9D36D49D28E5B45A009B4061 /* AccountViewController.swift */,
-				9D36D49E28E5B45A009B4061 /* AccountViewController.xib */,
+				9D8DD30728EC07AF002DEE57 /* FavoriteVC */,
+				9D8DD35E28EC3602002DEE57 /* PetHealthBook */,
+				9D8DD35528EC35FA002DEE57 /* InformationPet */,
+				9D8DD34428EC35F3002DEE57 /* UserAccountVC */,
 			);
 			path = AccountVC;
 			sourceTree = "<group>";
@@ -233,9 +307,6 @@
 				9D7BA91228E9584200319CCE /* LibraryCollectionCell */,
 				9D7BA92328E959A600319CCE /* LibraryTableCell.swift */,
 				9D7BA92428E959A600319CCE /* LibraryTableCell.xib */,
-				9D7BA92728EA042700319CCE /* PinterestLayout.swift */,
-				9D7BA92928EA795E00319CCE /* LibraryCollectionViewController.swift */,
-				9D7BA92A28EA795E00319CCE /* LibraryCollectionViewController.xib */,
 			);
 			path = LibraryCell;
 			sourceTree = "<group>";
@@ -277,6 +348,168 @@
 				9D7BA93D28EAEA2600319CCE /* PostCell.xib */,
 			);
 			path = PostCell;
+			sourceTree = "<group>";
+		};
+		9D8DD30728EC07AF002DEE57 /* FavoriteVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD30C28EC0822002DEE57 /* FavoriteCell */,
+				9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */,
+				9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */,
+			);
+			path = FavoriteVC;
+			sourceTree = "<group>";
+		};
+		9D8DD30C28EC0822002DEE57 /* FavoriteCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */,
+				9D8DD30E28EC083C002DEE57 /* FavoriteCell.xib */,
+			);
+			path = FavoriteCell;
+			sourceTree = "<group>";
+		};
+		9D8DD31128EC0CF4002DEE57 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA92728EA042700319CCE /* PinterestLayout.swift */,
+				9D8DD39228ED3573002DEE57 /* StretchyTableHeaderView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		9D8DD34428EC35F3002DEE57 /* UserAccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD36928EC367D002DEE57 /* InfomationCell */,
+				9D8DD36828EC366D002DEE57 /* LogoutCell */,
+				9D8DD36728EC365D002DEE57 /* PetCell */,
+				9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */,
+				9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */,
+			);
+			path = UserAccountVC;
+			sourceTree = "<group>";
+		};
+		9D8DD35528EC35FA002DEE57 /* InformationPet */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD35628EC35FA002DEE57 /* InforPetTableViewCell.swift */,
+				9D8DD35728EC35FA002DEE57 /* InformationPetViewController.swift */,
+				9D8DD35828EC35FA002DEE57 /* InforPetTableViewCell.xib */,
+				9D8DD35928EC35FA002DEE57 /* InformationPetViewController.xib */,
+			);
+			path = InformationPet;
+			sourceTree = "<group>";
+		};
+		9D8DD35E28EC3602002DEE57 /* PetHealthBook */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD35F28EC3602002DEE57 /* HealthBookTableViewCell.xib */,
+				9D8DD36028EC3602002DEE57 /* HealthBookTableViewCell.swift */,
+				9D8DD36128EC3602002DEE57 /* PetHealthBookViewController.swift */,
+				9D8DD36228EC3602002DEE57 /* PetHealthBookViewController.xib */,
+			);
+			path = PetHealthBook;
+			sourceTree = "<group>";
+		};
+		9D8DD36728EC365D002DEE57 /* PetCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD34928EC35F3002DEE57 /* PetTableViewCell.xib */,
+				9D8DD34628EC35F3002DEE57 /* PetTableViewCell.swift */,
+			);
+			path = PetCell;
+			sourceTree = "<group>";
+		};
+		9D8DD36828EC366D002DEE57 /* LogoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD34B28EC35F3002DEE57 /* LogOutTableViewCell.xib */,
+				9D8DD34828EC35F3002DEE57 /* LogOutTableViewCell.swift */,
+			);
+			path = LogoutCell;
+			sourceTree = "<group>";
+		};
+		9D8DD36928EC367D002DEE57 /* InfomationCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD34A28EC35F3002DEE57 /* InformationTableViewCell.xib */,
+				9D8DD34728EC35F3002DEE57 /* InformationTableViewCell.swift */,
+			);
+			path = InfomationCell;
+			sourceTree = "<group>";
+		};
+		9D8DD36A28EC4039002DEE57 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D7BA91728E9591D00319CCE /* TableCell */,
+				9D36D49128E5B426009B4061 /* HomeViewController.swift */,
+				9D36D49228E5B426009B4061 /* HomeViewController.xib */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		9D8DD39428ED9E35002DEE57 /* TrainingVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD39528ED9E54002DEE57 /* TrainingViewController.swift */,
+				9D8DD39628ED9E54002DEE57 /* TrainingViewController.xib */,
+			);
+			path = TrainingVC;
+			sourceTree = "<group>";
+		};
+		9D8DD39928EDA034002DEE57 /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD3CD28EDAD34002DEE57 /* New Group */,
+				9D8DD3CC28EDA830002DEE57 /* AnimalCell */,
+				9D8DD39B28EDA034002DEE57 /* ListItemTableViewCell.xib */,
+				9D8DD39C28EDA034002DEE57 /* SearchTableViewCell.xib */,
+				9D8DD39E28EDA034002DEE57 /* ListItemTableViewCell.swift */,
+				9D8DD39F28EDA034002DEE57 /* CategoryTableViewCell.swift */,
+				9D8DD3A028EDA034002DEE57 /* SearchTableViewCell.swift */,
+				9D8DD3A128EDA034002DEE57 /* CategoryTableViewCell.xib */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		9D8DD3A228EDA034002DEE57 /* DetailItem */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD3A328EDA034002DEE57 /* DetailItemViewController.xib */,
+				9D8DD3A428EDA034002DEE57 /* DetailItemViewController.swift */,
+				9D8DD3A528EDA034002DEE57 /* DetailItemCell */,
+			);
+			path = DetailItem;
+			sourceTree = "<group>";
+		};
+		9D8DD3A528EDA034002DEE57 /* DetailItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD3A628EDA034002DEE57 /* NameTableViewCell.swift */,
+				9D8DD3A728EDA034002DEE57 /* DescriptionTableViewCell.xib */,
+				9D8DD3A828EDA034002DEE57 /* InforPetsCell.swift */,
+				9D8DD3A928EDA034002DEE57 /* DescriptionTableViewCell.swift */,
+				9D8DD3AA28EDA034002DEE57 /* InforPetsCell.xib */,
+				9D8DD3AB28EDA034002DEE57 /* NameTableViewCell.xib */,
+			);
+			path = DetailItemCell;
+			sourceTree = "<group>";
+		};
+		9D8DD3CC28EDA830002DEE57 /* AnimalCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DD39D28EDA034002DEE57 /* ItemCollectionViewCell.xib */,
+				9D8DD39A28EDA034002DEE57 /* ItemCollectionViewCell.swift */,
+			);
+			path = AnimalCell;
+			sourceTree = "<group>";
+		};
+		9D8DD3CD28EDAD34002DEE57 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9DA6AB4228E5B6BD00718B19 /* TabbarController */ = {
@@ -373,24 +606,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8DD3AD28EDA034002DEE57 /* ListItemTableViewCell.xib in Resources */,
 				9D7BA93428EADD1500319CCE /* HandBookViewController.xib in Resources */,
-				9D7BA92C28EA795E00319CCE /* LibraryCollectionViewController.xib in Resources */,
+				9D8DD3CB28EDA178002DEE57 /* ListViewController.xib in Resources */,
+				9D8DD36628EC3602002DEE57 /* PetHealthBookViewController.xib in Resources */,
+				9D8DD35228EC35F3002DEE57 /* InformationTableViewCell.xib in Resources */,
 				9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */,
 				9D36D48128E5B20E009B4061 /* Assets.xcassets in Resources */,
+				9D8DD3AE28EDA034002DEE57 /* SearchTableViewCell.xib in Resources */,
 				9D7BA92128E9599100319CCE /* FavoriteTableCell.xib in Resources */,
 				9D7BA93928EAE9FF00319CCE /* SearchCell.xib in Resources */,
 				9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */,
 				9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */,
 				9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */,
+				9D8DD36328EC3602002DEE57 /* HealthBookTableViewCell.xib in Resources */,
+				9D8DD31028EC083C002DEE57 /* FavoriteCell.xib in Resources */,
+				9D8DD3BA28EDA034002DEE57 /* InforPetsCell.xib in Resources */,
+				9D8DD3B728EDA034002DEE57 /* DescriptionTableViewCell.xib in Resources */,
+				9D8DD3B428EDA034002DEE57 /* DetailItemViewController.xib in Resources */,
 				9D7BA92628E959A600319CCE /* LibraryTableCell.xib in Resources */,
-				9D36D49B28E5B443009B4061 /* ListViewController.xib in Resources */,
+				9D8DD35C28EC35FA002DEE57 /* InforPetTableViewCell.xib in Resources */,
+				9D8DD39828ED9E54002DEE57 /* TrainingViewController.xib in Resources */,
 				9D36D47C28E5B20C009B4061 /* Main.storyboard in Resources */,
-				9D36D4A028E5B45A009B4061 /* AccountViewController.xib in Resources */,
+				9D8DD30B28EC081B002DEE57 /* FavoriteViewController.xib in Resources */,
+				9D8DD34D28EC35F3002DEE57 /* AccountViewController.xib in Resources */,
+				9D8DD3B328EDA034002DEE57 /* CategoryTableViewCell.xib in Resources */,
+				9D8DD35128EC35F3002DEE57 /* PetTableViewCell.xib in Resources */,
 				9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */,
 				9D7BA91B28E9595B00319CCE /* CategoriesTableCell.xib in Resources */,
+				9D8DD35D28EC35FA002DEE57 /* InformationPetViewController.xib in Resources */,
 				9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */,
+				9D8DD35328EC35F3002DEE57 /* LogOutTableViewCell.xib in Resources */,
+				9D8DD3AF28EDA034002DEE57 /* ItemCollectionViewCell.xib in Resources */,
 				9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */,
 				9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */,
+				9D8DD3BB28EDA034002DEE57 /* NameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,28 +671,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */,
+				9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */,
 				9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */,
+				9D8DD34F28EC35F3002DEE57 /* InformationTableViewCell.swift in Sources */,
 				9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */,
+				9D8DD35A28EC35FA002DEE57 /* InforPetTableViewCell.swift in Sources */,
 				9D36D47928E5B20C009B4061 /* HomeController.swift in Sources */,
+				9D8DD35028EC35F3002DEE57 /* LogOutTableViewCell.swift in Sources */,
+				9D8DD3B528EDA034002DEE57 /* DetailItemViewController.swift in Sources */,
+				9D8DD36528EC3602002DEE57 /* PetHealthBookViewController.swift in Sources */,
+				9D8DD3B228EDA034002DEE57 /* SearchTableViewCell.swift in Sources */,
 				9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */,
 				9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */,
+				9D8DD35428EC35F3002DEE57 /* AccountViewController.swift in Sources */,
+				9D8DD3B628EDA034002DEE57 /* NameTableViewCell.swift in Sources */,
+				9D8DD3AC28EDA034002DEE57 /* ItemCollectionViewCell.swift in Sources */,
+				9D8DD3B928EDA034002DEE57 /* DescriptionTableViewCell.swift in Sources */,
 				9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */,
 				9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */,
+				9D8DD35B28EC35FA002DEE57 /* InformationPetViewController.swift in Sources */,
 				9DAD17DA28E6F69100296533 /* CategoriesCell.swift in Sources */,
 				9D36D47F28E5B20C009B4061 /* mock_project.xcdatamodeld in Sources */,
 				9D36D47528E5B20C009B4061 /* AppDelegate.swift in Sources */,
+				9D8DD39728ED9E54002DEE57 /* TrainingViewController.swift in Sources */,
+				9D8DD36428EC3602002DEE57 /* HealthBookTableViewCell.swift in Sources */,
 				9D7BA91A28E9595B00319CCE /* CategoriesTableCell.swift in Sources */,
 				9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */,
-				9D7BA92B28EA795E00319CCE /* LibraryCollectionViewController.swift in Sources */,
+				9D8DD34E28EC35F3002DEE57 /* PetTableViewCell.swift in Sources */,
+				9D8DD3B028EDA034002DEE57 /* ListItemTableViewCell.swift in Sources */,
+				9D8DD3B128EDA034002DEE57 /* CategoryTableViewCell.swift in Sources */,
 				9D7BA92028E9599100319CCE /* FavoriteTableCell.swift in Sources */,
 				9D36D49328E5B426009B4061 /* HomeViewController.swift in Sources */,
 				9D7BA93E28EAEA2600319CCE /* PostCell.swift in Sources */,
-				9D36D49A28E5B443009B4061 /* ListViewController.swift in Sources */,
 				9D36D47728E5B20C009B4061 /* SceneDelegate.swift in Sources */,
 				9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */,
 				9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */,
+				9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */,
+				9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */,
+				9D8DD3CA28EDA178002DEE57 /* ListViewController.swift in Sources */,
 				9D7BA92528E959A600319CCE /* LibraryTableCell.swift in Sources */,
-				9D36D49F28E5B45A009B4061 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +864,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -623,6 +892,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
