@@ -6,18 +6,60 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var contentView: UIView?
     @IBOutlet weak var homeContentTable: UITableView?
+    @IBOutlet weak var nameTextField: UILabel?
+
+    let db = Firestore.firestore()
+    let id = Auth.auth().currentUser?.uid
 
     override func viewDidLoad() {
         title = "Home"
         super.viewDidLoad()
         configView()
         configTableView()
-        self.navigationController?.navigationBar.isHidden = true
+        // self.navigationController?.navigationBar.isHidden = true
+        navigationItem.leftBarButtonItem =  UIBarButtonItem(title: "Log out",
+            style: .done, target: self, action: #selector(didTapLogout))
+
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    if self.id == document["uid"] as? String{
+                        guard let fullName = document["fullName"] as? String else {
+                            return
+                        }
+                        self.nameTextField?.text = fullName
+                        print(fullName)
+                    }
+                }
+            }
+        }
+
+    }
+
+    @objc func didTapLogout() {
+        do {
+            try Auth.auth().signOut()
+                let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true, completion: nil)
+        } catch {
+            print("Sign out error")
+        }
+    }
+
     @IBAction func tapNav(_ sender: Any) {
         let handBookVC = HandBookViewController(nibName: String(describing: HandBookViewController.self), bundle: .main)
         navigationController?.pushViewController(handBookVC, animated: true)

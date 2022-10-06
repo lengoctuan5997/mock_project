@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="contentView" destination="FNT-Cg-YLK" id="Z6a-Lz-0hH"/>
                 <outlet property="homeContentTable" destination="TXA-V8-z01" id="zAK-ct-z5J"/>
+                <outlet property="nameTextField" destination="LdS-IF-F3d" id="ntv-AJ-wQa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
