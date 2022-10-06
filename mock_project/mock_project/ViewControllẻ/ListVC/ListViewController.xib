@@ -18,18 +18,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-7N-XdW">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B2-Jl-dF4">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-7N-XdW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
+                    <constraints>
+                        <constraint firstItem="Clv-7N-XdW" firstAttribute="leading" secondItem="0B2-Jl-dF4" secondAttribute="leading" id="JfN-ib-uvU"/>
+                        <constraint firstAttribute="bottom" secondItem="Clv-7N-XdW" secondAttribute="bottom" id="glL-Ip-ylq"/>
+                        <constraint firstAttribute="trailing" secondItem="Clv-7N-XdW" secondAttribute="trailing" id="m5w-Kq-EUl"/>
+                        <constraint firstItem="Clv-7N-XdW" firstAttribute="top" secondItem="0B2-Jl-dF4" secondAttribute="top" id="tXO-oP-eCS"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Clv-7N-XdW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NWo-1t-oCR"/>
-                <constraint firstItem="Clv-7N-XdW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aFj-ZP-FQj"/>
-                <constraint firstItem="Clv-7N-XdW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dMq-Nt-IUb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Clv-7N-XdW" secondAttribute="bottom" id="sR6-KR-Pud"/>
+                <constraint firstItem="0B2-Jl-dF4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0yr-XD-H9p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0B2-Jl-dF4" secondAttribute="trailing" id="L4n-Gs-dK5"/>
+                <constraint firstItem="0B2-Jl-dF4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SAE-f1-5K5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0B2-Jl-dF4" secondAttribute="bottom" id="g4F-Jb-Vj3"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="86.383928571428569"/>
         </view>

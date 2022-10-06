@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import FirebaseAuth
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField?
@@ -72,31 +72,31 @@ class LoginViewController: UIViewController {
     }
 
     func login() {
-//        Auth.auth().signIn(withEmail: emailTextField?.text ?? "",
-//            password: passwordTextField?.text ?? "") { (authResult, error) in
-//            if let errorCreate = error {
-//                  let err = errorCreate as NSError
-//                  switch err.code {
-//                  case AuthErrorCode.wrongPassword.rawValue:
-//                      self.validationPasswordLabel.text = "Password không chính xác"
-//                      self.validationPasswordLabel.isHidden = false
-//                  default:
-//                     print("unknown error: \(err.localizedDescription)")
-//                  }
-//               } else {
-//                   let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
-//                   tabbarVC.modalPresentationStyle = .fullScreen
-//                   self.present(tabbarVC, animated: true, completion: nil)
-//               }
-//            }
+        Auth.auth().signIn(withEmail: emailTextField?.text ?? "",
+            password: passwordTextField?.text ?? "") { (authResult, error) in
+            if let errorCreate = error {
+                  let err = errorCreate as NSError
+                  switch err.code {
+                  case AuthErrorCode.wrongPassword.rawValue:
+                      self.validationPasswordLabel.text = "Password không chính xác"
+                      self.validationPasswordLabel.isHidden = false
+                  default:
+                     print("unknown error: \(err.localizedDescription)")
+                  }
+               } else {
+                   let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
+                   tabbarVC.modalPresentationStyle = .fullScreen
+                   self.present(tabbarVC, animated: true, completion: nil)
+               }
+            }
         checkUserInfo()
     }
 
     func checkUserInfo() {
-//        if Auth.auth().currentUser != nil {
-//            let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
-//            tabbarVC.modalPresentationStyle = .fullScreen
-//            self.present(tabbarVC, animated: true, completion: nil)
-//        }
+        if Auth.auth().currentUser != nil {
+            let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
+            tabbarVC.modalPresentationStyle = .fullScreen
+            self.present(tabbarVC, animated: true, completion: nil)
+        }
     }
 }

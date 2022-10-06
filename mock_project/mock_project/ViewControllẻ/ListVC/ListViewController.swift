@@ -9,15 +9,18 @@ import UIKit
 
 class ListViewController: UIViewController {
     @IBOutlet weak var listTableView: UITableView?
-
+    private var animals: [Animal] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        initData()
     }
 }
 // MARK: - config UI
 extension ListViewController {
     func configUI() {
+        self.setupToHideKeyboardOnTapOnView()
+        navigationController?.isNavigationBarHidden = true
         _ = view.applyGradient()
         guard let listTableView = listTableView
         else {
@@ -99,9 +102,10 @@ extension ListViewController: UITableViewDataSource {
             } else if indexPath.row == 1 {
                 height = 60
             } else if indexPath.row == 2 {
-                height = 1500
+                print(animals.count * 260)
+                height = CGFloat((animals.count / 2) * 260)
             }
-            return height
+        return height
     }
 
     func initCategoriesCell(
@@ -113,6 +117,9 @@ extension ListViewController: UITableViewDataSource {
             for: indexPath
         ) as? CategoriesTableCell ?? CategoriesTableCell()
 
+        cell.tapCategoriesCellClousure = { [weak self] in
+            print("select type")
+        }
         return cell
     }
 
@@ -134,7 +141,7 @@ extension ListViewController: UITableViewDataSource {
             withIdentifier: "listItemCell",
             for: indexPath
         ) as? ListItemTableViewCell ?? ListItemTableViewCell()
-
+        cell.animals = animals
         cell.tapCell = { [weak self] in
             print("clousure work")
 
@@ -146,6 +153,16 @@ extension ListViewController: UITableViewDataSource {
         }
 
         return cell
+    }
+}
+
+extension ListViewController {
+    func initData() {
+        animals = [
+            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "dog", species: "", information: "", history: "", image: "dog_f1", animal: "dog"),
+            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "dog", species: "", information: "", history: "", image: "catF", animal: "cat"),
+            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "bird", species: "", information: "", history: "", image: "bird-1", animal: "bird"),
+            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "dog", species: "", information: "", history: "", image: "fish-1", animal: "fish"),]
     }
 }
 

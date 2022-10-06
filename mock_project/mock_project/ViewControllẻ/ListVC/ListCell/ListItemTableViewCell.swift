@@ -10,8 +10,9 @@ import UIKit
 class ListItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView?
-
-    var animals: [String] = ["dog_f1", "dog_f2", "dog_f3", "dog_f4"]
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
+    
+    var animals: [Animal] = []
     var itemLabel: [String] = ["Rayan", "Labador", "Husky", "Yorke"]
     var tapCell: () -> Void = {}
 
@@ -36,9 +37,6 @@ extension ListItemTableViewCell {
             return
         }
 
-        if let layout = animalCollectionView.collectionViewLayout as? PinterestLayout {
-            layout.delegate = self
-        }
         animalCollectionView.delegate = self
         animalCollectionView.dataSource = self
 
@@ -47,6 +45,8 @@ extension ListItemTableViewCell {
             bundle: .main
         )
         animalCollectionView.register(nib, forCellWithReuseIdentifier: "cell")
+        let screenWidth = UIScreen.main.bounds.size.width
+        flowLayout?.itemSize = CGSize(width: screenWidth / 2 - 10, height: 250)
     }
 }
 // MARK: - collection view delegate
@@ -64,7 +64,7 @@ extension ListItemTableViewCell: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return itemLabel.count
+        return animals.count
     }
 
     func collectionView(
@@ -76,22 +76,8 @@ extension ListItemTableViewCell: UICollectionViewDataSource {
             for: indexPath
         ) as? ItemCollectionViewCell
 
-        cell?.animalImageView?.image = UIImage(named: animals[indexPath.row])
-        cell?.animalLabel?.text = itemLabel[indexPath.row]
+        cell?.configData(animals[indexPath.row])
 
         return cell ?? UICollectionViewCell()
-    }
-}
-
-// MARK: - pinterest layout
-extension ListItemTableViewCell: PinterestLayoutDelegate {
-    func collectionView(
-        _ collectionView: UICollectionView,
-        heightForCellAtIndexPath indexPath: IndexPath
-    ) -> CGFloat {
-        guard let height = UIImage(named: animals[indexPath.item])?.size.height else {
-            return 0
-        }
-        return height
     }
 }

@@ -6,23 +6,47 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var contentView: UIView?
     @IBOutlet weak var homeContentTable: UITableView?
-
+    @IBOutlet weak var accountNameLabel: UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
+
         configTableView()
-        self.navigationController?.navigationBar.isHidden = true
-        _ = contentView?.applyGradient()
-        contentView?.layer.masksToBounds = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let id = Auth.auth().currentUser?.uid
+        super.viewWillAppear(animated)
+
+        Firestore.firestore().collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    if id == document["uid"] as? String {
+                        guard let fullName = document["fullName"] as? String else {
+                            return
+                        }
+                        self.accountNameLabel?.text = fullName
+                        print(fullName)
+                    }
+                }
+            }
+        }
     }
 }
 // MARK: - config View
 extension HomeViewController {
     func configView() {
+        self.navigationController?.navigationBar.isHidden = true
+        _ = contentView?.applyGradient(30)
+//        contentView?.layer.masksToBounds = true
         contentView?.layer.cornerRadius = 30
         contentView?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         contentView?.cardShadow()
@@ -52,7 +76,8 @@ extension HomeViewController {
         )
         homeContentTable?.delegate = self
         homeContentTable?.dataSource = self
-        homeContentTable?.sectionFooterHeight = 0
+//        homeContentTable?.sectionFooterHeight = 10
+        homeContentTable?.sectionHeaderHeight = 10
     }
 
     @objc
@@ -120,7 +145,7 @@ extension HomeViewController: UITableViewDataSource {
         case .favorite:
             return 195
         default:
-            return 550
+            return 530
         }
     }
 

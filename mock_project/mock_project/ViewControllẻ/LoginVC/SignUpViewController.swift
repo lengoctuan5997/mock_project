@@ -6,8 +6,8 @@
 //
 
 import UIKit
-//import FirebaseAuth
-//import FirebaseFirestore
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var fullNameTextField: UITextField?
@@ -209,32 +209,32 @@ class SignUpViewController: UIViewController {
         let password = passwordTextField?.text ?? ""
         let fullName = fullNameTextField?.text ?? ""
         let phoneNumber = phoneTextField?.text ?? ""
-//        Auth.auth().createUser(withEmail: email,
-//                               password: password) { (authResult, error) in
-//            if let errorCreate = error {
-//                  let err = errorCreate as NSError
-//                  switch err.code {
-//                  case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-//                     print("accountExistsWithDifferentCredential")
-//                  case AuthErrorCode.emailAlreadyInUse.rawValue:
-//                      self.validationEmailLabel.text = "Email đã tồn tại"
-//                      self.validationEmailLabel.isHidden = false
-//                  default:
-//                     print("unknown error: \(err.localizedDescription)")
-//                  }
-//                  // return
-//               } else {
-//                   let db = Firestore.firestore()
-//                   db.collection("users").addDocument(data: ["uid": authResult?.user.uid,
-//                       "fullName": fullName, "password": password, "email": email, "phoneNumber": phoneNumber, "isAdmin": false]) {(error) in
-//                       if error != nil {
-//                           print("User not save")
-//                       }
-//                   }
-//                   let successVC = SuccessViewController(nibName: "SuccessViewController", bundle: nil)
-//                   successVC.modalPresentationStyle = .fullScreen
-//                   self.present(successVC, animated: true, completion: nil)
-//               }
-//        }
+        Auth.auth().createUser(withEmail: email,
+                               password: password) { (authResult, error) in
+            if let errorCreate = error {
+                  let err = errorCreate as NSError
+                  switch err.code {
+                  case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
+                     print("accountExistsWithDifferentCredential")
+                  case AuthErrorCode.emailAlreadyInUse.rawValue:
+                      self.validationEmailLabel.text = "Email đã tồn tại"
+                      self.validationEmailLabel.isHidden = false
+                  default:
+                     print("unknown error: \(err.localizedDescription)")
+                  }
+                  // return
+               } else {
+                   let db = Firestore.firestore()
+                   db.collection("users").addDocument(data: ["uid": authResult?.user.uid,
+                       "fullName": fullName, "password": password, "email": email, "phoneNumber": phoneNumber, "isAdmin": false]) {(error) in
+                       if error != nil {
+                           print("User not save")
+                       }
+                   }
+                   let successVC = SuccessViewController(nibName: "SuccessViewController", bundle: nil)
+                   successVC.modalPresentationStyle = .fullScreen
+                   self.present(successVC, animated: true, completion: nil)
+               }
+        }
     }
 }
