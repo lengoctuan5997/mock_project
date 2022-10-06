@@ -54,6 +54,12 @@
 		9D82710D28EE730500C9D6D3 /* AddInformationPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82710128EE730400C9D6D3 /* AddInformationPetTableViewCell.swift */; };
 		9D82710E28EE730500C9D6D3 /* AddAvatarPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82710228EE730400C9D6D3 /* AddAvatarPetTableViewCell.xib */; };
 		9D82710F28EE730500C9D6D3 /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82710328EE730400C9D6D3 /* AddPetViewController.xib */; };
+		9D82711728EE81E200C9D6D3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82711128EE81E200C9D6D3 /* SignUpViewController.swift */; };
+		9D82711828EE81E200C9D6D3 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82711228EE81E200C9D6D3 /* SuccessViewController.xib */; };
+		9D82711928EE81E200C9D6D3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82711328EE81E200C9D6D3 /* LoginViewController.xib */; };
+		9D82711A28EE81E200C9D6D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82711428EE81E200C9D6D3 /* LoginViewController.swift */; };
+		9D82711B28EE81E200C9D6D3 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82711528EE81E200C9D6D3 /* SignUpViewController.xib */; };
+		9D82711C28EE81E200C9D6D3 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82711628EE81E200C9D6D3 /* SuccessViewController.swift */; };
 		9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */; };
 		9D8DD30B28EC081B002DEE57 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */; };
 		9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */; };
@@ -146,6 +152,12 @@
 		9D82710128EE730400C9D6D3 /* AddInformationPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInformationPetTableViewCell.swift; sourceTree = "<group>"; };
 		9D82710228EE730400C9D6D3 /* AddAvatarPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAvatarPetTableViewCell.xib; sourceTree = "<group>"; };
 		9D82710328EE730400C9D6D3 /* AddPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPetViewController.xib; sourceTree = "<group>"; };
+		9D82711128EE81E200C9D6D3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9D82711228EE81E200C9D6D3 /* SuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
+		9D82711328EE81E200C9D6D3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9D82711428EE81E200C9D6D3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D82711528EE81E200C9D6D3 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		9D82711628EE81E200C9D6D3 /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
@@ -234,6 +246,7 @@
 		9D36D48B28E5B32F009B4061 /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
+				9D82711028EE81E200C9D6D3 /* LoginVC */,
 				9D8DD31128EC0CF4002DEE57 /* Layout */,
 				9DA6AB4728E5BDF700718B19 /* Extension */,
 				9DA6AB4228E5B6BD00718B19 /* TabbarController */,
@@ -432,6 +445,19 @@
 			path = AddPet;
 			sourceTree = "<group>";
 		};
+		9D82711028EE81E200C9D6D3 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D82711128EE81E200C9D6D3 /* SignUpViewController.swift */,
+				9D82711228EE81E200C9D6D3 /* SuccessViewController.xib */,
+				9D82711328EE81E200C9D6D3 /* LoginViewController.xib */,
+				9D82711428EE81E200C9D6D3 /* LoginViewController.swift */,
+				9D82711528EE81E200C9D6D3 /* SignUpViewController.xib */,
+				9D82711628EE81E200C9D6D3 /* SuccessViewController.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
 		9D8DD30728EC07AF002DEE57 /* FavoriteVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,12 +548,12 @@
 			isa = PBXGroup;
 			children = (
 				9D8DD3CC28EDA830002DEE57 /* AnimalCell */,
-				9D8DD39B28EDA034002DEE57 /* ListItemTableViewCell.xib */,
-				9D8DD39C28EDA034002DEE57 /* SearchTableViewCell.xib */,
-				9D8DD39E28EDA034002DEE57 /* ListItemTableViewCell.swift */,
 				9D8DD39F28EDA034002DEE57 /* CategoryTableViewCell.swift */,
-				9D8DD3A028EDA034002DEE57 /* SearchTableViewCell.swift */,
 				9D8DD3A128EDA034002DEE57 /* CategoryTableViewCell.xib */,
+				9D8DD39E28EDA034002DEE57 /* ListItemTableViewCell.swift */,
+				9D8DD39B28EDA034002DEE57 /* ListItemTableViewCell.xib */,
+				9D8DD3A028EDA034002DEE57 /* SearchTableViewCell.swift */,
+				9D8DD39C28EDA034002DEE57 /* SearchTableViewCell.xib */,
 			);
 			path = ListCell;
 			sourceTree = "<group>";
@@ -558,8 +584,8 @@
 		9D8DD3CC28EDA830002DEE57 /* AnimalCell */ = {
 			isa = PBXGroup;
 			children = (
-				9D8DD39D28EDA034002DEE57 /* ItemCollectionViewCell.xib */,
 				9D8DD39A28EDA034002DEE57 /* ItemCollectionViewCell.swift */,
+				9D8DD39D28EDA034002DEE57 /* ItemCollectionViewCell.xib */,
 			);
 			path = AnimalCell;
 			sourceTree = "<group>";
@@ -666,6 +692,7 @@
 				9D8270F128EE72D100C9D6D3 /* HealthBookTableViewCell.xib in Resources */,
 				9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */,
 				9D36D48128E5B20E009B4061 /* Assets.xcassets in Resources */,
+				9D82711828EE81E200C9D6D3 /* SuccessViewController.xib in Resources */,
 				9D8DD3AE28EDA034002DEE57 /* SearchTableViewCell.xib in Resources */,
 				9D7BA92128E9599100319CCE /* FavoriteTableCell.xib in Resources */,
 				9D82710E28EE730500C9D6D3 /* AddAvatarPetTableViewCell.xib in Resources */,
@@ -688,12 +715,14 @@
 				9D8270EB28EE725300C9D6D3 /* InformationPetViewController.xib in Resources */,
 				9D82710B28EE730500C9D6D3 /* AddInformationPetTableViewCell.xib in Resources */,
 				9D82710F28EE730500C9D6D3 /* AddPetViewController.xib in Resources */,
+				9D82711928EE81E200C9D6D3 /* LoginViewController.xib in Resources */,
 				9D8DD35128EC35F3002DEE57 /* PetTableViewCell.xib in Resources */,
 				9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */,
 				9D7BA91B28E9595B00319CCE /* CategoriesTableCell.xib in Resources */,
 				9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */,
 				9D82710428EE730500C9D6D3 /* ListPetViewController.xib in Resources */,
 				9D8DD35328EC35F3002DEE57 /* LogOutTableViewCell.xib in Resources */,
+				9D82711B28EE81E200C9D6D3 /* SignUpViewController.xib in Resources */,
 				9D8DD3AF28EDA034002DEE57 /* ItemCollectionViewCell.xib in Resources */,
 				9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */,
 				9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */,
@@ -729,6 +758,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D82711728EE81E200C9D6D3 /* SignUpViewController.swift in Sources */,
 				9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */,
 				9D8270F228EE72D100C9D6D3 /* HealthBookTableViewCell.swift in Sources */,
 				9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */,
@@ -740,6 +770,7 @@
 				9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */,
 				9D36D47928E5B20C009B4061 /* HomeController.swift in Sources */,
 				9D8DD35028EC35F3002DEE57 /* LogOutTableViewCell.swift in Sources */,
+				9D82711A28EE81E200C9D6D3 /* LoginViewController.swift in Sources */,
 				9D82710A28EE730500C9D6D3 /* AddAvatarPetTableViewCell.swift in Sources */,
 				9D8270E828EE725300C9D6D3 /* InforPetTableViewCell.swift in Sources */,
 				9D8DD3B528EDA034002DEE57 /* DetailItemViewController.swift in Sources */,
@@ -770,6 +801,7 @@
 				9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */,
 				9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */,
 				9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */,
+				9D82711C28EE81E200C9D6D3 /* SuccessViewController.swift in Sources */,
 				9D82710728EE730500C9D6D3 /* ListPetViewController.swift in Sources */,
 				9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */,
 				9D82710C28EE730500C9D6D3 /* AddPetViewController.swift in Sources */,
@@ -928,7 +960,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -956,7 +988,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
