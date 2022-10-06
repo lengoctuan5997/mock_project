@@ -16,8 +16,8 @@ class AccountViewController: UIViewController {
     let informationCell: String = "informationCell"
     let petPageCell: String = "petPageCell"
     let logOutCell: String = "logOutCell"
-    var inforAccount: [String] = ["Name", "Address", "Phone Number"]
-    var petPage: [String] = ["Information My Pet", "Health Detail My Pet", "My Favorite"]
+    var inforAccount: [String] = ["Tên", "Địa chỉ", "Số điện thoại"]
+    var petPage: [String] = ["Thú cưng của tôi", "Sổ sức khoẻ thú cưng", "Yêu thích"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class AccountViewController: UIViewController {
 
 extension AccountViewController {
     private func setupUI() {
-        containerView?.applyGradient()
+        _ = containerView?.applyGradient()
         accountTableView?.delegate = self
         accountTableView?.dataSource = self
         accountTableView?.register(
@@ -94,13 +94,13 @@ extension AccountViewController: UITableViewDelegate {
         didSelectRowAt indexPath: IndexPath
     ) {
         if indexPath.section == 1 && indexPath.row == 0 {
-            let inforPetVC = InformationPetViewController(
+            let myPetsVC = ListPetViewController(
                 nibName: String(
-                    describing: InformationPetViewController.self
+                    describing: ListPetViewController.self
                 ),
                 bundle: .main
             )
-            navigationController?.pushViewController(inforPetVC, animated: true)
+            navigationController?.pushViewController(myPetsVC, animated: true)
         }
         if indexPath.section == 1 && indexPath.row == 1 {
             let healthBookVC = PetHealthBookViewController(

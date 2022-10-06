@@ -8,59 +8,93 @@
 import UIKit
 
 class DetailItemViewController: UIViewController {
-
-    @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var animalTableView: UITableView?
+    @IBOutlet weak var containerView: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        listTableView.delegate = self
-        listTableView.dataSource = self
-
-        listTableView.translatesAutoresizingMaskIntoConstraints = false
-        listTableView.separatorStyle = .none
-
-        listTableView.register(UINib(nibName: "NameTableViewCell",
-                                     bundle: Bundle.main), forCellReuseIdentifier: "nameCell")
-        listTableView.register(UINib(nibName: "DescriptionTableViewCell",
-                                     bundle: Bundle.main), forCellReuseIdentifier: "descriptionCell")
-        listTableView.register(UINib(nibName: "InforPetsCell",
-                                     bundle: Bundle.main), forCellReuseIdentifier: "informationCell")
-
-        listTableView.clipsToBounds = true
-        listTableView.layer.cornerRadius = 25
-
-        listTableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-
+        configUI()
     }
 }
+// MARK: - config UI
+extension DetailItemViewController {
+    func configUI() {
+//        guard let animalTableView = animalTableView else {
+//            return
+//        }
+        _ = containerView?.applyGradient()
 
-extension DetailItemViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        animalTableView?.delegate = self
+        animalTableView?.dataSource = self
+
+        animalTableView?.register(
+            UINib(
+                nibName: "NameTableViewCell",
+                bundle: Bundle.main
+            ),
+            forCellReuseIdentifier: "nameCell"
+        )
+        animalTableView?.register(
+            UINib(
+                nibName: "DescriptionTableViewCell",
+                bundle: Bundle.main
+            ),
+            forCellReuseIdentifier: "descriptionCell"
+        )
+        animalTableView?.register(
+            UINib(
+                nibName: "InforPetsCell",
+                bundle: Bundle.main
+            ),
+            forCellReuseIdentifier: "informationCell"
+        )
+
+        let headerTableView = StretchyTableHeaderView(
+            frame: CGRect(
+                x: 0,
+                y: 0,
+                width: view.bounds.width,
+                height: 300
+            )
+        )
+        headerTableView.imageView.image = UIImage(named: "dog_f3")
+        animalTableView?.tableHeaderView = headerTableView
+        animalTableView?.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+    }
+}
+// MARK: - tableview delegate
+extension DetailItemViewController: UITableViewDelegate {
+
+}
+
+extension DetailItemViewController: UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         3
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
         let cellType = TableCellType.init(rawValue: indexPath.row)
 
         switch cellType {
-            case .categories:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell",
-                    for: indexPath) as? NameTableViewCell ?? UITableViewCell()
-                return cell
-            case .search:
-                let cell1 = tableView.dequeueReusableCell(withIdentifier: "descriptionCell",
-                    for: indexPath) as? DescriptionTableViewCell ?? UITableViewCell()
-
-                return cell1
-            default:
-                let cell2 = tableView.dequeueReusableCell(withIdentifier: "informationCell",
-                    for: indexPath) as? InforPetsCell ?? UITableViewCell()
-                return cell2
+        case .categories:
+            return initNameCell(indexPath)
+        case .search:
+            return initDescriptionCell(indexPath)
+        default:
+            return initInforCell(indexPath)
         }
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
             var height: CGFloat = CGFloat()
             if indexPath.row == 0 {
                 height = 120
@@ -80,6 +114,46 @@ extension DetailItemViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 2 {
             tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+
+    func initNameCell(
+        _ indexPath: IndexPath
+    ) -> NameTableViewCell {
+        let cell = animalTableView?.dequeueReusableCell(
+            withIdentifier: "nameCell",
+            for: indexPath
+        ) as? NameTableViewCell ?? NameTableViewCell()
+        return cell
+    }
+
+    func initDescriptionCell(
+        _ indexPath: IndexPath
+    ) -> DescriptionTableViewCell {
+        let cell = animalTableView?.dequeueReusableCell(
+            withIdentifier: "descriptionCell",
+            for: indexPath
+        ) as? DescriptionTableViewCell ?? DescriptionTableViewCell()
+        return cell
+    }
+
+    func initInforCell(
+        _ indexPath: IndexPath
+    ) -> InforPetsCell {
+        let cell = animalTableView?.dequeueReusableCell(
+            withIdentifier: "informationCell",
+            for: indexPath
+        ) as? InforPetsCell ?? InforPetsCell()
+        return cell
+    }
+}
+
+// MARK: - scroll table
+extension DetailItemViewController {
+    func scrollViewDidScroll(
+        _ scrollView: UIScrollView
+    ) {
+        let headerTableView = animalTableView?.tableHeaderView as? StretchyTableHeaderView
+        headerTableView?.scrollViewDidScroll(scrollView: scrollView)
     }
 }
 

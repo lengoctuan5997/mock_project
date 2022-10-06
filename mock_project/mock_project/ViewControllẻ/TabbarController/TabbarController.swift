@@ -27,17 +27,17 @@ extension TabbarController {
         let homeVC = generateNavController(
             HomeViewController(),
             "",
-            "homekit"
+            "house"
         )
         let listVC = generateNavController(
             ListViewController(),
             "",
-            "list.dash"
+            "book"
         )
         let accountVC = generateNavController(
             AccountViewController(),
             "",
-            "person.fill"
+            "person"
         )
 
 //        UINavigationBar.appearance().prefersLargeTitles = true
@@ -82,12 +82,15 @@ extension TabbarController {
         roundLayer.path = beziePath.cgPath
         roundLayer.fillColor = UIColor.tabBarItemAccent.cgColor
 
-        tabBar.layer.insertSublayer(roundLayer, at: 0)
+//        tabBar.layer.insertSublayer(roundLayer, at: 0)
 
         tabBar.itemWidth = width / 3
         tabBar.itemPositioning = .centered
         tabBar.tintColor = .tabBarItemLight
         tabBar.unselectedItemTintColor = .tabBarColor
+        tabBar.layer.cornerRadius = 20
+        tabBar.layer.masksToBounds = true
+        tabBar.backgroundColor = .white
         tabBar.cardShadow()
     }
 }

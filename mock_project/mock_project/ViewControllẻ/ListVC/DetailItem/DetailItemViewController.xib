@@ -10,7 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailItemViewController" customModule="mock_project" customModuleProvider="target">
             <connections>
-                <outlet property="listTableView" destination="wOE-zJ-BJR" id="zZu-4E-iEj"/>
+                <outlet property="animalTableView" destination="wOE-zJ-BJR" id="hSL-bT-wLp"/>
+                <outlet property="containerView" destination="ew4-sd-Bol" id="SgC-7R-jMa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,46 +20,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog3" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-Bf-FNL">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="350" id="tic-Gv-jNg"/>
-                    </constraints>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-bw-rQ6">
-                    <rect key="frame" x="0.0" y="318" width="414" height="578"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew4-sd-Bol">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-zJ-BJR">
-                            <rect key="frame" x="0.0" y="-18" width="414" height="596"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-zJ-BJR">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="578" id="0sF-Ph-AXC"/>
-                        <constraint firstAttribute="bottom" secondItem="wOE-zJ-BJR" secondAttribute="bottom" id="5Fo-f2-yQJ"/>
-                        <constraint firstItem="wOE-zJ-BJR" firstAttribute="top" secondItem="TZG-bw-rQ6" secondAttribute="top" constant="-18" id="MOO-tv-r3d"/>
-                        <constraint firstItem="wOE-zJ-BJR" firstAttribute="leading" secondItem="TZG-bw-rQ6" secondAttribute="leading" id="YCy-jw-wvp"/>
-                        <constraint firstAttribute="trailing" secondItem="wOE-zJ-BJR" secondAttribute="trailing" id="rBv-Dp-k7R"/>
+                        <constraint firstItem="wOE-zJ-BJR" firstAttribute="top" secondItem="ew4-sd-Bol" secondAttribute="top" id="70s-3J-Uql"/>
+                        <constraint firstAttribute="trailing" secondItem="wOE-zJ-BJR" secondAttribute="trailing" id="Iqx-x5-mrQ"/>
+                        <constraint firstItem="wOE-zJ-BJR" firstAttribute="leading" secondItem="ew4-sd-Bol" secondAttribute="leading" id="kDB-WS-tgI"/>
+                        <constraint firstAttribute="bottom" secondItem="wOE-zJ-BJR" secondAttribute="bottom" id="rAq-dz-gh1"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="gfy-Bf-FNL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8HL-d9-oZZ"/>
-                <constraint firstItem="gfy-Bf-FNL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8sY-cJ-CcJ"/>
-                <constraint firstItem="TZG-bw-rQ6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AKS-2X-qG9"/>
-                <constraint firstItem="gfy-Bf-FNL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RjA-Me-mod"/>
-                <constraint firstItem="gfy-Bf-FNL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="btC-01-Rn3"/>
-                <constraint firstItem="TZG-bw-rQ6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dv3-tU-qok"/>
-                <constraint firstAttribute="bottom" secondItem="TZG-bw-rQ6" secondAttribute="bottom" id="yez-bt-kbu"/>
+                <constraint firstItem="ew4-sd-Bol" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MbW-k0-uhH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ew4-sd-Bol" secondAttribute="bottom" id="ZWv-nP-6fT"/>
+                <constraint firstItem="ew4-sd-Bol" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ixJ-XR-9HT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ew4-sd-Bol" secondAttribute="trailing" id="wbY-zG-La5"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="86.383928571428569"/>
         </view>
     </objects>
     <resources>
-        <image name="dog3" width="3024" height="4032"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

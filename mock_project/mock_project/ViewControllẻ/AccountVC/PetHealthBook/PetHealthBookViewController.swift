@@ -13,8 +13,8 @@ class PetHealthBookViewController: UIViewController {
     @IBOutlet weak var healthBookTableView: UITableView?
 
     let healthBookCell: String = "healthBookCell"
-    var contentHealthBook: [String] = ["Health Check Day", "Reason", "Diagnostic", "Clinic"]
-
+    var contentHealthBook: [String] = ["Ngày khám", "Triệu chứng", "Chuẩn đoán tình trạng", "Nơi khám"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -23,17 +23,16 @@ class PetHealthBookViewController: UIViewController {
 
 extension PetHealthBookViewController {
     private func setupUI() {
-        _ = view.applyGradient()
         avatarPet?.layer.cornerRadius = (avatarPet?.frame.height ?? 100) / 2
         petNameHealthBookLabel?.text = "Chos Quang"
         navigationController?.isNavigationBarHidden = false
-        let addButton = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(didTapAddButton))
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: self, action: #selector(didTapAddButton))
         navigationItem.rightBarButtonItem = addButton
         healthBookTableView?.delegate = self
         healthBookTableView?.dataSource = self
-        healthBookTableView?.register(
+        healthBookTableView?.register (
             UINib(
-                nibName: String(
+                nibName: String (
                     describing: HealthBookTableViewCell.self
                 ),
                 bundle: nil
@@ -64,14 +63,14 @@ extension PetHealthBookViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contentHealthBook.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let healthBookCell = healthBookTableView?.dequeueReusableCell(
-            withIdentifier: healthBookCell
-        ) as? HealthBookTableViewCell else {
+        guard let healthBookCell = healthBookTableView?.dequeueReusableCell(withIdentifier: healthBookCell) as? HealthBookTableViewCell else {
             return HealthBookTableViewCell()
         }
         healthBookCell.contentHealthBookLabel?.text = contentHealthBook[indexPath.row]
         return healthBookCell
     }
+    
+    
 }

@@ -13,8 +13,13 @@ class NameTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         heartButton.layer.cornerRadius = 25
-        heartButton.setImage(UIImage(
-            systemName: "heart.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+        heartButton.setImage(
+            UIImage(systemName: "heart.fill")?.withTintColor(
+                        .black,
+                        renderingMode: .alwaysOriginal
+                    ),
+            for: .normal
+        )
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
