@@ -63,6 +63,7 @@
 		9D82711C28EE81E200C9D6D3 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82711628EE81E200C9D6D3 /* SuccessViewController.swift */; };
 		9D82711E28EE8D2100C9D6D3 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82711D28EE8D2100C9D6D3 /* Animals.swift */; };
 		9D82712028EEC82600C9D6D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D82711F28EEC82600C9D6D3 /* GoogleService-Info.plist */; };
+		9D82712228EEEB4400C9D6D3 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82712128EEEB4400C9D6D3 /* UserManager.swift */; };
 		9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */; };
 		9D8DD30B28EC081B002DEE57 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */; };
 		9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */; };
@@ -161,6 +162,7 @@
 		9D82711628EE81E200C9D6D3 /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		9D82711D28EE8D2100C9D6D3 /* Animals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
 		9D82711F28EEC82600C9D6D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D82712128EEEB4400C9D6D3 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			children = (
 				9D7BA91028E9562F00319CCE /* HomeInstance.swift */,
 				9D82711D28EE8D2100C9D6D3 /* Animals.swift */,
+				9D82712128EEEB4400C9D6D3 /* UserManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				9D8DD3B628EDA034002DEE57 /* NameTableViewCell.swift in Sources */,
 				9D8270F328EE72D100C9D6D3 /* PetHealthBookViewController.swift in Sources */,
 				9D8DD3AC28EDA034002DEE57 /* ItemCollectionViewCell.swift in Sources */,
+				9D82712228EEEB4400C9D6D3 /* UserManager.swift in Sources */,
 				9D8DD3B928EDA034002DEE57 /* DescriptionTableViewCell.swift in Sources */,
 				9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */,
 				9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */,

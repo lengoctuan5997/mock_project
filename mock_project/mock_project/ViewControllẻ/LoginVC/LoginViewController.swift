@@ -7,22 +7,30 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField?
     @IBOutlet weak var passwordTextField: UITextField?
+    @IBOutlet weak var validationEmailLabel: UILabel?
+    @IBOutlet weak var validationPasswordLabel: UILabel?
 
-    @IBOutlet weak var validationEmailLabel: UILabel!
-    @IBOutlet weak var validationPasswordLabel: UILabel!
+    var userManager = UserManager.shared
+    let authen = Auth.auth()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        validationEmailLabel.isHidden = true
-        validationPasswordLabel.isHidden = true
+        validationEmailLabel?.isHidden = true
+        validationPasswordLabel?.isHidden = true
+        tabBarController?.tabBar.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        checkUserInfo()
+        onCheckUserIsLogin()
+        configUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
 
     @IBAction func didTapLogin(_ sender: Any) {
@@ -38,10 +46,10 @@ class LoginViewController: UIViewController {
     @IBAction func emailChanged(_ sender: Any) {
         if let email = emailTextField?.text {
             if let errorMessage = invalidEmail(email) {
-                validationEmailLabel.text = errorMessage
-                validationEmailLabel.isHidden = false
+                validationEmailLabel?.text = errorMessage
+                validationEmailLabel?.isHidden = false
             } else {
-                validationEmailLabel.isHidden = true
+                validationEmailLabel?.isHidden = true
             }
         }
     }
@@ -60,7 +68,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func passwordChanged(_ sender: Any) {
     }
-    
+
     func validateFields() {
         if emailTextField?.text?.isEmpty == true {
             return
@@ -71,32 +79,98 @@ class LoginViewController: UIViewController {
         login()
     }
 
+}
+// MARK: - config UI
+extension LoginViewController {
+    func configUI() {
+        emailTextField?.cardShadow()
+        emailTextField?.paddingLeft()
+        passwordTextField?.cardShadow()
+        passwordTextField?.paddingLeft()
+        emailTextField?.layer.cornerRadius = 15
+        passwordTextField?.layer.cornerRadius = 15
+        
+    }
+}
+
+// MARK: - login
+extension LoginViewController {
     func login() {
-        Auth.auth().signIn(withEmail: emailTextField?.text ?? "",
-            password: passwordTextField?.text ?? "") { (authResult, error) in
+        authen.signIn(
+            withEmail: emailTextField?.text ?? "",
+            password: passwordTextField?.text ?? ""
+        ) { (_, error) in
             if let errorCreate = error {
-                  let err = errorCreate as NSError
-                  switch err.code {
-                  case AuthErrorCode.wrongPassword.rawValue:
-                      self.validationPasswordLabel.text = "Password không chính xác"
-                      self.validationPasswordLabel.isHidden = false
-                  default:
-                     print("unknown error: \(err.localizedDescription)")
-                  }
-               } else {
-                   let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
-                   tabbarVC.modalPresentationStyle = .fullScreen
-                   self.present(tabbarVC, animated: true, completion: nil)
-               }
-            }
-        checkUserInfo()
+              let err = errorCreate as NSError
+              switch err.code {
+              case AuthErrorCode.wrongPassword.rawValue:
+                  self.validationPasswordLabel?.text = "Password không chính xác"
+                  self.validationPasswordLabel?.isHidden = false
+              default:
+                 print("unknown error: \(err.localizedDescription)")
+              }
+           } else {
+               self.onCheckUserIsLogin()
+           }
+        }
     }
 
-    func checkUserInfo() {
-        if Auth.auth().currentUser != nil {
-            let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
+    private func onCheckUserIsLogin() {
+        if authen.currentUser != nil {
+
+            onGetCurrentUserLogin()
+
+            let tabbarVC = TabbarController(
+                nibName: "TabbarController",
+                bundle: nil
+            )
             tabbarVC.modalPresentationStyle = .fullScreen
-            self.present(tabbarVC, animated: true, completion: nil)
+            self.present(
+                tabbarVC,
+                animated: true,
+                completion: nil
+            )
+        }
+    }
+
+    private func onGetCurrentUserLogin() {
+        let id = Auth.auth().currentUser?.uid
+        Firestore.firestore().collection("users").getDocuments() { [weak self] (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents
+                where id == document["uid"] as? String {
+                    guard let fullName = document["fullName"] as? String else {
+                        return
+                    }
+                    guard let phoneNumber = document["phoneNumber"] as? String else {
+                        return
+                    }
+                    guard let isAdmin = document["isAdmin"] as? Bool else {
+                        return
+                    }
+                    guard let password = document["password"] as? String else {
+                        return
+                    }
+                    guard let uid = document["uid"] as? String else {
+                        return
+                    }
+                    guard let email = document["email"] as? String else {
+                        return
+                    }
+                    
+                    let user = User(
+                        fullName: fullName,
+                        phoneNumber: phoneNumber,
+                        isAdmin: isAdmin,
+                        password: password,
+                        uid: uid,
+                        email: email
+                    )
+                    self?.userManager.setUserInfo(user)
+                }
+            }
         }
     }
 }
