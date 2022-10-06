@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listPetCell" rowHeight="92" id="KGk-i7-Jjw" customClass="ListPetTableViewCell" customModule="mock_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-JQ-ChR">
+                        <rect key="frame" x="10" y="6" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="gpf-ei-AV4"/>
+                            <constraint firstAttribute="height" constant="80" id="oKd-0F-RaZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYN-Y1-LVr">
+                        <rect key="frame" x="98" y="6" width="122.33333333333331" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loài thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-vW-hdr">
+                        <rect key="frame" x="100" y="64" width="109" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OOf-mt-Gar">
+                        <rect key="frame" x="286" y="32.666666666666664" width="30" height="27.000000000000007"/>
+                        <color key="tintColor" red="0.270588249" green="0.60392159219999997" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="2Ec-wX-UCR"/>
+                            <constraint firstAttribute="width" constant="30" id="xEu-nI-RqE"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9wq-JQ-ChR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4U2-jQ-Bew"/>
+                    <constraint firstItem="HYN-Y1-LVr" firstAttribute="top" secondItem="9wq-JQ-ChR" secondAttribute="top" id="6qC-bf-VUy"/>
+                    <constraint firstItem="HYN-Y1-LVr" firstAttribute="leading" secondItem="9wq-JQ-ChR" secondAttribute="trailing" constant="8" id="7Ka-IT-Zxg"/>
+                    <constraint firstItem="vh2-vW-hdr" firstAttribute="leading" secondItem="9wq-JQ-ChR" secondAttribute="trailing" constant="10" id="MyH-IE-nDn"/>
+                    <constraint firstItem="OOf-mt-Gar" firstAttribute="centerY" secondItem="9wq-JQ-ChR" secondAttribute="centerY" id="PmV-S0-wLi"/>
+                    <constraint firstAttribute="trailing" secondItem="OOf-mt-Gar" secondAttribute="trailing" constant="10" id="RSe-3k-bSo"/>
+                    <constraint firstItem="9wq-JQ-ChR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dex-g9-c2A"/>
+                    <constraint firstItem="vh2-vW-hdr" firstAttribute="bottom" secondItem="9wq-JQ-ChR" secondAttribute="bottom" id="zkw-be-dEf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="petAvatar" destination="9wq-JQ-ChR" id="F4w-qi-b4a"/>
+                <outlet property="petNameLabel" destination="HYN-Y1-LVr" id="pai-V8-gWx"/>
+                <outlet property="speciesLabel" destination="vh2-vW-hdr" id="4xC-7a-Y8L"/>
+            </connections>
+            <point key="canvasLocation" x="35.384615384615387" y="5.6872037914691944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Image 1" width="300" height="300"/>
+        <image name="chevron.right.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
+</document>

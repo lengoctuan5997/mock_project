@@ -29,7 +29,7 @@ extension ListViewController {
 
         listTableView.register(
             UINib(
-                nibName: "CategoryTableViewCell",
+                nibName: String(describing: CategoriesTableCell.self),
                  bundle: Bundle.main
             ),
             forCellReuseIdentifier: "categoryCell"
@@ -37,9 +37,9 @@ extension ListViewController {
         listTableView.register(
             UINib(
                 nibName: String(describing: SearchTableCell.self),
-                bundle: Bundle.main
+                bundle: .main
             ),
-            forCellReuseIdentifier: "searchCell")
+            forCellReuseIdentifier: "searchAnimalCell")
         listTableView.register(
             UINib(
                 nibName: "ListItemTableViewCell",
@@ -118,12 +118,12 @@ extension ListViewController: UITableViewDataSource {
 
     func initSearchCell(
         _ indexPath: IndexPath
-    ) -> SearchTableViewCell {
+    ) -> SearchTableCell {
         let cell = listTableView?.dequeueReusableCell(
             withIdentifier:
-            "searchCell",
+            "searchAnimalCell",
             for: indexPath
-        ) as? SearchTableViewCell ?? SearchTableViewCell()
+        ) as? SearchTableCell ?? SearchTableCell()
         return cell
     }
 

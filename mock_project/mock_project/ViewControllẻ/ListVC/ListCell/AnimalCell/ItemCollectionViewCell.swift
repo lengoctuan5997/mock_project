@@ -13,7 +13,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var animalLabel: UILabel?
     @IBOutlet weak var animalContainerView: UIView?
     @IBOutlet weak var animailNameContent: UIView?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         animalContainerView?.cardShadow()

@@ -11,10 +11,9 @@ class InformationPetViewController: UIViewController {
     @IBOutlet weak var avatarPet: UIImageView?
     @IBOutlet weak var petNameLabel: UILabel?
     @IBOutlet weak var informationPetTableView: UITableView?
-    @IBOutlet weak var containerView: UIView?
-    
+
     let informationPetCell: String = "informationPetCell"
-    var content: [String] = ["Date of birth", "Species", "Sex", "Color"]
+    var content: [String] = ["Ngày sinh", "Loài thú cưng", "Giới tính", "Màu thú cưng"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +23,16 @@ class InformationPetViewController: UIViewController {
 
 extension InformationPetViewController {
     private func setupUI() {
-        _ = view?.applyGradient()
         avatarPet?.layer.cornerRadius = (avatarPet?.frame.height ?? 100) / 2
         petNameLabel?.text = "Chos Quang"
         navigationController?.isNavigationBarHidden = false
-        let editButton = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(didTapEditButton))
+        let editButton = UIBarButtonItem(title: "Sửa", style: .done, target: self, action: #selector(didTapEditButton))
         navigationItem.rightBarButtonItem = editButton
         informationPetTableView?.delegate = self
         informationPetTableView?.dataSource = self
-        informationPetTableView?.register(
+        informationPetTableView?.register (
             UINib(
-                nibName: String(
+                nibName: String (
                     describing: InforPetTableViewCell.self
                 ),
                 bundle: nil
@@ -65,9 +63,9 @@ extension InformationPetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         content.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let inforPetCell = informationPetTableView?.dequeueReusableCell(
+        guard let inforPetCell = informationPetTableView?.dequeueReusableCell (
             withIdentifier: informationPetCell
         ) as? InforPetTableViewCell else {
             return InforPetTableViewCell()

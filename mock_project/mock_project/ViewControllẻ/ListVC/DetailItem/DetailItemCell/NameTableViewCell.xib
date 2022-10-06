@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,22 +20,27 @@
                         <rect key="frame" x="0.0" y="20" width="427" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oHR-2l-gpU">
-                                <rect key="frame" x="20" y="13.5" width="322" height="93"/>
+                                <rect key="frame" x="20" y="12.5" width="322" height="95"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bull dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-5D-jNs">
-                                        <rect key="frame" x="0.0" y="0.0" width="113" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-5D-jNs">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="38"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Bull dog">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="Chalkduster"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scotland, Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-3e-aQE">
-                                        <rect key="frame" x="0.0" y="44" width="106.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="46" width="106.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-qs-vXx">
-                                        <rect key="frame" x="0.0" y="72.5" width="81.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="74.5" width="81.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -45,16 +49,17 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-yt-fuW">
                                 <rect key="frame" x="362" y="35" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.8840433955" green="0.45948863029999998" blue="0.44312143329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rDb-9s-oda"/>
                                     <constraint firstAttribute="width" constant="50" id="uHH-xn-cvq"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="5" height="5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oHR-2l-gpU" firstAttribute="leading" secondItem="NAp-h0-EBG" secondAttribute="leading" constant="20" id="0V2-po-5gl"/>
                             <constraint firstAttribute="trailing" secondItem="8Vb-yt-fuW" secondAttribute="trailing" constant="15" id="Xvb-f0-JWk"/>
@@ -64,6 +69,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="NAp-h0-EBG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="HTq-QO-AsN"/>
                     <constraint firstItem="NAp-h0-EBG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dx6-pm-QlF"/>
@@ -72,15 +78,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="heartButton" destination="8Vb-yt-fuW" id="Qe9-NN-Kie"/>
             </connections>
             <point key="canvasLocation" x="267.39130434782612" y="123.21428571428571"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

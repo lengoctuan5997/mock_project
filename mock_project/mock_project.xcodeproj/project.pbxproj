@@ -34,6 +34,26 @@
 		9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA93D28EAEA2600319CCE /* PostCell.xib */; };
 		9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */; };
 		9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */; };
+		9D8270E828EE725300C9D6D3 /* InforPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270E428EE725300C9D6D3 /* InforPetTableViewCell.swift */; };
+		9D8270E928EE725300C9D6D3 /* InformationPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270E528EE725300C9D6D3 /* InformationPetViewController.swift */; };
+		9D8270EA28EE725300C9D6D3 /* InforPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270E628EE725300C9D6D3 /* InforPetTableViewCell.xib */; };
+		9D8270EB28EE725300C9D6D3 /* InformationPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270E728EE725300C9D6D3 /* InformationPetViewController.xib */; };
+		9D8270F128EE72D100C9D6D3 /* HealthBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270ED28EE72D100C9D6D3 /* HealthBookTableViewCell.xib */; };
+		9D8270F228EE72D100C9D6D3 /* HealthBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270EE28EE72D100C9D6D3 /* HealthBookTableViewCell.swift */; };
+		9D8270F328EE72D100C9D6D3 /* PetHealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270EF28EE72D100C9D6D3 /* PetHealthBookViewController.swift */; };
+		9D8270F428EE72D100C9D6D3 /* PetHealthBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270F028EE72D100C9D6D3 /* PetHealthBookViewController.xib */; };
+		9D82710428EE730500C9D6D3 /* ListPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270F728EE730400C9D6D3 /* ListPetViewController.xib */; };
+		9D82710528EE730500C9D6D3 /* ListPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270F828EE730400C9D6D3 /* ListPetTableViewCell.swift */; };
+		9D82710628EE730500C9D6D3 /* LogoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270F928EE730400C9D6D3 /* LogoListTableViewCell.xib */; };
+		9D82710728EE730500C9D6D3 /* ListPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270FA28EE730400C9D6D3 /* ListPetViewController.swift */; };
+		9D82710828EE730500C9D6D3 /* ListPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270FB28EE730400C9D6D3 /* ListPetTableViewCell.xib */; };
+		9D82710928EE730500C9D6D3 /* LogoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270FC28EE730400C9D6D3 /* LogoListTableViewCell.swift */; };
+		9D82710A28EE730500C9D6D3 /* AddAvatarPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8270FE28EE730400C9D6D3 /* AddAvatarPetTableViewCell.swift */; };
+		9D82710B28EE730500C9D6D3 /* AddInformationPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8270FF28EE730400C9D6D3 /* AddInformationPetTableViewCell.xib */; };
+		9D82710C28EE730500C9D6D3 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82710028EE730400C9D6D3 /* AddPetViewController.swift */; };
+		9D82710D28EE730500C9D6D3 /* AddInformationPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82710128EE730400C9D6D3 /* AddInformationPetTableViewCell.swift */; };
+		9D82710E28EE730500C9D6D3 /* AddAvatarPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82710228EE730400C9D6D3 /* AddAvatarPetTableViewCell.xib */; };
+		9D82710F28EE730500C9D6D3 /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D82710328EE730400C9D6D3 /* AddPetViewController.xib */; };
 		9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */; };
 		9D8DD30B28EC081B002DEE57 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */; };
 		9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */; };
@@ -46,14 +66,6 @@
 		9D8DD35228EC35F3002DEE57 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD34A28EC35F3002DEE57 /* InformationTableViewCell.xib */; };
 		9D8DD35328EC35F3002DEE57 /* LogOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD34B28EC35F3002DEE57 /* LogOutTableViewCell.xib */; };
 		9D8DD35428EC35F3002DEE57 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */; };
-		9D8DD35A28EC35FA002DEE57 /* InforPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD35628EC35FA002DEE57 /* InforPetTableViewCell.swift */; };
-		9D8DD35B28EC35FA002DEE57 /* InformationPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD35728EC35FA002DEE57 /* InformationPetViewController.swift */; };
-		9D8DD35C28EC35FA002DEE57 /* InforPetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD35828EC35FA002DEE57 /* InforPetTableViewCell.xib */; };
-		9D8DD35D28EC35FA002DEE57 /* InformationPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD35928EC35FA002DEE57 /* InformationPetViewController.xib */; };
-		9D8DD36328EC3602002DEE57 /* HealthBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD35F28EC3602002DEE57 /* HealthBookTableViewCell.xib */; };
-		9D8DD36428EC3602002DEE57 /* HealthBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD36028EC3602002DEE57 /* HealthBookTableViewCell.swift */; };
-		9D8DD36528EC3602002DEE57 /* PetHealthBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD36128EC3602002DEE57 /* PetHealthBookViewController.swift */; };
-		9D8DD36628EC3602002DEE57 /* PetHealthBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD36228EC3602002DEE57 /* PetHealthBookViewController.xib */; };
 		9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39228ED3573002DEE57 /* StretchyTableHeaderView.swift */; };
 		9D8DD39728ED9E54002DEE57 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DD39528ED9E54002DEE57 /* TrainingViewController.swift */; };
 		9D8DD39828ED9E54002DEE57 /* TrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8DD39628ED9E54002DEE57 /* TrainingViewController.xib */; };
@@ -114,6 +126,26 @@
 		9D7BA93D28EAEA2600319CCE /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		9D7BA94028EAEAE900319CCE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		9D7BA94128EAEAE900319CCE /* SearchTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableCell.xib; sourceTree = "<group>"; };
+		9D8270E428EE725300C9D6D3 /* InforPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforPetTableViewCell.swift; sourceTree = "<group>"; };
+		9D8270E528EE725300C9D6D3 /* InformationPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPetViewController.swift; sourceTree = "<group>"; };
+		9D8270E628EE725300C9D6D3 /* InforPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforPetTableViewCell.xib; sourceTree = "<group>"; };
+		9D8270E728EE725300C9D6D3 /* InformationPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationPetViewController.xib; sourceTree = "<group>"; };
+		9D8270ED28EE72D100C9D6D3 /* HealthBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthBookTableViewCell.xib; sourceTree = "<group>"; };
+		9D8270EE28EE72D100C9D6D3 /* HealthBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBookTableViewCell.swift; sourceTree = "<group>"; };
+		9D8270EF28EE72D100C9D6D3 /* PetHealthBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthBookViewController.swift; sourceTree = "<group>"; };
+		9D8270F028EE72D100C9D6D3 /* PetHealthBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetHealthBookViewController.xib; sourceTree = "<group>"; };
+		9D8270F728EE730400C9D6D3 /* ListPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPetViewController.xib; sourceTree = "<group>"; };
+		9D8270F828EE730400C9D6D3 /* ListPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPetTableViewCell.swift; sourceTree = "<group>"; };
+		9D8270F928EE730400C9D6D3 /* LogoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoListTableViewCell.xib; sourceTree = "<group>"; };
+		9D8270FA28EE730400C9D6D3 /* ListPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPetViewController.swift; sourceTree = "<group>"; };
+		9D8270FB28EE730400C9D6D3 /* ListPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPetTableViewCell.xib; sourceTree = "<group>"; };
+		9D8270FC28EE730400C9D6D3 /* LogoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoListTableViewCell.swift; sourceTree = "<group>"; };
+		9D8270FE28EE730400C9D6D3 /* AddAvatarPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAvatarPetTableViewCell.swift; sourceTree = "<group>"; };
+		9D8270FF28EE730400C9D6D3 /* AddInformationPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInformationPetTableViewCell.xib; sourceTree = "<group>"; };
+		9D82710028EE730400C9D6D3 /* AddPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
+		9D82710128EE730400C9D6D3 /* AddInformationPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInformationPetTableViewCell.swift; sourceTree = "<group>"; };
+		9D82710228EE730400C9D6D3 /* AddAvatarPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAvatarPetTableViewCell.xib; sourceTree = "<group>"; };
+		9D82710328EE730400C9D6D3 /* AddPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPetViewController.xib; sourceTree = "<group>"; };
 		9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		9D8DD30D28EC083C002DEE57 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
@@ -126,14 +158,6 @@
 		9D8DD34A28EC35F3002DEE57 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
 		9D8DD34B28EC35F3002DEE57 /* LogOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogOutTableViewCell.xib; sourceTree = "<group>"; };
 		9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		9D8DD35628EC35FA002DEE57 /* InforPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforPetTableViewCell.swift; sourceTree = "<group>"; };
-		9D8DD35728EC35FA002DEE57 /* InformationPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPetViewController.swift; sourceTree = "<group>"; };
-		9D8DD35828EC35FA002DEE57 /* InforPetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InforPetTableViewCell.xib; sourceTree = "<group>"; };
-		9D8DD35928EC35FA002DEE57 /* InformationPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationPetViewController.xib; sourceTree = "<group>"; };
-		9D8DD35F28EC3602002DEE57 /* HealthBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthBookTableViewCell.xib; sourceTree = "<group>"; };
-		9D8DD36028EC3602002DEE57 /* HealthBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBookTableViewCell.swift; sourceTree = "<group>"; };
-		9D8DD36128EC3602002DEE57 /* PetHealthBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHealthBookViewController.swift; sourceTree = "<group>"; };
-		9D8DD36228EC3602002DEE57 /* PetHealthBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetHealthBookViewController.xib; sourceTree = "<group>"; };
 		9D8DD39228ED3573002DEE57 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
 		9D8DD39528ED9E54002DEE57 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		9D8DD39628ED9E54002DEE57 /* TrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingViewController.xib; sourceTree = "<group>"; };
@@ -246,9 +270,10 @@
 		9D36D49C28E5B446009B4061 /* AccountVC */ = {
 			isa = PBXGroup;
 			children = (
+				9D8270F528EE730400C9D6D3 /* ListPet */,
+				9D8270EC28EE72D100C9D6D3 /* PetHealthBook */,
+				9D8270E328EE725300C9D6D3 /* InformationPet */,
 				9D8DD30728EC07AF002DEE57 /* FavoriteVC */,
-				9D8DD35E28EC3602002DEE57 /* PetHealthBook */,
-				9D8DD35528EC35FA002DEE57 /* InformationPet */,
 				9D8DD34428EC35F3002DEE57 /* UserAccountVC */,
 			);
 			path = AccountVC;
@@ -350,6 +375,63 @@
 			path = PostCell;
 			sourceTree = "<group>";
 		};
+		9D8270E328EE725300C9D6D3 /* InformationPet */ = {
+			isa = PBXGroup;
+			children = (
+				9D8270E428EE725300C9D6D3 /* InforPetTableViewCell.swift */,
+				9D8270E528EE725300C9D6D3 /* InformationPetViewController.swift */,
+				9D8270E628EE725300C9D6D3 /* InforPetTableViewCell.xib */,
+				9D8270E728EE725300C9D6D3 /* InformationPetViewController.xib */,
+			);
+			path = InformationPet;
+			sourceTree = "<group>";
+		};
+		9D8270EC28EE72D100C9D6D3 /* PetHealthBook */ = {
+			isa = PBXGroup;
+			children = (
+				9D8270ED28EE72D100C9D6D3 /* HealthBookTableViewCell.xib */,
+				9D8270EE28EE72D100C9D6D3 /* HealthBookTableViewCell.swift */,
+				9D8270EF28EE72D100C9D6D3 /* PetHealthBookViewController.swift */,
+				9D8270F028EE72D100C9D6D3 /* PetHealthBookViewController.xib */,
+			);
+			path = PetHealthBook;
+			sourceTree = "<group>";
+		};
+		9D8270F528EE730400C9D6D3 /* ListPet */ = {
+			isa = PBXGroup;
+			children = (
+				9D8270F628EE730400C9D6D3 /* HomeList */,
+				9D8270FD28EE730400C9D6D3 /* AddPet */,
+			);
+			path = ListPet;
+			sourceTree = "<group>";
+		};
+		9D8270F628EE730400C9D6D3 /* HomeList */ = {
+			isa = PBXGroup;
+			children = (
+				9D8270F728EE730400C9D6D3 /* ListPetViewController.xib */,
+				9D8270F828EE730400C9D6D3 /* ListPetTableViewCell.swift */,
+				9D8270F928EE730400C9D6D3 /* LogoListTableViewCell.xib */,
+				9D8270FA28EE730400C9D6D3 /* ListPetViewController.swift */,
+				9D8270FB28EE730400C9D6D3 /* ListPetTableViewCell.xib */,
+				9D8270FC28EE730400C9D6D3 /* LogoListTableViewCell.swift */,
+			);
+			path = HomeList;
+			sourceTree = "<group>";
+		};
+		9D8270FD28EE730400C9D6D3 /* AddPet */ = {
+			isa = PBXGroup;
+			children = (
+				9D8270FE28EE730400C9D6D3 /* AddAvatarPetTableViewCell.swift */,
+				9D8270FF28EE730400C9D6D3 /* AddInformationPetTableViewCell.xib */,
+				9D82710028EE730400C9D6D3 /* AddPetViewController.swift */,
+				9D82710128EE730400C9D6D3 /* AddInformationPetTableViewCell.swift */,
+				9D82710228EE730400C9D6D3 /* AddAvatarPetTableViewCell.xib */,
+				9D82710328EE730400C9D6D3 /* AddPetViewController.xib */,
+			);
+			path = AddPet;
+			sourceTree = "<group>";
+		};
 		9D8DD30728EC07AF002DEE57 /* FavoriteVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,28 +470,6 @@
 				9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */,
 			);
 			path = UserAccountVC;
-			sourceTree = "<group>";
-		};
-		9D8DD35528EC35FA002DEE57 /* InformationPet */ = {
-			isa = PBXGroup;
-			children = (
-				9D8DD35628EC35FA002DEE57 /* InforPetTableViewCell.swift */,
-				9D8DD35728EC35FA002DEE57 /* InformationPetViewController.swift */,
-				9D8DD35828EC35FA002DEE57 /* InforPetTableViewCell.xib */,
-				9D8DD35928EC35FA002DEE57 /* InformationPetViewController.xib */,
-			);
-			path = InformationPet;
-			sourceTree = "<group>";
-		};
-		9D8DD35E28EC3602002DEE57 /* PetHealthBook */ = {
-			isa = PBXGroup;
-			children = (
-				9D8DD35F28EC3602002DEE57 /* HealthBookTableViewCell.xib */,
-				9D8DD36028EC3602002DEE57 /* HealthBookTableViewCell.swift */,
-				9D8DD36128EC3602002DEE57 /* PetHealthBookViewController.swift */,
-				9D8DD36228EC3602002DEE57 /* PetHealthBookViewController.xib */,
-			);
-			path = PetHealthBook;
 			sourceTree = "<group>";
 		};
 		9D8DD36728EC365D002DEE57 /* PetCell */ = {
@@ -461,7 +521,6 @@
 		9D8DD39928EDA034002DEE57 /* ListCell */ = {
 			isa = PBXGroup;
 			children = (
-				9D8DD3CD28EDAD34002DEE57 /* New Group */,
 				9D8DD3CC28EDA830002DEE57 /* AnimalCell */,
 				9D8DD39B28EDA034002DEE57 /* ListItemTableViewCell.xib */,
 				9D8DD39C28EDA034002DEE57 /* SearchTableViewCell.xib */,
@@ -486,10 +545,10 @@
 		9D8DD3A528EDA034002DEE57 /* DetailItemCell */ = {
 			isa = PBXGroup;
 			children = (
+				9D8DD3A928EDA034002DEE57 /* DescriptionTableViewCell.swift */,
+				9D8DD3A828EDA034002DEE57 /* InforPetsCell.swift */,
 				9D8DD3A628EDA034002DEE57 /* NameTableViewCell.swift */,
 				9D8DD3A728EDA034002DEE57 /* DescriptionTableViewCell.xib */,
-				9D8DD3A828EDA034002DEE57 /* InforPetsCell.swift */,
-				9D8DD3A928EDA034002DEE57 /* DescriptionTableViewCell.swift */,
 				9D8DD3AA28EDA034002DEE57 /* InforPetsCell.xib */,
 				9D8DD3AB28EDA034002DEE57 /* NameTableViewCell.xib */,
 			);
@@ -503,13 +562,6 @@
 				9D8DD39A28EDA034002DEE57 /* ItemCollectionViewCell.swift */,
 			);
 			path = AnimalCell;
-			sourceTree = "<group>";
-		};
-		9D8DD3CD28EDAD34002DEE57 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9DA6AB4228E5B6BD00718B19 /* TabbarController */ = {
@@ -609,38 +661,44 @@
 				9D8DD3AD28EDA034002DEE57 /* ListItemTableViewCell.xib in Resources */,
 				9D7BA93428EADD1500319CCE /* HandBookViewController.xib in Resources */,
 				9D8DD3CB28EDA178002DEE57 /* ListViewController.xib in Resources */,
-				9D8DD36628EC3602002DEE57 /* PetHealthBookViewController.xib in Resources */,
+				9D8270F428EE72D100C9D6D3 /* PetHealthBookViewController.xib in Resources */,
 				9D8DD35228EC35F3002DEE57 /* InformationTableViewCell.xib in Resources */,
+				9D8270F128EE72D100C9D6D3 /* HealthBookTableViewCell.xib in Resources */,
 				9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */,
 				9D36D48128E5B20E009B4061 /* Assets.xcassets in Resources */,
 				9D8DD3AE28EDA034002DEE57 /* SearchTableViewCell.xib in Resources */,
 				9D7BA92128E9599100319CCE /* FavoriteTableCell.xib in Resources */,
+				9D82710E28EE730500C9D6D3 /* AddAvatarPetTableViewCell.xib in Resources */,
 				9D7BA93928EAE9FF00319CCE /* SearchCell.xib in Resources */,
 				9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */,
 				9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */,
 				9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */,
-				9D8DD36328EC3602002DEE57 /* HealthBookTableViewCell.xib in Resources */,
 				9D8DD31028EC083C002DEE57 /* FavoriteCell.xib in Resources */,
 				9D8DD3BA28EDA034002DEE57 /* InforPetsCell.xib in Resources */,
 				9D8DD3B728EDA034002DEE57 /* DescriptionTableViewCell.xib in Resources */,
+				9D82710828EE730500C9D6D3 /* ListPetTableViewCell.xib in Resources */,
 				9D8DD3B428EDA034002DEE57 /* DetailItemViewController.xib in Resources */,
+				9D8270EA28EE725300C9D6D3 /* InforPetTableViewCell.xib in Resources */,
 				9D7BA92628E959A600319CCE /* LibraryTableCell.xib in Resources */,
-				9D8DD35C28EC35FA002DEE57 /* InforPetTableViewCell.xib in Resources */,
 				9D8DD39828ED9E54002DEE57 /* TrainingViewController.xib in Resources */,
 				9D36D47C28E5B20C009B4061 /* Main.storyboard in Resources */,
 				9D8DD30B28EC081B002DEE57 /* FavoriteViewController.xib in Resources */,
 				9D8DD34D28EC35F3002DEE57 /* AccountViewController.xib in Resources */,
 				9D8DD3B328EDA034002DEE57 /* CategoryTableViewCell.xib in Resources */,
+				9D8270EB28EE725300C9D6D3 /* InformationPetViewController.xib in Resources */,
+				9D82710B28EE730500C9D6D3 /* AddInformationPetTableViewCell.xib in Resources */,
+				9D82710F28EE730500C9D6D3 /* AddPetViewController.xib in Resources */,
 				9D8DD35128EC35F3002DEE57 /* PetTableViewCell.xib in Resources */,
 				9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */,
 				9D7BA91B28E9595B00319CCE /* CategoriesTableCell.xib in Resources */,
-				9D8DD35D28EC35FA002DEE57 /* InformationPetViewController.xib in Resources */,
 				9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */,
+				9D82710428EE730500C9D6D3 /* ListPetViewController.xib in Resources */,
 				9D8DD35328EC35F3002DEE57 /* LogOutTableViewCell.xib in Resources */,
 				9D8DD3AF28EDA034002DEE57 /* ItemCollectionViewCell.xib in Resources */,
 				9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */,
 				9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */,
 				9D8DD3BB28EDA034002DEE57 /* NameTableViewCell.xib in Resources */,
+				9D82710628EE730500C9D6D3 /* LogoListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,30 +730,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */,
+				9D8270F228EE72D100C9D6D3 /* HealthBookTableViewCell.swift in Sources */,
 				9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */,
+				9D82710928EE730500C9D6D3 /* LogoListTableViewCell.swift in Sources */,
+				9D82710528EE730500C9D6D3 /* ListPetTableViewCell.swift in Sources */,
 				9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */,
+				9D82710D28EE730500C9D6D3 /* AddInformationPetTableViewCell.swift in Sources */,
 				9D8DD34F28EC35F3002DEE57 /* InformationTableViewCell.swift in Sources */,
 				9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */,
-				9D8DD35A28EC35FA002DEE57 /* InforPetTableViewCell.swift in Sources */,
 				9D36D47928E5B20C009B4061 /* HomeController.swift in Sources */,
 				9D8DD35028EC35F3002DEE57 /* LogOutTableViewCell.swift in Sources */,
+				9D82710A28EE730500C9D6D3 /* AddAvatarPetTableViewCell.swift in Sources */,
+				9D8270E828EE725300C9D6D3 /* InforPetTableViewCell.swift in Sources */,
 				9D8DD3B528EDA034002DEE57 /* DetailItemViewController.swift in Sources */,
-				9D8DD36528EC3602002DEE57 /* PetHealthBookViewController.swift in Sources */,
 				9D8DD3B228EDA034002DEE57 /* SearchTableViewCell.swift in Sources */,
 				9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */,
 				9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */,
 				9D8DD35428EC35F3002DEE57 /* AccountViewController.swift in Sources */,
 				9D8DD3B628EDA034002DEE57 /* NameTableViewCell.swift in Sources */,
+				9D8270F328EE72D100C9D6D3 /* PetHealthBookViewController.swift in Sources */,
 				9D8DD3AC28EDA034002DEE57 /* ItemCollectionViewCell.swift in Sources */,
 				9D8DD3B928EDA034002DEE57 /* DescriptionTableViewCell.swift in Sources */,
 				9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */,
 				9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */,
-				9D8DD35B28EC35FA002DEE57 /* InformationPetViewController.swift in Sources */,
 				9DAD17DA28E6F69100296533 /* CategoriesCell.swift in Sources */,
 				9D36D47F28E5B20C009B4061 /* mock_project.xcdatamodeld in Sources */,
 				9D36D47528E5B20C009B4061 /* AppDelegate.swift in Sources */,
 				9D8DD39728ED9E54002DEE57 /* TrainingViewController.swift in Sources */,
-				9D8DD36428EC3602002DEE57 /* HealthBookTableViewCell.swift in Sources */,
 				9D7BA91A28E9595B00319CCE /* CategoriesTableCell.swift in Sources */,
 				9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */,
 				9D8DD34E28EC35F3002DEE57 /* PetTableViewCell.swift in Sources */,
@@ -703,12 +764,15 @@
 				9D8DD3B128EDA034002DEE57 /* CategoryTableViewCell.swift in Sources */,
 				9D7BA92028E9599100319CCE /* FavoriteTableCell.swift in Sources */,
 				9D36D49328E5B426009B4061 /* HomeViewController.swift in Sources */,
+				9D8270E928EE725300C9D6D3 /* InformationPetViewController.swift in Sources */,
 				9D7BA93E28EAEA2600319CCE /* PostCell.swift in Sources */,
 				9D36D47728E5B20C009B4061 /* SceneDelegate.swift in Sources */,
 				9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */,
 				9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */,
 				9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */,
+				9D82710728EE730500C9D6D3 /* ListPetViewController.swift in Sources */,
 				9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */,
+				9D82710C28EE730500C9D6D3 /* AddPetViewController.swift in Sources */,
 				9D8DD3CA28EDA178002DEE57 /* ListViewController.swift in Sources */,
 				9D7BA92528E959A600319CCE /* LibraryTableCell.swift in Sources */,
 			);
