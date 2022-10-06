@@ -1,0 +1,4 @@
+type_name:
+  allowed_symbols: "_"
+cyclomatic_complexity:
+  ignores_case_statements: true

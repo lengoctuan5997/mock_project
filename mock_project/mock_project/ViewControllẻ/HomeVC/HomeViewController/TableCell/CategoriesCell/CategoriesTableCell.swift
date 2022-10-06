@@ -34,7 +34,6 @@ extension CategoriesTableCell {
         flowLayout?.scrollDirection = .horizontal
         categoriesCollectionView?.delegate = self
         categoriesCollectionView?.dataSource = self
-//        cellView?.applyGradient()
     }
 }
 

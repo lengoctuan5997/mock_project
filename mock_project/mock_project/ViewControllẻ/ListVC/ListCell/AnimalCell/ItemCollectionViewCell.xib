@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPx-Y6-bbw">
-                        <rect key="frame" x="5" y="5" width="190" height="290"/>
+                        <rect key="frame" x="10" y="5" width="180" height="285"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvB-71-42A">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="290"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvB-71-42A">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="285"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAL-O5-e4H">
-                                <rect key="frame" x="0.0" y="250" width="190" height="40"/>
+                                <rect key="frame" x="0.0" y="245" width="180" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCw-DH-rFU">
-                                        <rect key="frame" x="10" y="0.0" width="170" height="40"/>
+                                        <rect key="frame" x="10" y="0.0" width="160" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aR8-AL-qaw"/>
@@ -61,10 +61,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="qPx-Y6-bbw" secondAttribute="trailing" constant="5" id="IMk-gr-RNd"/>
+                <constraint firstAttribute="trailing" secondItem="qPx-Y6-bbw" secondAttribute="trailing" constant="10" id="IMk-gr-RNd"/>
                 <constraint firstItem="qPx-Y6-bbw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="IWY-RS-obI"/>
-                <constraint firstItem="qPx-Y6-bbw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="U8k-om-ALl"/>
-                <constraint firstAttribute="bottom" secondItem="qPx-Y6-bbw" secondAttribute="bottom" constant="5" id="s7t-n3-tF7"/>
+                <constraint firstItem="qPx-Y6-bbw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="U8k-om-ALl"/>
+                <constraint firstAttribute="bottom" secondItem="qPx-Y6-bbw" secondAttribute="bottom" constant="10" id="s7t-n3-tF7"/>
             </constraints>
             <size key="customSize" width="200" height="300"/>
             <connections>

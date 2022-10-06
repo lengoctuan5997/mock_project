@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class AccountViewController: UIViewController {
     @IBOutlet weak var avatarUserImageView: UIImageView?
@@ -117,6 +119,19 @@ extension AccountViewController: UITableViewDelegate {
                 bundle: .main
             )
             navigationController?.pushViewController(favoriteVC, animated: true)
+        }
+        if indexPath.section == 2 && indexPath.row == 0 {
+            print("Log out")
+            do {
+                try Auth.auth().signOut()
+                let loginVC = LoginViewController(
+                    nibName: String(describing: LoginViewController.self),
+                    bundle: .main
+                )
+                navigationController?.pushViewController(loginVC, animated: true)
+            } catch {
+                print("Sign out error")
+            }
         }
         accountTableView?.deselectRow(at: indexPath, animated: true)
     }

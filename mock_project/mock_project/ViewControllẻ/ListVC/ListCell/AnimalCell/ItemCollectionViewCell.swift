@@ -22,4 +22,17 @@ class ItemCollectionViewCell: UICollectionViewCell {
         animalImageView?.clipsToBounds = true
         animalImageView?.layer.cornerRadius = 15
     }
+    
+    override func prepareForReuse() {
+        animalImageView?.image = nil
+        animalLabel?.text = nil
+    }
+}
+
+// MARK: - config data
+extension ItemCollectionViewCell {
+    func configData(_ animal: Animal) {
+        animalImageView?.image = UIImage(named: animal.image)
+        animalLabel?.text = animal.type
+    }
 }
