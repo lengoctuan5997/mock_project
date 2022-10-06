@@ -18,5 +18,15 @@ class InformationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
+    override func prepareForReuse() {
+        detailLabel?.text = nil
+    }
+}
+// MARK: - config UI
+extension InformationTableViewCell {
+    func configUI(_ title: String, _ detail: String) {
+        titleLabel?.text = title
+        detailLabel?.text = detail
+    }
 }

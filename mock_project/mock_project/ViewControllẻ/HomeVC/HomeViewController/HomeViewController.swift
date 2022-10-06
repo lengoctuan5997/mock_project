@@ -13,32 +13,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var contentView: UIView?
     @IBOutlet weak var homeContentTable: UITableView?
     @IBOutlet weak var accountNameLabel: UILabel?
-    
+
+    let userManager = UserManager.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
 
         configTableView()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        let id = Auth.auth().currentUser?.uid
-        super.viewWillAppear(animated)
-
-        Firestore.firestore().collection("users").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    if id == document["uid"] as? String {
-                        guard let fullName = document["fullName"] as? String else {
-                            return
-                        }
-                        self.accountNameLabel?.text = fullName
-                        print(fullName)
-                    }
-                }
-            }
-        }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.accountNameLabel?.text = self.userManager.getUserInfo().fullName
     }
 }
 // MARK: - config View
@@ -78,17 +64,6 @@ extension HomeViewController {
         homeContentTable?.dataSource = self
 //        homeContentTable?.sectionFooterHeight = 10
         homeContentTable?.sectionHeaderHeight = 10
-    }
-
-    @objc
-    func didTapNavToHandBookView(_ notifi: Notification) {
-        let handBookVC = HandBookViewController(
-            nibName: String(
-                describing: HandBookViewController.self
-            ),
-            bundle: .main
-        )
-        navigationController?.pushViewController(handBookVC, animated: true)
     }
 }
 // MARK: - table delegate

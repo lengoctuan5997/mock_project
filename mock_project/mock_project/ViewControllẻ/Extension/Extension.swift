@@ -73,8 +73,7 @@ extension UIViewController {
         view.addGestureRecognizer(tap)
     }
 
-    @objc func dismissKeyboard()
-    {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 }
@@ -83,4 +82,12 @@ extension Notification.Name {
     static let notiFicationNameList: Notification.Name = Notification.Name("tabBar.List")
 
     static let notiFicationNameHandBook: Notification.Name = Notification.Name("tabBar.handBook")
+}
+
+extension UITextField {
+    func paddingLeft() {
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
 }

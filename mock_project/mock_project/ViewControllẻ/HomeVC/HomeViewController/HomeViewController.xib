@@ -21,12 +21,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ak-VH-DKw">
-                    <rect key="frame" x="0.0" y="44" width="375" height="70"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="40"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-IF-F3d">
-                            <rect key="frame" x="162" y="24.666666666666671" width="51" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-IF-F3d">
+                            <rect key="frame" x="176" y="5.3333333333333339" width="23.333333333333343" height="29.333333333333329"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Hi">
+                                    <attributes>
+                                        <font key="NSFont" size="23" name="Chalkduster"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -34,14 +40,14 @@
                     <constraints>
                         <constraint firstItem="LdS-IF-F3d" firstAttribute="centerY" secondItem="2ak-VH-DKw" secondAttribute="centerY" id="AAL-Pk-Omc"/>
                         <constraint firstItem="LdS-IF-F3d" firstAttribute="centerX" secondItem="2ak-VH-DKw" secondAttribute="centerX" id="gAY-i2-vHQ"/>
-                        <constraint firstAttribute="height" constant="70" id="gpZ-9z-o7U"/>
+                        <constraint firstAttribute="height" constant="40" id="gpZ-9z-o7U"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNT-Cg-YLK">
-                    <rect key="frame" x="0.0" y="114" width="375" height="698"/>
+                    <rect key="frame" x="0.0" y="84" width="375" height="728"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-V8-z01">
-                            <rect key="frame" x="5" y="30" width="365" height="668"/>
+                            <rect key="frame" x="5" y="30" width="365" height="698"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>

@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resetForm()
+        configUI()
     }
 
     @IBAction func didTapSignUp(_ sender: Any) {
@@ -39,21 +40,6 @@ class SignUpViewController: UIViewController {
         self.present(loginVC, animated: true, completion: nil)
     }
 
-    func resetForm() {
-        submitFormButton.isEnabled = false
-
-        validationNameLabel?.isHidden = true
-        validationPhoneLabel?.isHidden = true
-        validationEmailLabel?.isHidden = true
-        validationPassword?.isHidden = true
-        validationConfirmPassLabel?.isHidden = true
-
-        validationNameLabel?.text = ""
-        validationPhoneLabel?.text = ""
-        validationEmailLabel?.text = ""
-        validationPassword?.text = ""
-        validationConfirmPassLabel?.text = ""
-    }
 
     func validationSignUp() {
         if passwordTextField?.text == confirmPasswordTextField?.text {
@@ -186,9 +172,7 @@ class SignUpViewController: UIViewController {
     }
 
     func invalidConfirmPassword(_ value: String) -> String? {
-        if value == passwordTextField?.text {
-            return nil
-        } else {
+        if value != passwordTextField?.text {
             return "Mật khẩu không chính xác"
         }
         return nil
@@ -236,5 +220,46 @@ class SignUpViewController: UIViewController {
                    self.present(successVC, animated: true, completion: nil)
                }
         }
+    }
+}
+
+// MARK: - CONFIG
+extension SignUpViewController {
+    func configUI() {
+        fullNameTextField?.cardShadow()
+        fullNameTextField?.paddingLeft()
+        fullNameTextField?.layer.cornerRadius = 15
+        
+        phoneTextField?.cardShadow()
+        phoneTextField?.paddingLeft()
+        phoneTextField?.layer.cornerRadius = 15
+        
+        emailTextField?.cardShadow()
+        emailTextField?.paddingLeft()
+        emailTextField?.layer.cornerRadius = 15
+        
+        passwordTextField?.cardShadow()
+        passwordTextField?.paddingLeft()
+        passwordTextField?.layer.cornerRadius = 15
+        
+        confirmPasswordTextField?.cardShadow()
+        confirmPasswordTextField?.paddingLeft()
+        confirmPasswordTextField?.layer.cornerRadius = 15
+    }
+    
+    func resetForm() {
+        submitFormButton.isEnabled = false
+
+        validationNameLabel?.isHidden = true
+        validationPhoneLabel?.isHidden = true
+        validationEmailLabel?.isHidden = true
+        validationPassword?.isHidden = true
+        validationConfirmPassLabel?.isHidden = true
+
+        validationNameLabel?.text = ""
+        validationPhoneLabel?.text = ""
+        validationEmailLabel?.text = ""
+        validationPassword?.text = ""
+        validationConfirmPassLabel?.text = ""
     }
 }

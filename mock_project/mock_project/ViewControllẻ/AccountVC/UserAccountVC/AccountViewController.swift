@@ -15,11 +15,13 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var avatarAccount: UIImageView?
     @IBOutlet weak var containerView: UIView?
     
-    let informationCell: String = "informationCell"
-    let petPageCell: String = "petPageCell"
-    let logOutCell: String = "logOutCell"
-    var inforAccount: [String] = ["Tên", "Địa chỉ", "Số điện thoại"]
-    var petPage: [String] = ["Thú cưng của tôi", "Sổ sức khoẻ thú cưng", "Yêu thích"]
+    private let informationCell: String = "informationCell"
+    private let petPageCell: String = "petPageCell"
+    private let logOutCell: String = "logOutCell"
+    private var inforAccount: [String] = ["Tên", "Số điện thoại", "Email"]
+    private var petPage: [String] = ["Thú cưng của tôi", "Sổ sức khoẻ thú cưng", "Yêu thích"]
+    private var userInfo: [String] = []
+    private let userManager = UserManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +71,11 @@ extension AccountViewController {
         headerTableView.imageView.image = UIImage(named: "dog_f3")
         accountTableView?.tableHeaderView = headerTableView
         accountTableView?.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+        let user: User = userManager.getUserInfo()
+        userInfo.append(user.fullName ?? "")
+        userInfo.append(user.phoneNumber ?? "")
+        userInfo.append(user.email ?? "")
+//        userInfo = [user.fullName, user.phoneNumber, user.email]
     }
 }
 
@@ -149,6 +156,8 @@ extension AccountViewController: UITableViewDataSource {
         numberOfRowsInSection section: Int
     ) -> Int {
         switch section {
+        case 0:
+            return userInfo.count
         case 2:
             return 1
         default:
@@ -167,6 +176,7 @@ extension AccountViewController: UITableViewDataSource {
             ) as? InformationTableViewCell else {
                 return UITableViewCell()
             }
+            inforCell.configUI(inforAccount[indexPath.row], userInfo[indexPath.row])
             return inforCell
         case 1:
             guard let petPageCell = accountTableView?.dequeueReusableCell(
