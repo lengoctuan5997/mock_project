@@ -10,38 +10,51 @@ import UIKit
 class DetailItemViewController: UIViewController {
     @IBOutlet weak var animalTableView: UITableView?
     @IBOutlet weak var containerView: UIView?
+    @IBOutlet weak var backButton: UIButton?
+
+    private var animal: Animal?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+
+    @IBAction func didBackPrevView(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+extension DetailItemViewController {
+    func setAnimal(_ animal: Animal) {
+        self.animal = animal
+    }
 }
 // MARK: - config UI
 extension DetailItemViewController {
     func configUI() {
-//        guard let animalTableView = animalTableView else {
-//            return
-//        }
-        _ = containerView?.applyGradient()
+        backButton?.setStyleBackButton()
+        guard let animalTableView = animalTableView else {
+            return
+        }
+        _ = view?.applyGradient()
 
-        animalTableView?.delegate = self
-        animalTableView?.dataSource = self
+        animalTableView.delegate = self
+        animalTableView.dataSource = self
 
-        animalTableView?.register(
+        animalTableView.register(
             UINib(
                 nibName: "NameTableViewCell",
                 bundle: Bundle.main
             ),
             forCellReuseIdentifier: "nameCell"
         )
-        animalTableView?.register(
+        animalTableView.register(
             UINib(
                 nibName: "DescriptionTableViewCell",
                 bundle: Bundle.main
             ),
             forCellReuseIdentifier: "descriptionCell"
         )
-        animalTableView?.register(
+        animalTableView.register(
             UINib(
                 nibName: "InforPetsCell",
                 bundle: Bundle.main
@@ -57,9 +70,18 @@ extension DetailItemViewController {
                 height: 300
             )
         )
-        headerTableView.imageView.image = UIImage(named: "dog_f3")
-        animalTableView?.tableHeaderView = headerTableView
-        animalTableView?.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+        headerTableView.imageView.image = didSetImage(animal?.image ?? "")
+        animalTableView.tableHeaderView = headerTableView
+        animalTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tabBarController?.tabBar.isHidden = true
+    }
+
+    func didSetImage(_ url: String) -> UIImage {
+        let imageLink = URL(string: url) ?? URL(fileURLWithPath: "")
+        let imageData = try? Data(contentsOf: imageLink)
+        let imageAnimal = UIImage(data: imageData ?? Data()) ?? UIImage()
+
+        return imageAnimal
     }
 }
 // MARK: - tableview delegate
@@ -123,6 +145,11 @@ extension DetailItemViewController: UITableViewDataSource {
             withIdentifier: "nameCell",
             for: indexPath
         ) as? NameTableViewCell ?? NameTableViewCell()
+
+        if let animal = animal {
+            cell.setAnimalInfo(animal)
+        }
+
         return cell
     }
 
@@ -133,6 +160,11 @@ extension DetailItemViewController: UITableViewDataSource {
             withIdentifier: "descriptionCell",
             for: indexPath
         ) as? DescriptionTableViewCell ?? DescriptionTableViewCell()
+        
+        if let animal = animal {
+            cell.setInfoAnimal(animal)
+        }
+
         return cell
     }
 
@@ -143,6 +175,10 @@ extension DetailItemViewController: UITableViewDataSource {
             withIdentifier: "informationCell",
             for: indexPath
         ) as? InforPetsCell ?? InforPetsCell()
+        
+        if let animal = animal {
+            cell.setAnimalInfo(animal)
+        }
         return cell
     }
 }

@@ -19,6 +19,10 @@ class ListViewController: UIViewController {
         configUI()
         initData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
 }
 // MARK: - config UI
 extension ListViewController {
@@ -158,13 +162,13 @@ extension ListViewController: UITableViewDataSource {
         ) as? ListItemTableViewCell ?? ListItemTableViewCell()
 
         cell.setData(animalData)
-        cell.tapCell = { [weak self] in
-            print("clousure work")
-
+        cell.tapCell = { [weak self] cellIndex in
             let detailVC = DetailItemViewController(
                 nibName: String(describing: DetailItemViewController.self),
                 bundle: .main
             )
+
+            detailVC.setAnimal(animalData[cellIndex.item])
             self?.navigationController?.pushViewController(detailVC, animated: true)
         }
 
@@ -174,11 +178,20 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController {
     func initData() {
+        let loadingView = LoadingView(nibName: String(describing: LoadingView.self), bundle: .main)
+        loadingView.modalTransitionStyle = .crossDissolve
+        loadingView.modalPresentationStyle = .overCurrentContext
+
+        self.present(loadingView, animated: true)
+
         let dbFirestore = Firestore.firestore()
 
         dbFirestore
             .collection("petLibrary")
             .getDocuments { [weak self] (querySnapshot, err) in
+ 
+            loadingView.self.dismiss(animated: true)
+
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -206,9 +219,6 @@ extension ListViewController {
             let animal = data["animal"] as? String ?? ""
 
             let image = data["image"] as? String ?? ""
-            let imageLink = URL(string: image) ?? URL(fileURLWithPath: "")
-            let imageData = try? Data(contentsOf: imageLink)
-            let imageAnimal = UIImage(data: imageData ?? Data()) as UIImage?
 
             let loadData = Animal(
                 height: height,
@@ -219,7 +229,7 @@ extension ListViewController {
                 species: species,
                 information: information,
                 history: history,
-                image: imageAnimal ?? UIImage(),
+                image: image,
                 animal: animal
             )
             arrAnimal.append(loadData)

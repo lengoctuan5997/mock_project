@@ -8,11 +8,13 @@
 import UIKit
 
 class DescriptionTableViewCell: UITableViewCell {
-
     @IBOutlet weak var sexView: UIView!
     @IBOutlet weak var ageView: UIView!
     @IBOutlet weak var weightView: UIView!
-
+    @IBOutlet weak var ageLabel: UILabel?
+    @IBOutlet weak var weightLabel: UILabel?
+    @IBOutlet weak var heightLabel: UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -37,6 +39,18 @@ class DescriptionTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        heightLabel?.text = nil
+        weightLabel?.text = nil
+        ageLabel?.text = nil
+    }
+    
+    func setInfoAnimal(_ animal: Animal) {
+        heightLabel?.text = animal.height
+        weightLabel?.text = animal.weight
+        ageLabel?.text = animal.age
     }
 
 }

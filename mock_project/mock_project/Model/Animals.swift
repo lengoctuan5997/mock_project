@@ -17,6 +17,6 @@ struct Animal {
     let species: String
     let information: String
     let history: String
-    let image: UIImage
+    let image: String
     let animal: String
 }

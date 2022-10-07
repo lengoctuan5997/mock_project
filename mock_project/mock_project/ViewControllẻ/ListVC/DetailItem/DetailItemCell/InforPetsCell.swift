@@ -8,7 +8,9 @@
 import UIKit
 
 class InforPetsCell: UITableViewCell {
-
+    @IBOutlet weak var infoLabel: UITextView?
+    @IBOutlet weak var historyLabel: UITextView?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,16 @@ class InforPetsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        infoLabel?.text = nil
+        historyLabel?.text = nil
+    }
+    
+    func setAnimalInfo(_ animal: Animal) {
+        infoLabel?.text = animal.information
+        historyLabel?.text = animal.history
     }
 
 }

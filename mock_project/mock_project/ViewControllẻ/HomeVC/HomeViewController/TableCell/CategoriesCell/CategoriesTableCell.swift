@@ -43,8 +43,8 @@ extension CategoriesTableCell: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        let cell = categoriesCollectionView?.cellForItem(at: indexPath) as? CategoriesCell
-            cell?.isHighlighted = true
+//        let cell = categoriesCollectionView?.cellForItem(at: indexPath) as? CategoriesCell
+//            cell?.isHighlighted = true
         tapCategoriesCellClousure(categoriesAnimal[indexPath.item])
     }
 
@@ -52,8 +52,8 @@ extension CategoriesTableCell: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didDeselectItemAt indexPath: IndexPath
     ) {
-        let cell = categoriesCollectionView?.cellForItem(at: indexPath) as? CategoriesCell
-            cell?.isHighlighted = false
+//        let cell = categoriesCollectionView?.cellForItem(at: indexPath) as? CategoriesCell
+//            cell?.isHighlighted = false
     }
 }
 

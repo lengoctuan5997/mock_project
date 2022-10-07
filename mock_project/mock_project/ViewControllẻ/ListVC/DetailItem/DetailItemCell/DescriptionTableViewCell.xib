@@ -23,50 +23,77 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UE-Tb-NiU">
                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5I-0W-WRd">
-                                        <rect key="frame" x="22.5" y="33" width="45.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5I-0W-WRd">
+                                        <rect key="frame" x="5" y="35.5" width="80" height="19.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Male">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92941176889999999" green="0.59215688710000003" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="O5I-0W-WRd" secondAttribute="trailing" constant="5" id="YXM-YH-Nc3"/>
                                     <constraint firstItem="O5I-0W-WRd" firstAttribute="centerX" secondItem="1UE-Tb-NiU" secondAttribute="centerX" id="YrF-7J-4VT"/>
                                     <constraint firstItem="O5I-0W-WRd" firstAttribute="centerY" secondItem="1UE-Tb-NiU" secondAttribute="centerY" id="e57-hD-CN3"/>
                                     <constraint firstAttribute="width" constant="90" id="hEt-ee-eie"/>
                                     <constraint firstAttribute="width" secondItem="1UE-Tb-NiU" secondAttribute="height" multiplier="17:17" id="mDo-2U-5ob"/>
+                                    <constraint firstItem="O5I-0W-WRd" firstAttribute="leading" secondItem="1UE-Tb-NiU" secondAttribute="leading" constant="5" id="nkK-aK-jox"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb3-Si-gTC">
                                 <rect key="frame" x="123" y="0.0" width="90" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-ba-k5A">
-                                        <rect key="frame" x="12" y="33" width="66.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-ba-k5A">
+                                        <rect key="frame" x="5" y="35.5" width="80" height="19.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="1 Years">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2352941036" green="0.4352940917" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="Bxy-ba-k5A" firstAttribute="leading" secondItem="cb3-Si-gTC" secondAttribute="leading" constant="5" id="1bp-D7-ksh"/>
                                     <constraint firstItem="Bxy-ba-k5A" firstAttribute="centerY" secondItem="cb3-Si-gTC" secondAttribute="centerY" id="BYt-uA-0KB"/>
                                     <constraint firstItem="Bxy-ba-k5A" firstAttribute="centerX" secondItem="cb3-Si-gTC" secondAttribute="centerX" id="DIc-Xc-IiP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bxy-ba-k5A" secondAttribute="trailing" constant="5" id="zwy-Hj-1u8"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru2-xW-4sV">
                                 <rect key="frame" x="246" y="0.0" width="90" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAr-Fj-vsG">
-                                        <rect key="frame" x="24.5" y="33" width="41" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAr-Fj-vsG">
+                                        <rect key="frame" x="5" y="35.5" width="80" height="19.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="7 Kg">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstItem="eAr-Fj-vsG" firstAttribute="centerY" secondItem="ru2-xW-4sV" secondAttribute="centerY" id="2aN-am-dpw"/>
+                                    <constraint firstItem="eAr-Fj-vsG" firstAttribute="leading" secondItem="ru2-xW-4sV" secondAttribute="leading" constant="5" id="Gb7-vB-KdN"/>
+                                    <constraint firstAttribute="trailing" secondItem="eAr-Fj-vsG" secondAttribute="trailing" constant="5" id="S27-mg-nLE"/>
                                     <constraint firstItem="eAr-Fj-vsG" firstAttribute="centerX" secondItem="ru2-xW-4sV" secondAttribute="centerX" id="VUC-jF-qYB"/>
                                 </constraints>
                             </view>
@@ -81,8 +108,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="ageLabel" destination="Bxy-ba-k5A" id="xat-AS-UFq"/>
                 <outlet property="ageView" destination="cb3-Si-gTC" id="ld0-OU-VUV"/>
+                <outlet property="heightLabel" destination="O5I-0W-WRd" id="l07-rn-lk6"/>
                 <outlet property="sexView" destination="1UE-Tb-NiU" id="K1c-o1-zTG"/>
+                <outlet property="weightLabel" destination="eAr-Fj-vsG" id="uF2-de-ewr"/>
                 <outlet property="weightView" destination="ru2-xW-4sV" id="3Zv-bO-XAz"/>
             </connections>
             <point key="canvasLocation" x="200.00000000000003" y="116.51785714285714"/>

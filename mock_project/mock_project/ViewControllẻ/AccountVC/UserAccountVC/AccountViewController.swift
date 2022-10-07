@@ -30,6 +30,7 @@ class AccountViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -68,7 +69,23 @@ extension AccountViewController {
                 height: 300
             )
         )
+        let userImage = UIImageView()
+        userImage.translatesAutoresizingMaskIntoConstraints = false
+        userImage.image = UIImage(named: "dog_f3")
+
+        headerTableView.containerView.addSubview(userImage)
+        userImage.centerYAnchor.constraint(equalTo: headerTableView.containerView.centerYAnchor).isActive = true
+
+        userImage.centerXAnchor.constraint(equalTo: headerTableView.containerView.centerXAnchor).isActive = true
+        userImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        userImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        userImage.layer.cornerRadius = 75
+        userImage.contentMode = .scaleAspectFill
+        userImage.clipsToBounds = true
         headerTableView.imageView.image = UIImage(named: "dog_f3")
+        headerTableView.imageView.alpha = 0.5
+        headerTableView.imageView.backgroundColor = .primaryColor
+        headerTableView.imageView.frame.size.height = 100
         accountTableView?.tableHeaderView = headerTableView
         accountTableView?.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
         let user: User = userManager.getUserInfo()
@@ -102,6 +119,15 @@ extension AccountViewController: UITableViewDelegate {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
+        if indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
+            let userDetailVc = UserDetailVC(
+                nibName: String(
+                    describing: UserDetailVC.self
+                ),
+                bundle: .main
+            )
+            navigationController?.pushViewController(userDetailVc, animated: true)
+        }
         if indexPath.section == 1 && indexPath.row == 0 {
             let myPetsVC = ListPetViewController(
                 nibName: String(

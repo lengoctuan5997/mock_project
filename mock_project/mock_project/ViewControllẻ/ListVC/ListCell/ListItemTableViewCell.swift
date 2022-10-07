@@ -13,7 +13,7 @@ class ListItemTableViewCell: UITableViewCell {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
 
     private var itemLabel: [String] = ["Rayan", "Labador", "Husky", "Yorke"]
-    var tapCell: () -> Void = {}
+    var tapCell: (_ indexPath: IndexPath) -> Void = {_ in}
     var animals: [Animal] = []
 
     override func awakeFromNib() {
@@ -65,7 +65,7 @@ extension ListItemTableViewCell: UICollectionViewDelegate {
         didSelectItemAt indexPath: IndexPath
     ) {
         print("tap tap")
-        tapCell()
+        tapCell(indexPath)
     }
 }
 extension ListItemTableViewCell: UICollectionViewDataSource {
