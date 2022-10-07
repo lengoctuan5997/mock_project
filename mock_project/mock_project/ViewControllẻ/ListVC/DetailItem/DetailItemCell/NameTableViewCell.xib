@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="20" width="427" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oHR-2l-gpU">
-                                <rect key="frame" x="20" y="12.5" width="322" height="95"/>
+                                <rect key="frame" x="20" y="13.5" width="322" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-5D-jNs">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="38"/>
@@ -33,16 +33,26 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scotland, Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-3e-aQE">
-                                        <rect key="frame" x="0.0" y="46" width="106.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-3e-aQE">
+                                        <rect key="frame" x="0.0" y="46" width="133" height="19.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Scotland, Anh">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-qs-vXx">
-                                        <rect key="frame" x="0.0" y="74.5" width="81.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-qs-vXx">
+                                        <rect key="frame" x="0.0" y="73.5" width="82" height="19.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Dog Home">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -54,9 +64,10 @@
                                     <constraint firstAttribute="height" constant="50" id="rDb-9s-oda"/>
                                     <constraint firstAttribute="width" constant="50" id="uHH-xn-cvq"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="5" height="5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" image="suit.heart.fill" catalog="system" title=""/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,9 +91,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="animalName" destination="eqZ-5D-jNs" id="MPL-Fx-q6z"/>
+                <outlet property="animalOrigin" destination="2pn-3e-aQE" id="UIM-rl-Okc"/>
+                <outlet property="animalSpecies" destination="3xT-qs-vXx" id="F8P-6K-8uT"/>
                 <outlet property="heartButton" destination="8Vb-yt-fuW" id="Qe9-NN-Kie"/>
             </connections>
             <point key="canvasLocation" x="267.39130434782612" y="123.21428571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
 </document>

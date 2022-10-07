@@ -37,8 +37,8 @@ class StretchyTableHeaderView: UIView {
 
         // ImageView for background
         imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-        imageView.backgroundColor = .yellow
         imageView.contentMode = .scaleAspectFill
         imageView.frame.size.height = containerView.bounds.height
         imageView.layer.cornerRadius = 30

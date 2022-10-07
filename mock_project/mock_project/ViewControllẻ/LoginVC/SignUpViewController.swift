@@ -230,22 +230,29 @@ extension SignUpViewController {
         fullNameTextField?.cardShadow()
         fullNameTextField?.paddingLeft()
         fullNameTextField?.layer.cornerRadius = 15
+        fullNameTextField?.setBorder(1, .primaryColor)
 
         phoneTextField?.cardShadow()
         phoneTextField?.paddingLeft()
         phoneTextField?.layer.cornerRadius = 15
+        phoneTextField?.setBorder(1, .primaryColor)
 
         emailTextField?.cardShadow()
         emailTextField?.paddingLeft()
         emailTextField?.layer.cornerRadius = 15
+        emailTextField?.setBorder(1, .primaryColor)
 
         passwordTextField?.cardShadow()
         passwordTextField?.paddingLeft()
         passwordTextField?.layer.cornerRadius = 15
+        passwordTextField?.setBorder(1, .primaryColor)
 
         confirmPasswordTextField?.cardShadow()
         confirmPasswordTextField?.paddingLeft()
         confirmPasswordTextField?.layer.cornerRadius = 15
+        confirmPasswordTextField?.setBorder(1, .primaryColor)
+
+        submitFormButton?.setBorder(1, .white)
     }
 
     func resetForm() {

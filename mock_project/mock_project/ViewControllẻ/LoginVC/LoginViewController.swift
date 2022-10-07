@@ -85,13 +85,20 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func configUI() {
         _ = view.applyGradient()
-        signinButton.cardShadow()
+ 
         emailTextField?.cardShadow()
         emailTextField?.paddingLeft()
+        emailTextField?.setBorder(1, .primaryColor)
+
         passwordTextField?.cardShadow()
         passwordTextField?.paddingLeft()
+        passwordTextField?.setBorder(1, .primaryColor)
+
         emailTextField?.layer.cornerRadius = 15
         passwordTextField?.layer.cornerRadius = 15
+        
+        signinButton.setBorder(1, .white)
+        signinButton.cardShadow()
         
     }
 }
@@ -103,12 +110,12 @@ extension LoginViewController {
             nibName: "LoadingView",
             bundle: .main
         )
-        
+
         loadingView.modalPresentationStyle = .overCurrentContext
         loadingView.modalTransitionStyle = .crossDissolve
-        
+
         self.present(loadingView, animated: true)
-        
+
         authen.signIn(
             withEmail: emailTextField?.text ?? "",
             password: passwordTextField?.text ?? ""
