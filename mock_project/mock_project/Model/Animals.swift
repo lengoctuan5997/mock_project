@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 struct Animal {
-    let height: Double
-    let weight: Double
-    let age: Int8
+    let height: String
+    let weight: String
+    let age: String
     let origin: String
     let type: String
     let species: String
     let information: String
     let history: String
-    let image: String
+    let image: UIImage
     let animal: String
 }

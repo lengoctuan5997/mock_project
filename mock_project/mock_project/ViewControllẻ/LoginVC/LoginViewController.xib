@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="emailTextField" destination="c4t-rv-czu" id="BIs-1h-pul"/>
                 <outlet property="passwordTextField" destination="7yV-2v-hfb" id="O6A-mL-GCq"/>
+                <outlet property="signinButton" destination="7UP-fP-PDH" id="os5-by-1LP"/>
                 <outlet property="validationEmailLabel" destination="2Ty-un-AG4" id="hmN-8Z-Oay"/>
                 <outlet property="validationPasswordLabel" destination="Aj3-GB-77A" id="J8P-fq-eIq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,10 +32,11 @@
                                 <constraint firstAttribute="height" constant="51" id="1Vc-xM-VJs"/>
                             </constraints>
                             <attributedString key="attributedText">
-                                <fragment content="Login">
+                                <fragment content="Đăng nhập">
                                     <attributes>
-                                        <font key="NSFont" size="33" name="Chalkduster"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <color key="NSColor" red="0.32941177490000001" green="0.2588235438" blue="0.59607845540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="40" name="CourierNewPS-BoldMT"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
@@ -86,7 +88,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="2Ty-un-AG4" firstAttribute="top" secondItem="c4t-rv-czu" secondAttribute="bottom" constant="10" id="1em-yv-Jcb"/>
                                 <constraint firstItem="c4t-rv-czu" firstAttribute="leading" secondItem="s1u-rf-AHQ" secondAttribute="leading" id="3Bz-Yh-o1X"/>
@@ -122,7 +124,7 @@
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <integer key="value" value="10"/>
+                                    <integer key="value" value="15"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
@@ -160,7 +162,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="LAp-Tw-ZdC"/>
                                 <constraint firstItem="XAg-aS-dNo" firstAttribute="leading" secondItem="osf-VH-2Cv" secondAttribute="trailing" constant="4" id="QaL-vs-W1q"/>

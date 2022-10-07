@@ -17,6 +17,9 @@ extension UIColor {
     static var tabBarItemLight: UIColor {
         #colorLiteral(red: 0.1132211015, green: 0.6089417934, blue: 0.9398133159, alpha: 1)
     }
+    static var primaryColor: UIColor {
+        #colorLiteral(red: 0.3429558873, green: 0.2553575635, blue: 0.6170496941, alpha: 1)
+    }
 }
 
 extension UIView {
@@ -57,9 +60,19 @@ extension UIView {
         return gradient
     }
 
-    func setBorder() {
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.white.cgColor
+    func setBorder(
+        _ width: CGFloat,
+        _ color: UIColor
+    ) {
+        self.layer.borderWidth = width
+        self.layer.borderColor = color.cgColor
+    }
+    
+    func setStyleBackButton() {
+        self.setBorder(2, .white)
+        self.cardShadow()
+        self.layer.cornerRadius = self.bounds.width / 2
+        self.backgroundColor = .primaryColor
     }
 }
 

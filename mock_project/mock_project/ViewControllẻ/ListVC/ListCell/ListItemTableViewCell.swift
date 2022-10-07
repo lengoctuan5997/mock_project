@@ -11,10 +11,10 @@ class ListItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
-    
-    var animals: [Animal] = []
-    var itemLabel: [String] = ["Rayan", "Labador", "Husky", "Yorke"]
+
+    private var itemLabel: [String] = ["Rayan", "Labador", "Husky", "Yorke"]
     var tapCell: () -> Void = {}
+    var animals: [Animal] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +26,15 @@ class ListItemTableViewCell: UITableViewCell {
         animated: Bool
     ) {
         super.setSelected(selected, animated: animated)
+    }
+}
+// MARK: - SET DATA
+extension ListItemTableViewCell {
+    func setData(_ animals: [Animal]) {
+        self.animals = animals
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
     }
 }
 

@@ -14,7 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField?
     @IBOutlet weak var validationEmailLabel: UILabel?
     @IBOutlet weak var validationPasswordLabel: UILabel?
-
+    @IBOutlet weak var signinButton: UIButton!
+    
     var userManager = UserManager.shared
     let authen = Auth.auth()
 
@@ -83,6 +84,8 @@ class LoginViewController: UIViewController {
 // MARK: - config UI
 extension LoginViewController {
     func configUI() {
+        _ = view.applyGradient()
+        signinButton.cardShadow()
         emailTextField?.cardShadow()
         emailTextField?.paddingLeft()
         passwordTextField?.cardShadow()
@@ -96,10 +99,21 @@ extension LoginViewController {
 // MARK: - login
 extension LoginViewController {
     func login() {
+        let loadingView = LoadingView(
+            nibName: "LoadingView",
+            bundle: .main
+        )
+        
+        loadingView.modalPresentationStyle = .overCurrentContext
+        loadingView.modalTransitionStyle = .crossDissolve
+        
+        self.present(loadingView, animated: true)
+        
         authen.signIn(
             withEmail: emailTextField?.text ?? "",
             password: passwordTextField?.text ?? ""
         ) { (_, error) in
+            loadingView.self.dismiss(animated: true)
             if let errorCreate = error {
               let err = errorCreate as NSError
               switch err.code {
@@ -135,7 +149,7 @@ extension LoginViewController {
 
     private func onGetCurrentUserLogin() {
         let id = Auth.auth().currentUser?.uid
-        Firestore.firestore().collection("users").getDocuments() { [weak self] (querySnapshot, err) in
+        Firestore.firestore().collection("users").getDocuments { [weak self] (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -159,7 +173,7 @@ extension LoginViewController {
                     guard let email = document["email"] as? String else {
                         return
                     }
-                    
+
                     let user = User(
                         fullName: fullName,
                         phoneNumber: phoneNumber,

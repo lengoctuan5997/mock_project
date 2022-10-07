@@ -1,58 +1,79 @@
 //
-//  FavoriteViewController.swift
+//  FavoriteVC.swift
 //  mock_project
 //
-//  Created by Lê Ngọc Tuấn on 04/10/2022.
+//  Created by Lê Ngọc Tuấn on 07/10/2022.
 //
 
 import UIKit
 
 private let reuseIdentifier = "favoriteCell"
 
-class FavoriteViewController: UICollectionViewController {
-    @IBOutlet var collectionContainer: UICollectionView!
+class FavoriteVC: UIViewController {
+    @IBOutlet weak var favoriteCollectionView: UICollectionView?
+    @IBOutlet weak var backButton: UIButton!
     
     var animalFavorites: [String] = ["dog_f1", "dog_f2", "dog_f3", "dog_f4", "dog_f5", "dog_f6", "dog_f7"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
+
+    @IBAction func didTapBackToPreView(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
-extension FavoriteViewController {
+
+// MARK: - CONFIG UI
+extension FavoriteVC {
     func configUI() {
+        guard let favoriteCollectionView = favoriteCollectionView else {
+            return
+        }
+
+        backButton.setStyleBackButton()
+        backButton.titleLabel?.textColor = .white
+        
         view.backgroundColor = .white
         _ = view.applyGradient()
-        
-        collectionView.register(
+
+        favoriteCollectionView.register(
             UINib(
                 nibName: String(describing: FavoriteCell.self),
                 bundle: .main
             ),
             forCellWithReuseIdentifier: reuseIdentifier
         )
-        collectionView.contentInset = UIEdgeInsets(
-            top: 20,
+        favoriteCollectionView.contentInset = UIEdgeInsets(
+            top: 0,
             left: 5,
             bottom: 10,
             right: 5
         )
+        favoriteCollectionView.delegate = self
+        favoriteCollectionView.dataSource = self
 
-        if let layout = collectionView.collectionViewLayout as? PinterestLayout {
+        if let layout = favoriteCollectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
     }
 }
-
-extension FavoriteViewController {
-    override func collectionView(
+// MARK: - DELEGATE
+extension FavoriteVC: UICollectionViewDelegate {
+    
+}
+// MARK: - DATASOURCE
+extension FavoriteVC: UICollectionViewDataSource {
+    
+    func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
         return animalFavorites.count
     }
 
-    override func collectionView(
+    func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
@@ -66,8 +87,8 @@ extension FavoriteViewController {
         return cell
     }
 }
-
-extension FavoriteViewController: PinterestLayoutDelegate {
+// MARK: - PINTEREST LAYOUT
+extension FavoriteVC: PinterestLayoutDelegate {
     func collectionView(
         _ collectionView: UICollectionView,
         heightForCellAtIndexPath indexPath: IndexPath
