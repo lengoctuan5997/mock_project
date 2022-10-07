@@ -87,7 +87,7 @@ extension HandBookViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false
+        true
     }
 
 }

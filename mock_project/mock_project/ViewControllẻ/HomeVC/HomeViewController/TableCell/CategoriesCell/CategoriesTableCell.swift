@@ -12,7 +12,7 @@ class CategoriesTableCell: UITableViewCell {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
     @IBOutlet weak var cellView: UIView?
     var categoriesAnimal: [String] = ["cat", "bird", "dog", "fish"]
-    var tapCategoriesCellClousure: () -> Void = {}
+    var tapCategoriesCellClousure: (_ animalType: String) -> Void = {_ in }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,7 +43,17 @@ extension CategoriesTableCell: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        tapCategoriesCellClousure()
+        let cell = categoriesCollectionView?.cellForItem(at: indexPath) as? CategoriesCell
+            cell?.isHighlighted = true
+        tapCategoriesCellClousure(categoriesAnimal[indexPath.item])
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didDeselectItemAt indexPath: IndexPath
+    ) {
+        let cell = categoriesCollectionView?.cellForItem(at: indexPath) as? CategoriesCell
+            cell?.isHighlighted = false
     }
 }
 

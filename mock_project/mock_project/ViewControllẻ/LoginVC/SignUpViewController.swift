@@ -226,27 +226,28 @@ class SignUpViewController: UIViewController {
 // MARK: - CONFIG
 extension SignUpViewController {
     func configUI() {
+        _ = view.applyGradient()
         fullNameTextField?.cardShadow()
         fullNameTextField?.paddingLeft()
         fullNameTextField?.layer.cornerRadius = 15
-        
+
         phoneTextField?.cardShadow()
         phoneTextField?.paddingLeft()
         phoneTextField?.layer.cornerRadius = 15
-        
+
         emailTextField?.cardShadow()
         emailTextField?.paddingLeft()
         emailTextField?.layer.cornerRadius = 15
-        
+
         passwordTextField?.cardShadow()
         passwordTextField?.paddingLeft()
         passwordTextField?.layer.cornerRadius = 15
-        
+
         confirmPasswordTextField?.cardShadow()
         confirmPasswordTextField?.paddingLeft()
         confirmPasswordTextField?.layer.cornerRadius = 15
     }
-    
+
     func resetForm() {
         submitFormButton.isEnabled = false
 

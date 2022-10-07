@@ -14,7 +14,7 @@ class LibraryTableCell: UITableViewCell {
     var animals: [CGFloat] = [300, 200, 200, 300]
     var libraryTapCellClousure: () -> Void = {}
     var contentLibarary: [LibrariesContent] = [
-        LibrariesContent(title: "Danh mục", image: "categories__color"),
+        LibrariesContent(title: "Sổ sức khoẻ", image: "heath_care"),
         LibrariesContent(title: "Thú cưng", image: "my_pet_color"),
         LibrariesContent(title: "Cẩm nang", image: "handbook_color"),
         LibrariesContent(title: "Huấn luyện", image: "training_color")

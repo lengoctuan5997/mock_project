@@ -16,11 +16,18 @@ class LibraryCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        configUI()
+    }
+}
+// MARK: - CONFIG UI
+extension LibraryCell {
+    func configUI() {
         cellView?.cardShadow()
         nameView?.cardShadow()
         nameView?.layer.cornerRadius = 15
         cellView?.layer.cornerRadius = 15
         imageView?.layer.cornerRadius = 15
+        nameView?.setBorder(2, .white)
     }
 }
 

@@ -32,7 +32,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
 // MARK: - config data
 extension ItemCollectionViewCell {
     func configData(_ animal: Animal) {
-        animalImageView?.image = UIImage(named: animal.image)
-        animalLabel?.text = animal.type
+        animalImageView?.image = animal.image
+        animalLabel?.text = animal.species
     }
 }

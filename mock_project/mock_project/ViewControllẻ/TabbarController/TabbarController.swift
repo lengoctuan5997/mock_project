@@ -89,7 +89,7 @@ extension TabbarController {
         tabBar.tintColor = .tabBarItemLight
         tabBar.unselectedItemTintColor = .tabBarColor
         tabBar.layer.cornerRadius = 20
-        tabBar.layer.masksToBounds = true
+        tabBar.clipsToBounds = true
         tabBar.backgroundColor = .white
         tabBar.cardShadow()
     }

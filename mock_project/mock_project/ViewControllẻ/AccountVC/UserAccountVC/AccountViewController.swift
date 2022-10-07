@@ -121,8 +121,8 @@ extension AccountViewController: UITableViewDelegate {
             navigationController?.pushViewController(healthBookVC, animated: true)
         }
         if indexPath.section == 1 && indexPath.row == 2 {
-            let favoriteVC = FavoriteViewController(
-                nibName: String(describing: FavoriteViewController.self),
+            let favoriteVC = FavoriteVC(
+                nibName: String(describing: FavoriteVC.self),
                 bundle: .main
             )
             navigationController?.pushViewController(favoriteVC, animated: true)

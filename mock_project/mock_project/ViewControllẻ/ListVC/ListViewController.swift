@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ListViewController: UIViewController {
     @IBOutlet weak var listTableView: UITableView?
     private var animals: [Animal] = []
+    private var filterAnimals: [Animal] = []
+    private var isSelectype: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -102,8 +106,11 @@ extension ListViewController: UITableViewDataSource {
             } else if indexPath.row == 1 {
                 height = 60
             } else if indexPath.row == 2 {
-                print(animals.count * 260)
-                height = CGFloat((animals.count / 2) * 260)
+                height = CGFloat(((
+                    isSelectype ?
+                    filterAnimals.count :
+                    animals.count) / 2) * 255
+                )
             }
         return height
     }
@@ -117,8 +124,14 @@ extension ListViewController: UITableViewDataSource {
             for: indexPath
         ) as? CategoriesTableCell ?? CategoriesTableCell()
 
-        cell.tapCategoriesCellClousure = { [weak self] in
-            print("select type")
+        cell.tapCategoriesCellClousure = { [weak self] (type) in
+
+            self?.isSelectype = true
+
+            self?.filterAnimals = self?.animals.filter({ animal in
+                return animal.animal.lowercased() == type.lowercased()
+            }) ?? []
+            self?.listTableView?.reloadData()
         }
         return cell
     }
@@ -137,11 +150,14 @@ extension ListViewController: UITableViewDataSource {
     func initAnimalsCell(
         _ indexPath: IndexPath
     ) -> ListItemTableViewCell {
+        let animalData = isSelectype ? filterAnimals : animals
+
         let cell = listTableView?.dequeueReusableCell(
             withIdentifier: "listItemCell",
             for: indexPath
         ) as? ListItemTableViewCell ?? ListItemTableViewCell()
-        cell.animals = animals
+
+        cell.setData(animalData)
         cell.tapCell = { [weak self] in
             print("clousure work")
 
@@ -158,11 +174,60 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController {
     func initData() {
-        animals = [
-            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "dog", species: "", information: "", history: "", image: "dog_f1", animal: "dog"),
-            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "dog", species: "", information: "", history: "", image: "catF", animal: "cat"),
-            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "bird", species: "", information: "", history: "", image: "bird-1", animal: "bird"),
-            Animal(height: 10, weight: 10, age: 19, origin: "Japan", type: "dog", species: "", information: "", history: "", image: "fish-1", animal: "fish"),]
+        let dbFirestore = Firestore.firestore()
+
+        dbFirestore
+            .collection("petLibrary")
+            .getDocuments { [weak self] (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let querySnapshot = querySnapshot
+                else {
+                    return
+                }
+                self?.setData(querySnapshot)
+            }
+        }
+    }
+
+    func setData(_ querySnapshot: QuerySnapshot) {
+        var arrAnimal: [Animal] = []
+        for document in querySnapshot.documents {
+            let data = document.data()
+            let height = data["height"] as? String ?? ""
+            let weight = data["weight"] as? String ?? ""
+            let age = data["age"] as? String ?? ""
+            let origin = data["origin"] as? String ?? ""
+            let type = data["type"] as? String ?? ""
+            let species = data["species"] as? String ?? ""
+            let information = data["information"] as? String ?? ""
+            let history = data["history"] as? String ?? ""
+            let animal = data["animal"] as? String ?? ""
+
+            let image = data["image"] as? String ?? ""
+            let imageLink = URL(string: image) ?? URL(fileURLWithPath: "")
+            let imageData = try? Data(contentsOf: imageLink)
+            let imageAnimal = UIImage(data: imageData ?? Data()) as UIImage?
+
+            let loadData = Animal(
+                height: height,
+                weight: weight,
+                age: age,
+                origin: origin,
+                type: type,
+                species: species,
+                information: information,
+                history: history,
+                image: imageAnimal ?? UIImage(),
+                animal: animal
+            )
+            arrAnimal.append(loadData)
+        }
+        DispatchQueue.main.async {
+            self.animals = arrAnimal
+            self.listTableView?.reloadData()
+        }
     }
 }
 

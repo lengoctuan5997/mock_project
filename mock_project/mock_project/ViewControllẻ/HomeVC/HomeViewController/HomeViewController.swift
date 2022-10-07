@@ -62,8 +62,8 @@ extension HomeViewController {
         )
         homeContentTable?.delegate = self
         homeContentTable?.dataSource = self
-//        homeContentTable?.sectionFooterHeight = 10
         homeContentTable?.sectionHeaderHeight = 10
+        homeContentTable?.layer.cornerRadius = 15
     }
 }
 // MARK: - table delegate
@@ -74,7 +74,8 @@ extension HomeViewController: UITableViewDelegate {
         forSection section: Int
     ) {
         if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.textLabel?.textColor = .black
+            headerView.textLabel?.textColor = .primaryColor
+            headerView.textLabel?.font = UIFont(name: "Courier New Bold", size: 17)
         }
     }
 
@@ -83,6 +84,12 @@ extension HomeViewController: UITableViewDelegate {
         heightForFooterInSection section: Int
     ) -> CGFloat {
         0
+    }
+
+    func tableView(
+        _ tableView: UITableView, heightForHeaderInSection section: Int
+    ) -> CGFloat {
+        return 0
     }
 }
 
@@ -93,7 +100,7 @@ extension HomeViewController: UITableViewDataSource {
         _ tableView: UITableView,
         titleForHeaderInSection section: Int
     ) -> String? {
-        ["", "Favorite", "Library"][section]
+        ["", "Yêu thích", "Thư viện"][section]
     }
 
     func numberOfSections(
@@ -147,7 +154,7 @@ extension HomeViewController: UITableViewDataSource {
             for: indexPath
         ) as? CategoriesTableCell ?? CategoriesTableCell()
 
-        cell.tapCategoriesCellClousure = { [weak self] in
+        cell.tapCategoriesCellClousure = { [weak self] type in
             self?.tabBarController?.selectedIndex = 1
         }
 
@@ -163,8 +170,8 @@ extension HomeViewController: UITableViewDataSource {
         ) as? FavoriteTableCell ?? FavoriteTableCell()
 
         cell.favoriteTapCellClousure = { [weak self] in
-            let favoriteVC = FavoriteViewController(
-                nibName: String(describing: FavoriteViewController.self),
+            let favoriteVC = FavoriteVC(
+                nibName: String(describing: FavoriteVC.self),
                 bundle: .main
             )
 

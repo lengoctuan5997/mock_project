@@ -10,7 +10,7 @@
 		06A1C29F2B9E96AA6A148992 /* Pods_mock_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43026E7DC099FE8F1BEAF6D5 /* Pods_mock_project.framework */; };
 		9D36D47528E5B20C009B4061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D47428E5B20C009B4061 /* AppDelegate.swift */; };
 		9D36D47728E5B20C009B4061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D47628E5B20C009B4061 /* SceneDelegate.swift */; };
-		9D36D47928E5B20C009B4061 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D47828E5B20C009B4061 /* HomeController.swift */; };
+		9D36D47928E5B20C009B4061 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D47828E5B20C009B4061 /* LaunchController.swift */; };
 		9D36D47C28E5B20C009B4061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D47A28E5B20C009B4061 /* Main.storyboard */; };
 		9D36D47F28E5B20C009B4061 /* mock_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D47D28E5B20C009B4061 /* mock_project.xcdatamodeld */; };
 		9D36D48128E5B20E009B4061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D48028E5B20E009B4061 /* Assets.xcassets */; };
@@ -100,6 +100,10 @@
 		9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */; };
 		9DAD17DA28E6F69100296533 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD17D828E6F69100296533 /* CategoriesCell.swift */; };
 		9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD17D928E6F69100296533 /* CategoriesCell.xib */; };
+		9DBA744B28EFC2E2005E7089 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA744928EFC2E2005E7089 /* FavoriteVC.swift */; };
+		9DBA744C28EFC2E2005E7089 /* FavoriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA744A28EFC2E2005E7089 /* FavoriteVC.xib */; };
+		9DBA745528EFFC6D005E7089 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA745328EFFC6D005E7089 /* LoadingView.swift */; };
+		9DBA745628EFFC6D005E7089 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA745428EFFC6D005E7089 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,7 +112,7 @@
 		9D36D47128E5B20C009B4061 /* mock_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mock_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D36D47428E5B20C009B4061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D36D47628E5B20C009B4061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9D36D47828E5B20C009B4061 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		9D36D47828E5B20C009B4061 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		9D36D47B28E5B20C009B4061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D36D47E28E5B20C009B4061 /* mock_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mock_project.xcdatamodel; sourceTree = "<group>"; };
 		9D36D48028E5B20E009B4061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,6 +203,10 @@
 		9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionCell.xib; sourceTree = "<group>"; };
 		9DAD17D828E6F69100296533 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		9DAD17D928E6F69100296533 /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
+		9DBA744928EFC2E2005E7089 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		9DBA744A28EFC2E2005E7089 /* FavoriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteVC.xib; sourceTree = "<group>"; };
+		9DBA745328EFFC6D005E7089 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9DBA745428EFFC6D005E7089 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		ABEE748361B55BC44C276FFB /* Pods-mock_project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock_project.debug.xcconfig"; path = "Target Support Files/Pods-mock_project/Pods-mock_project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,7 +275,7 @@
 				9D36D49C28E5B446009B4061 /* AccountVC */,
 				9D36D49528E5B42B009B4061 /* ListVC */,
 				9D36D49028E5B40A009B4061 /* HomeVC */,
-				9D36D47828E5B20C009B4061 /* HomeController.swift */,
+				9D36D47828E5B20C009B4061 /* LaunchController.swift */,
 			);
 			name = ViewControl;
 			path = "ViewControllẻ";
@@ -480,6 +488,8 @@
 				9D8DD30C28EC0822002DEE57 /* FavoriteCell */,
 				9D8DD30828EC081B002DEE57 /* FavoriteViewController.swift */,
 				9D8DD30928EC081B002DEE57 /* FavoriteViewController.xib */,
+				9DBA744928EFC2E2005E7089 /* FavoriteVC.swift */,
+				9DBA744A28EFC2E2005E7089 /* FavoriteVC.xib */,
 			);
 			path = FavoriteVC;
 			sourceTree = "<group>";
@@ -496,6 +506,7 @@
 		9D8DD31128EC0CF4002DEE57 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				9DBA745228EFFC4E005E7089 /* LoadingView */,
 				9D7BA92728EA042700319CCE /* PinterestLayout.swift */,
 				9D8DD39228ED3573002DEE57 /* StretchyTableHeaderView.swift */,
 			);
@@ -637,6 +648,15 @@
 			path = CategoriesCollectionCell;
 			sourceTree = "<group>";
 		};
+		9DBA745228EFFC4E005E7089 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA745328EFFC6D005E7089 /* LoadingView.swift */,
+				9DBA745428EFFC6D005E7089 /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		E1E6063217B04F4C049F324C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +757,7 @@
 				9D8270EB28EE725300C9D6D3 /* InformationPetViewController.xib in Resources */,
 				9D82710B28EE730500C9D6D3 /* AddInformationPetTableViewCell.xib in Resources */,
 				9D82710F28EE730500C9D6D3 /* AddPetViewController.xib in Resources */,
+				9DBA745628EFFC6D005E7089 /* LoadingView.xib in Resources */,
 				9D82711928EE81E200C9D6D3 /* LoginViewController.xib in Resources */,
 				9D8DD35128EC35F3002DEE57 /* PetTableViewCell.xib in Resources */,
 				9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */,
@@ -747,6 +768,7 @@
 				9D82711B28EE81E200C9D6D3 /* SignUpViewController.xib in Resources */,
 				9D8DD3AF28EDA034002DEE57 /* ItemCollectionViewCell.xib in Resources */,
 				9D7BA94328EAEAE900319CCE /* SearchTableCell.xib in Resources */,
+				9DBA744C28EFC2E2005E7089 /* FavoriteVC.xib in Resources */,
 				9DAD17DB28E6F69100296533 /* CategoriesCell.xib in Resources */,
 				9D8DD3BB28EDA034002DEE57 /* NameTableViewCell.xib in Resources */,
 				9D82710628EE730500C9D6D3 /* LogoListTableViewCell.xib in Resources */,
@@ -823,13 +845,14 @@
 				9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */,
 				9D8270F228EE72D100C9D6D3 /* HealthBookTableViewCell.swift in Sources */,
 				9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */,
+				9DBA744B28EFC2E2005E7089 /* FavoriteVC.swift in Sources */,
 				9D82710928EE730500C9D6D3 /* LogoListTableViewCell.swift in Sources */,
 				9D82710528EE730500C9D6D3 /* ListPetTableViewCell.swift in Sources */,
 				9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */,
 				9D82710D28EE730500C9D6D3 /* AddInformationPetTableViewCell.swift in Sources */,
 				9D8DD34F28EC35F3002DEE57 /* InformationTableViewCell.swift in Sources */,
 				9D7BA93828EAE9FF00319CCE /* SearchCell.swift in Sources */,
-				9D36D47928E5B20C009B4061 /* HomeController.swift in Sources */,
+				9D36D47928E5B20C009B4061 /* LaunchController.swift in Sources */,
 				9D8DD35028EC35F3002DEE57 /* LogOutTableViewCell.swift in Sources */,
 				9D82711A28EE81E200C9D6D3 /* LoginViewController.swift in Sources */,
 				9D82711E28EE8D2100C9D6D3 /* Animals.swift in Sources */,
@@ -854,6 +877,7 @@
 				9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */,
 				9D8DD34E28EC35F3002DEE57 /* PetTableViewCell.swift in Sources */,
 				9D8DD3B028EDA034002DEE57 /* ListItemTableViewCell.swift in Sources */,
+				9DBA745528EFFC6D005E7089 /* LoadingView.swift in Sources */,
 				9D7BA92028E9599100319CCE /* FavoriteTableCell.swift in Sources */,
 				9D36D49328E5B426009B4061 /* HomeViewController.swift in Sources */,
 				9D8270E928EE725300C9D6D3 /* InformationPetViewController.swift in Sources */,
