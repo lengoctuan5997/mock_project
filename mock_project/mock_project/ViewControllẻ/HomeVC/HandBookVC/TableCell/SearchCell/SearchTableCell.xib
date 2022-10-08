@@ -21,9 +21,12 @@
                         <rect key="frame" x="20" y="10" width="280" height="44"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wA-H5-tMw">
-                                <rect key="frame" x="55" y="5" width="210" height="34"/>
+                                <rect key="frame" x="55" y="5" width="179" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didStartSearch:" destination="KGk-i7-Jjw" eventType="editingChanged" id="ZCX-UU-w6m"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-wZ-T4o">
                                 <rect key="frame" x="15" y="9.5" width="25" height="25"/>
@@ -31,20 +34,35 @@
                                     <constraint firstAttribute="width" constant="25" id="vex-tE-wNu"/>
                                     <constraint firstAttribute="height" constant="25" id="w4f-Mv-Qrj"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.32941177490000001" green="0.2588235438" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-mx-hzw">
+                                <rect key="frame" x="239" y="6.5" width="31" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YwO-mx-hzw" secondAttribute="height" multiplier="1:1" id="Ydc-UJ-SMj"/>
+                                    <constraint firstAttribute="height" constant="31" id="cxU-R1-ulz"/>
+                                </constraints>
+                                <color key="tintColor" red="0.32941177490000001" green="0.2588235438" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="x.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapRemoveText:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JKw-oo-hTD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="b6v-wZ-T4o" firstAttribute="centerY" secondItem="s07-kO-txR" secondAttribute="centerY" id="9yL-iy-uih"/>
+                            <constraint firstItem="YwO-mx-hzw" firstAttribute="centerY" secondItem="s07-kO-txR" secondAttribute="centerY" id="Hf0-Vn-nkL"/>
                             <constraint firstItem="1wA-H5-tMw" firstAttribute="centerY" secondItem="s07-kO-txR" secondAttribute="centerY" id="JGJ-3N-T64"/>
                             <constraint firstItem="b6v-wZ-T4o" firstAttribute="leading" secondItem="s07-kO-txR" secondAttribute="leading" constant="15" id="LXw-7n-mWe"/>
                             <constraint firstItem="1wA-H5-tMw" firstAttribute="top" secondItem="s07-kO-txR" secondAttribute="top" constant="5" id="OLa-co-SlX"/>
                             <constraint firstAttribute="bottom" secondItem="1wA-H5-tMw" secondAttribute="bottom" constant="5" id="YO1-Dp-wdu"/>
+                            <constraint firstItem="YwO-mx-hzw" firstAttribute="leading" secondItem="1wA-H5-tMw" secondAttribute="trailing" constant="5" id="YaY-iw-Y8a"/>
                             <constraint firstItem="1wA-H5-tMw" firstAttribute="leading" secondItem="b6v-wZ-T4o" secondAttribute="trailing" constant="15" id="oSD-4h-Rza"/>
-                            <constraint firstAttribute="trailing" secondItem="1wA-H5-tMw" secondAttribute="trailing" constant="15" id="zfx-Bo-Vtd"/>
+                            <constraint firstAttribute="trailing" secondItem="YwO-mx-hzw" secondAttribute="trailing" constant="10" id="qUD-Ns-6c8"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -59,6 +77,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="deleteButton" destination="YwO-mx-hzw" id="bVu-T7-bKP"/>
                 <outlet property="searchTextField" destination="1wA-H5-tMw" id="7Ht-lX-Dmu"/>
                 <outlet property="searchView" destination="s07-kO-txR" id="hqt-Y1-UnC"/>
             </connections>
@@ -67,6 +86,7 @@
     </objects>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="x.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -48,17 +48,17 @@
                     <rect key="frame" x="0.0" y="84" width="375" height="728"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-V8-z01">
-                            <rect key="frame" x="5" y="10" width="365" height="718"/>
+                            <rect key="frame" x="0.0" y="10" width="375" height="718"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="TXA-V8-z01" firstAttribute="leading" secondItem="FNT-Cg-YLK" secondAttribute="leading" constant="5" id="4E7-lc-HwJ"/>
+                        <constraint firstItem="TXA-V8-z01" firstAttribute="leading" secondItem="FNT-Cg-YLK" secondAttribute="leading" id="4E7-lc-HwJ"/>
                         <constraint firstItem="TXA-V8-z01" firstAttribute="top" secondItem="FNT-Cg-YLK" secondAttribute="top" constant="10" id="ec0-UQ-ZwK"/>
                         <constraint firstAttribute="bottom" secondItem="TXA-V8-z01" secondAttribute="bottom" id="ej9-vP-Mjg"/>
-                        <constraint firstAttribute="trailing" secondItem="TXA-V8-z01" secondAttribute="trailing" constant="5" id="rj8-kk-xDd"/>
+                        <constraint firstAttribute="trailing" secondItem="TXA-V8-z01" secondAttribute="trailing" id="rj8-kk-xDd"/>
                     </constraints>
                 </view>
             </subviews>

@@ -17,6 +17,11 @@
 		9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D48228E5B20E009B4061 /* LaunchScreen.storyboard */; };
 		9D36D49328E5B426009B4061 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36D49128E5B426009B4061 /* HomeViewController.swift */; };
 		9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D36D49228E5B426009B4061 /* HomeViewController.xib */; };
+		9D4B692B28F1355F00C9C977 /* HandBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B692A28F1355F00C9C977 /* HandBook.swift */; };
+		9D4B692F28F1638400C9C977 /* HandBookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B692D28F1638400C9C977 /* HandBookDetailVC.swift */; };
+		9D4B693028F1638400C9C977 /* HandBookDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D4B692E28F1638400C9C977 /* HandBookDetailVC.xib */; };
+		9D4B693428F1659100C9C977 /* HandBookPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B693228F1659100C9C977 /* HandBookPostCell.swift */; };
+		9D4B693528F1659100C9C977 /* HandBookPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D4B693328F1659100C9C977 /* HandBookPostCell.xib */; };
 		9D7BA91128E9562F00319CCE /* HomeInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91028E9562F00319CCE /* HomeInstance.swift */; };
 		9D7BA91528E9585800319CCE /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7BA91328E9585800319CCE /* LibraryCell.swift */; };
 		9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7BA91428E9585800319CCE /* LibraryCell.xib */; };
@@ -122,6 +127,11 @@
 		9D36D48528E5B20E009B4061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D36D49128E5B426009B4061 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9D36D49228E5B426009B4061 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		9D4B692A28F1355F00C9C977 /* HandBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBook.swift; sourceTree = "<group>"; };
+		9D4B692D28F1638400C9C977 /* HandBookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookDetailVC.swift; sourceTree = "<group>"; };
+		9D4B692E28F1638400C9C977 /* HandBookDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandBookDetailVC.xib; sourceTree = "<group>"; };
+		9D4B693228F1659100C9C977 /* HandBookPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookPostCell.swift; sourceTree = "<group>"; };
+		9D4B693328F1659100C9C977 /* HandBookPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandBookPostCell.xib; sourceTree = "<group>"; };
 		9D7BA91028E9562F00319CCE /* HomeInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInstance.swift; sourceTree = "<group>"; };
 		9D7BA91328E9585800319CCE /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
 		9D7BA91428E9585800319CCE /* LibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCell.xib; sourceTree = "<group>"; };
@@ -298,10 +308,10 @@
 		9D36D49528E5B42B009B4061 /* ListVC */ = {
 			isa = PBXGroup;
 			children = (
-				9D8DD3C828EDA178002DEE57 /* ListViewController.swift */,
-				9D8DD3C928EDA178002DEE57 /* ListViewController.xib */,
 				9D8DD3A228EDA034002DEE57 /* DetailItem */,
 				9D8DD39928EDA034002DEE57 /* ListCell */,
+				9D8DD3C828EDA178002DEE57 /* ListViewController.swift */,
+				9D8DD3C928EDA178002DEE57 /* ListViewController.xib */,
 			);
 			path = ListVC;
 			sourceTree = "<group>";
@@ -318,12 +328,32 @@
 			path = AccountVC;
 			sourceTree = "<group>";
 		};
+		9D4B692C28F1635000C9C977 /* HandBookDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B693128F1653900C9C977 /* Cell */,
+				9D4B692D28F1638400C9C977 /* HandBookDetailVC.swift */,
+				9D4B692E28F1638400C9C977 /* HandBookDetailVC.xib */,
+			);
+			path = HandBookDetailVC;
+			sourceTree = "<group>";
+		};
+		9D4B693128F1653900C9C977 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B693228F1659100C9C977 /* HandBookPostCell.swift */,
+				9D4B693328F1659100C9C977 /* HandBookPostCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9D7BA90F28E9561A00319CCE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9D7BA91028E9562F00319CCE /* HomeInstance.swift */,
 				9D82711D28EE8D2100C9D6D3 /* Animals.swift */,
 				9D82712128EEEB4400C9D6D3 /* UserManager.swift */,
+				9D4B692A28F1355F00C9C977 /* HandBook.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +410,7 @@
 		9D7BA93028EADCE200319CCE /* HandBookVC */ = {
 			isa = PBXGroup;
 			children = (
+				9D4B692C28F1635000C9C977 /* HandBookDetailVC */,
 				9D7BA93528EAE9C700319CCE /* TableCell */,
 				9D7BA93128EADD1500319CCE /* HandBookViewController.swift */,
 				9D7BA93228EADD1500319CCE /* HandBookViewController.xib */,
@@ -589,9 +620,9 @@
 		9D8DD3A228EDA034002DEE57 /* DetailItem */ = {
 			isa = PBXGroup;
 			children = (
-				9D8DD3A328EDA034002DEE57 /* DetailItemViewController.xib */,
-				9D8DD3A428EDA034002DEE57 /* DetailItemViewController.swift */,
 				9D8DD3A528EDA034002DEE57 /* DetailItemCell */,
+				9D8DD3A428EDA034002DEE57 /* DetailItemViewController.swift */,
+				9D8DD3A328EDA034002DEE57 /* DetailItemViewController.xib */,
 			);
 			path = DetailItem;
 			sourceTree = "<group>";
@@ -755,8 +786,10 @@
 				9D82710E28EE730500C9D6D3 /* AddAvatarPetTableViewCell.xib in Resources */,
 				9DBA745B28F04C00005E7089 /* UserDetailVC.xib in Resources */,
 				9D7BA93928EAE9FF00319CCE /* SearchCell.xib in Resources */,
+				9D4B693028F1638400C9C977 /* HandBookDetailVC.xib in Resources */,
 				9D7BA93F28EAEA2600319CCE /* PostCell.xib in Resources */,
 				9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */,
+				9D4B693528F1659100C9C977 /* HandBookPostCell.xib in Resources */,
 				9D7BA91628E9585800319CCE /* LibraryCell.xib in Resources */,
 				9D8DD31028EC083C002DEE57 /* FavoriteCell.xib in Resources */,
 				9D8DD3BA28EDA034002DEE57 /* InforPetsCell.xib in Resources */,
@@ -871,6 +904,7 @@
 				9D36D47928E5B20C009B4061 /* LaunchController.swift in Sources */,
 				9D8DD35028EC35F3002DEE57 /* LogOutTableViewCell.swift in Sources */,
 				9D82711A28EE81E200C9D6D3 /* LoginViewController.swift in Sources */,
+				9D4B692F28F1638400C9C977 /* HandBookDetailVC.swift in Sources */,
 				9D82711E28EE8D2100C9D6D3 /* Animals.swift in Sources */,
 				9D82710A28EE730500C9D6D3 /* AddAvatarPetTableViewCell.swift in Sources */,
 				9D8270E828EE725300C9D6D3 /* InforPetTableViewCell.swift in Sources */,
@@ -890,6 +924,7 @@
 				9D36D47528E5B20C009B4061 /* AppDelegate.swift in Sources */,
 				9D8DD39728ED9E54002DEE57 /* TrainingViewController.swift in Sources */,
 				9D7BA91A28E9595B00319CCE /* CategoriesTableCell.swift in Sources */,
+				9D4B692B28F1355F00C9C977 /* HandBook.swift in Sources */,
 				9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */,
 				9D8DD34E28EC35F3002DEE57 /* PetTableViewCell.swift in Sources */,
 				9D8DD3B028EDA034002DEE57 /* ListItemTableViewCell.swift in Sources */,
@@ -899,6 +934,7 @@
 				9D8270E928EE725300C9D6D3 /* InformationPetViewController.swift in Sources */,
 				9D7BA93E28EAEA2600319CCE /* PostCell.swift in Sources */,
 				9D36D47728E5B20C009B4061 /* SceneDelegate.swift in Sources */,
+				9D4B693428F1659100C9C977 /* HandBookPostCell.swift in Sources */,
 				9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */,
 				9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */,
 				9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */,

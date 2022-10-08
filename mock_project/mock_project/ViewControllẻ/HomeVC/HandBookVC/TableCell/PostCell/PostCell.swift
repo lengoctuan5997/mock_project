@@ -8,10 +8,12 @@
 import UIKit
 
 class PostCell: UITableViewCell {
-    @IBOutlet weak var postView: UIView?
-    @IBOutlet weak var contentPostView: UIView?
-    @IBOutlet weak var postImage: UIImageView?
-
+    @IBOutlet private weak var postView: UIView?
+    @IBOutlet private weak var contentPostView: UIView?
+    @IBOutlet private weak var postImage: UIImageView?
+    @IBOutlet private weak var postTitle: UILabel?
+    @IBOutlet private weak var postDescription: UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         postView?.cardShadow()
@@ -26,5 +28,20 @@ class PostCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    override func prepareForReuse() {
+        postImage?.image = nil
+        postTitle?.text = nil
+        postDescription?.text = nil
+    }
 
+}
+
+// MARK: - CONFIG DATA
+extension PostCell {
+    func didSetData(_ post: HandBook) {
+        postImage?.image = post.image
+        postTitle?.text = post.title
+        postDescription?.text = post.title
+    }
 }

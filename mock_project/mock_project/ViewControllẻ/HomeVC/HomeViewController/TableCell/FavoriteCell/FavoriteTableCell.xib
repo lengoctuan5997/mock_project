@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-AC-bpG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <rect key="frame" x="20" y="0.0" width="280" height="200"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pfm-XR-nmo">
                             <size key="itemSize" width="195" height="195"/>
@@ -28,10 +28,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="tkW-AC-bpG" secondAttribute="trailing" id="4Pu-0I-C6c"/>
+                    <constraint firstAttribute="trailing" secondItem="tkW-AC-bpG" secondAttribute="trailing" constant="20" id="4Pu-0I-C6c"/>
                     <constraint firstItem="tkW-AC-bpG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dlz-X8-Pc8"/>
                     <constraint firstAttribute="bottom" secondItem="tkW-AC-bpG" secondAttribute="bottom" id="Hz1-2p-CjP"/>
-                    <constraint firstItem="tkW-AC-bpG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pCL-BL-BkE"/>
+                    <constraint firstItem="tkW-AC-bpG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="pCL-BL-BkE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

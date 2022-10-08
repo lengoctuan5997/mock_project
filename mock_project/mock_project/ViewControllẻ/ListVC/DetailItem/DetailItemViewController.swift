@@ -70,7 +70,7 @@ extension DetailItemViewController {
                 height: 300
             )
         )
-        headerTableView.imageView.image = didSetImage(animal?.image ?? "")
+        headerTableView.imageView.image = animal?.image as? UIImage
         animalTableView.tableHeaderView = headerTableView
         animalTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tabBarController?.tabBar.isHidden = true
@@ -86,7 +86,21 @@ extension DetailItemViewController {
 }
 // MARK: - tableview delegate
 extension DetailItemViewController: UITableViewDelegate {
-
+    
+        func tableView(
+            _ tableView: UITableView,
+            heightForRowAt indexPath: IndexPath
+        ) -> CGFloat {
+                var height: CGFloat = CGFloat()
+                if indexPath.row == 0 {
+                    height = 120
+                } else if indexPath.row == 1 {
+                    height = 135
+                } else if indexPath.row == 2 {
+                    return UITableView.automaticDimension
+                }
+                return height
+        }
 }
 
 extension DetailItemViewController: UITableViewDataSource {
@@ -111,21 +125,6 @@ extension DetailItemViewController: UITableViewDataSource {
         default:
             return initInforCell(indexPath)
         }
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        heightForRowAt indexPath: IndexPath
-    ) -> CGFloat {
-            var height: CGFloat = CGFloat()
-            if indexPath.row == 0 {
-                height = 120
-            } else if indexPath.row == 1 {
-                height = 135
-            } else if indexPath.row == 2 {
-                height = 400
-            }
-            return height
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -160,7 +159,7 @@ extension DetailItemViewController: UITableViewDataSource {
             withIdentifier: "descriptionCell",
             for: indexPath
         ) as? DescriptionTableViewCell ?? DescriptionTableViewCell()
-        
+
         if let animal = animal {
             cell.setInfoAnimal(animal)
         }
@@ -175,7 +174,7 @@ extension DetailItemViewController: UITableViewDataSource {
             withIdentifier: "informationCell",
             for: indexPath
         ) as? InforPetsCell ?? InforPetsCell()
-        
+
         if let animal = animal {
             cell.setAnimalInfo(animal)
         }

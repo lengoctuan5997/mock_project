@@ -20,21 +20,22 @@
                         <rect key="frame" x="0.0" y="20" width="427" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oHR-2l-gpU">
-                                <rect key="frame" x="20" y="13.5" width="322" height="93"/>
+                                <rect key="frame" x="20" y="15.5" width="322" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqZ-5D-jNs">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="34"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Bull dog">
                                                 <attributes>
-                                                    <font key="NSFont" size="30" name="Chalkduster"/>
+                                                    <color key="NSColor" red="0.32941177490000001" green="0.2588235438" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="30" name="CourierNewPS-BoldMT"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-3e-aQE">
-                                        <rect key="frame" x="0.0" y="46" width="133" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="42" width="133" height="19.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Scotland, Anh">
                                                 <attributes>
@@ -45,7 +46,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-qs-vXx">
-                                        <rect key="frame" x="0.0" y="73.5" width="82" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="69.5" width="82" height="19.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Dog Home">
                                                 <attributes>

@@ -33,11 +33,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
 // MARK: - config data
 extension ItemCollectionViewCell {
     func configData(_ animal: Animal) {
-        let imageLink = URL(string: animal.image) ?? URL(fileURLWithPath: "")
-        let imageData = try? Data(contentsOf: imageLink)
-        let imageAnimal = UIImage(data: imageData ?? Data()) as UIImage?
 
-        animalImageView?.image = imageAnimal
+        animalImageView?.image = animal.image
         animalLabel?.text = animal.species
     }
 }

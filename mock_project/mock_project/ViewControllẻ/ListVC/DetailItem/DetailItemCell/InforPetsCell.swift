@@ -8,25 +8,26 @@
 import UIKit
 
 class InforPetsCell: UITableViewCell {
-    @IBOutlet weak var infoLabel: UITextView?
-    @IBOutlet weak var historyLabel: UITextView?
-    
+    @IBOutlet weak var infoLabel: UILabel?
+    @IBOutlet weak var historyLabel: UILabel?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        infoLabel?.lineBreakMode = .byWordWrapping
+//        infoLabel?.numberOfLines = 0
+//        historyLabel?.lineBreakMode = .byWordWrapping
+//        historyLabel?.numberOfLines = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
+
     override func prepareForReuse() {
         infoLabel?.text = nil
         historyLabel?.text = nil
     }
-    
+
     func setAnimalInfo(_ animal: Animal) {
         infoLabel?.text = animal.information
         historyLabel?.text = animal.history
