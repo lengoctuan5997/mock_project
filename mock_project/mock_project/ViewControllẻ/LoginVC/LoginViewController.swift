@@ -120,7 +120,6 @@ extension LoginViewController {
             withEmail: emailTextField?.text ?? "",
             password: passwordTextField?.text ?? ""
         ) { (_, error) in
-            loadingView.self.dismiss(animated: true)
             if let errorCreate = error {
               let err = errorCreate as NSError
               switch err.code {
@@ -128,11 +127,21 @@ extension LoginViewController {
                   self.validationPasswordLabel?.text = "Password không chính xác"
                   self.validationPasswordLabel?.isHidden = false
               default:
-                 print("unknown error: \(err.localizedDescription)")
+                  let alert = UIAlertController(
+                    title: "Warning",
+                    message: "\(err.localizedDescription)",
+                    preferredStyle: .alert
+                  )
+
+                  alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                      self.present(alert, animated: true)
+                  }
               }
            } else {
                self.onCheckUserIsLogin()
            }
+            loadingView.self.dismiss(animated: true)
         }
     }
 
@@ -189,7 +198,9 @@ extension LoginViewController {
                         uid: uid,
                         email: email
                     )
-                    self?.userManager.setUserInfo(user)
+                    DispatchQueue.main.async {
+                        self?.userManager.setUserInfo(user)
+                    }
                 }
             }
         }

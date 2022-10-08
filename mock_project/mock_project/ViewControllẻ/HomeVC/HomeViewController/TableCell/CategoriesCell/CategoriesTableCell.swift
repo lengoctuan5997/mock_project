@@ -32,6 +32,8 @@ extension CategoriesTableCell {
             forCellWithReuseIdentifier: "categoriesCVV"
         )
         flowLayout?.scrollDirection = .horizontal
+        categoriesCollectionView?.contentInset = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: -10
+        )
         categoriesCollectionView?.delegate = self
         categoriesCollectionView?.dataSource = self
     }

@@ -12,7 +12,7 @@ class NameTableViewCell: UITableViewCell {
     @IBOutlet weak var animalOrigin: UILabel?
     @IBOutlet weak var animalSpecies: UILabel?
     @IBOutlet weak var heartButton: UIButton?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         heartButton?.layer.cornerRadius = 25
@@ -23,17 +23,17 @@ class NameTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     override func prepareForReuse() {
         animalName?.text = nil
         animalOrigin?.text = nil
         animalSpecies?.text = nil
     }
-    
+
     func setAnimalInfo(_ animal: Animal) {
-        animalName?.text = animal.type
+        animalName?.text = animal.species
         animalOrigin?.text = animal.origin
-        animalSpecies?.text = animal.species
+        animalSpecies?.text = animal.type
     }
 
 }

@@ -6,44 +6,44 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class HandBookViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar?
     @IBOutlet weak var navItem: UINavigationItem?
     @IBOutlet weak var handBookTableView: UITableView?
+    @IBOutlet weak var backButton: UIButton?
 
-    var handBooks: [Int] = [1, 2, 3, 4]
+    private var handBookAnimals: [HandBook] = []
+    private var filterHandBook: [HandBook] = []
+    private var isFilter: Bool = false
+    private var animalType: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configNav()
-        configTableView()
-        navigationController?.navigationBar.isHidden = false
+        configUI()
+
+        didLoadHandBook()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
 // MARK: - configNAV
 extension HandBookViewController {
-    private func configNav() {
-        let backButton = UIBarButtonItem(
-            title: "Back",
-            style: .done,
-            target: self,
-            action: #selector(didTapBackToPrevView)
-        )
-        navItem?.leftBarButtonItem = backButton
-    }
-
-    @objc
-    func didTapBackToPrevView() {
+    @IBAction private func didTapBackToPrevView(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 }
 
 // MARK: - config tableview
 extension HandBookViewController {
-    func configTableView() {
+    func configUI() {
         _ = view?.applyGradient()
+        backButton?.setStyleBackButton()
         handBookTableView?.delegate = self
         handBookTableView?.dataSource = self
         handBookTableView?.register(
@@ -84,6 +84,13 @@ extension HandBookViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         handBookTableView?.deselectRow(at: indexPath, animated: true)
+        if indexPath.row > 1 {
+            let handbookDetailVC = HandBookDetailVC(nibName: String(describing: HandBookDetailVC.self), bundle: .main)
+
+            handbookDetailVC.didSetHandBook(handBookAnimals[indexPath.row - 2])
+            navigationController?.pushViewController(handbookDetailVC, animated: true)
+        }
+        print("tap")
     }
 
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -95,7 +102,8 @@ extension HandBookViewController: UITableViewDelegate {
 // MARK: - table datasource
 extension HandBookViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        handBooks.count + 2
+        let handBooks = isFilter ? (filterHandBook.count + 2) : (handBookAnimals.count + 2)
+        return handBooks
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -118,6 +126,12 @@ extension HandBookViewController: UITableViewDataSource {
             for: indexPath
         ) as? CategoriesTableCell ?? CategoriesTableCell()
 
+        cell.tapCategoriesCellClousure = { [weak self] (type) in
+            self?.animalType = type
+            self?.isFilter = true
+
+            self?.filter(type)
+        }
         return cell
     }
 
@@ -129,17 +143,111 @@ extension HandBookViewController: UITableViewDataSource {
             for: indexPath
         ) as? SearchTableCell ?? SearchTableCell()
 
+        // delete search
+        cell.deleteSearchValueClousure = { [weak self] in
+            self?.isFilter = self?.animalType.isEmpty == true ? false : true
+            self?.filter(self?.animalType ?? "")
+        }
+
+        // search handbook
+        cell.didStartSearchClousure = { [weak self] (searchText) in
+            self?.isFilter = true
+
+            self?.filterHandBook = self?.handBookAnimals.filter({ handbook in
+                let isSelected: Bool = self?.animalType.isEmpty == true ? true
+                : (handbook.animal?.lowercased() == self?.animalType.lowercased())
+                return isSelected &&
+                handbook.title.lowercased().contains(searchText.lowercased())
+            }) ?? []
+            self?.handBookTableView?.reloadData()
+        }
+
         return cell
     }
 
     func initPostCell(
         _ indexPath: IndexPath
     ) -> PostCell {
+        let handBooks = isFilter ? filterHandBook : handBookAnimals
+
         let cell = handBookTableView?.dequeueReusableCell(
             withIdentifier: "postCell",
             for: indexPath
         ) as? PostCell ?? PostCell()
 
+        cell.didSetData(handBooks[indexPath.row - 2])
         return cell
+    }
+}
+
+// MARK: - LOAD DATA
+extension HandBookViewController {
+
+    func filter(_ type: String) {
+        filterHandBook = handBookAnimals.filter({ handBook in
+            return handBook.animal?.lowercased() == type.lowercased()
+        })
+        handBookTableView?.reloadData()
+    }
+
+    func didLoadHandBook() {
+        let loadingView = LoadingView(
+            nibName: String(describing: LoadingView.self),
+            bundle: .main
+        )
+        loadingView.modalTransitionStyle = .crossDissolve
+        loadingView.modalPresentationStyle = .overCurrentContext
+
+        self.present(loadingView, animated: true)
+
+        let dbFirestore = Firestore.firestore()
+
+        dbFirestore
+            .collection("handbook")
+            .getDocuments { [weak self] (querySnapshot, err) in
+
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let querySnapshot = querySnapshot
+                else {
+                    return
+                }
+                self?.setData(querySnapshot, loadingView)
+            }
+        }
+    }
+
+    func setData(
+        _ querySnapshot: QuerySnapshot,
+        _ loadingView: LoadingView
+    ) {
+        var handBooks: [HandBook] = []
+        for document in querySnapshot.documents {
+            let data = document.data()
+            let animal = data["animal"] as? String ?? ""
+            let description = data["description"] as? String ?? ""
+            let title = data["title"] as? String ?? ""
+
+            let image = data["image"] as? String ?? ""
+            let imageLink = URL(string: image) ?? URL(fileURLWithPath: "")
+            let imageData = try? Data(contentsOf: imageLink)
+            let imageAnimal = UIImage(data: imageData ?? Data()) as UIImage? ?? UIImage()
+
+            let loadData = HandBook()
+            loadData.animal = animal
+            loadData.image = imageAnimal
+            loadData.description = description
+            loadData.title = title
+
+            handBooks.append(loadData)
+        }
+        print("handbook \(handBooks.count)")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
+            loadingView.didDismissView()
+            self.handBookAnimals = handBooks
+            self.handBookTableView?.reloadData()
+        }
     }
 }

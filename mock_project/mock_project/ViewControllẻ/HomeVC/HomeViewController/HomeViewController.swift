@@ -22,9 +22,13 @@ class HomeViewController: UIViewController {
 
         configTableView()
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false    }
+
     override func viewDidAppear(_ animated: Bool) {
         self.accountNameLabel?.text = self.userManager.getUserInfo().fullName
+
     }
 }
 // MARK: - config View
@@ -127,7 +131,7 @@ extension HomeViewController: UITableViewDataSource {
         case .favorite:
             return 195
         default:
-            return 530
+            return 520
         }
     }
 
@@ -154,7 +158,12 @@ extension HomeViewController: UITableViewDataSource {
             for: indexPath
         ) as? CategoriesTableCell ?? CategoriesTableCell()
 
-        cell.tapCategoriesCellClousure = { [weak self] type in
+        cell.tapCategoriesCellClousure = { [weak self] (type) in
+
+            let nav = self?.tabBarController?.viewControllers?[1] as? UINavigationController
+            let animalsVC = nav?.viewControllers.first as? ListViewController
+            animalsVC?.animalType = type
+
             self?.tabBarController?.selectedIndex = 1
         }
 

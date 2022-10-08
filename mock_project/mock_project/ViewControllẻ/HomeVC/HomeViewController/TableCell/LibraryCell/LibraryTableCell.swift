@@ -44,6 +44,7 @@ extension LibraryTableCell {
         if let layout = libraryCollectionView?.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
+        libraryCollectionView?.contentInset = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: -10)
         libraryCollectionView?.delegate = self
         libraryCollectionView?.dataSource = self
         libraryCollectionView?.allowsSelection = true

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="HandBookPostCell" customModule="mock_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsA-Td-6hy">
+                        <rect key="frame" x="10" y="10" width="300" height="135"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWh-dR-xzQ">
+                                <rect key="frame" x="0.0" y="10" width="300" height="94.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="CourierNewPS-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMK-N5-LAa">
+                                <rect key="frame" x="0.0" y="114.5" width="300" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BMK-N5-LAa" firstAttribute="top" secondItem="hWh-dR-xzQ" secondAttribute="bottom" constant="10" id="Ar3-CM-eCn"/>
+                            <constraint firstItem="hWh-dR-xzQ" firstAttribute="leading" secondItem="bsA-Td-6hy" secondAttribute="leading" id="Dip-2L-4Nl"/>
+                            <constraint firstAttribute="bottom" secondItem="BMK-N5-LAa" secondAttribute="bottom" id="FNz-Oa-RRi"/>
+                            <constraint firstAttribute="trailing" secondItem="hWh-dR-xzQ" secondAttribute="trailing" id="UW0-fd-eG1"/>
+                            <constraint firstItem="BMK-N5-LAa" firstAttribute="leading" secondItem="bsA-Td-6hy" secondAttribute="leading" id="cPT-Yr-T4l"/>
+                            <constraint firstAttribute="trailing" secondItem="BMK-N5-LAa" secondAttribute="trailing" id="tXR-50-PRX"/>
+                            <constraint firstItem="hWh-dR-xzQ" firstAttribute="top" secondItem="bsA-Td-6hy" secondAttribute="top" constant="10" id="yaC-bU-409"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="bsA-Td-6hy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Sya-ip-EDB"/>
+                    <constraint firstAttribute="bottom" secondItem="bsA-Td-6hy" secondAttribute="bottom" id="odz-iq-Uwe"/>
+                    <constraint firstItem="bsA-Td-6hy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ukp-KW-sS6"/>
+                    <constraint firstAttribute="trailing" secondItem="bsA-Td-6hy" secondAttribute="trailing" constant="10" id="x0P-7S-cFE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="descriptionHandBook" destination="BMK-N5-LAa" id="dfo-lc-YNS"/>
+                <outlet property="titleHandBook" destination="hWh-dR-xzQ" id="iQK-3z-w1t"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="101.45089285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

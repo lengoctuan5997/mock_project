@@ -13,13 +13,15 @@ class ListViewController: UIViewController {
     private var animals: [Animal] = []
     private var filterAnimals: [Animal] = []
     private var isSelectype: Bool = false
+    var animalType: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
         initData()
+        print(animalType, "Type")
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
     }
@@ -110,10 +112,13 @@ extension ListViewController: UITableViewDataSource {
             } else if indexPath.row == 1 {
                 height = 60
             } else if indexPath.row == 2 {
-                height = CGFloat(((
-                    isSelectype ?
-                    filterAnimals.count :
-                    animals.count) / 2) * 255
+                var animalCount: Int
+                if (( isSelectype ? filterAnimals.count : animals.count) / 2) < 1 {
+                    animalCount = 1
+                } else {
+                    animalCount = ( isSelectype ? filterAnimals.count : animals.count) / 2
+                }
+                height = CGFloat(animalCount * 255
                 )
             }
         return height
@@ -129,13 +134,10 @@ extension ListViewController: UITableViewDataSource {
         ) as? CategoriesTableCell ?? CategoriesTableCell()
 
         cell.tapCategoriesCellClousure = { [weak self] (type) in
-
+            self?.animalType = type
             self?.isSelectype = true
 
-            self?.filterAnimals = self?.animals.filter({ animal in
-                return animal.animal.lowercased() == type.lowercased()
-            }) ?? []
-            self?.listTableView?.reloadData()
+            self?.filter(type)
         }
         return cell
     }
@@ -148,6 +150,24 @@ extension ListViewController: UITableViewDataSource {
             "searchAnimalCell",
             for: indexPath
         ) as? SearchTableCell ?? SearchTableCell()
+        // remove search value
+        cell.deleteSearchValueClousure = { [weak self] in
+            self?.isSelectype = self?.animalType.isEmpty == false ? true : false
+
+            self?.filter(self?.animalType ?? "")
+        }
+
+        // start search animal
+        cell.didStartSearchClousure = { [weak self] searchText in
+
+            self?.isSelectype = true
+            self?.filterAnimals = self?.animals.filter({ animal in
+                return (animal.animal.lowercased() == self?.animalType.lowercased()) && animal.species.lowercased().contains(searchText.lowercased())
+            }) ?? []
+
+            DispatchQueue.main.async {                self?.listTableView?.reloadData()
+            }
+        }
         return cell
     }
 
@@ -174,6 +194,13 @@ extension ListViewController: UITableViewDataSource {
 
         return cell
     }
+
+    func filter(_ type: String) {
+        filterAnimals = animals.filter({ animal in
+            return animal.animal.lowercased() == type.lowercased()
+        })
+        listTableView?.reloadData()
+    }
 }
 
 extension ListViewController {
@@ -189,8 +216,6 @@ extension ListViewController {
         dbFirestore
             .collection("petLibrary")
             .getDocuments { [weak self] (querySnapshot, err) in
- 
-            loadingView.self.dismiss(animated: true)
 
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -201,6 +226,8 @@ extension ListViewController {
                 }
                 self?.setData(querySnapshot)
             }
+
+            loadingView.didDismissView()
         }
     }
 
@@ -219,6 +246,9 @@ extension ListViewController {
             let animal = data["animal"] as? String ?? ""
 
             let image = data["image"] as? String ?? ""
+            let imageLink = URL(string: image) ?? URL(fileURLWithPath: "")
+            let imageData = try? Data(contentsOf: imageLink)
+            let imageAnimal = UIImage(data: imageData ?? Data()) as UIImage? ?? UIImage()
 
             let loadData = Animal(
                 height: height,
@@ -229,7 +259,7 @@ extension ListViewController {
                 species: species,
                 information: information,
                 history: history,
-                image: image,
+                image: imageAnimal,
                 animal: animal
             )
             arrAnimal.append(loadData)

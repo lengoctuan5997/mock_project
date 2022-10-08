@@ -182,8 +182,10 @@ class SignUpViewController: UIViewController {
         if validationNameLabel.isHidden && validationPhoneLabel.isHidden &&
             validationEmailLabel.isHidden && validationPassword.isHidden && validationConfirmPassLabel.isHidden {
             submitFormButton.isEnabled = true
+            submitFormButton.backgroundColor = .primaryColor
         } else {
             submitFormButton.isEnabled = false
+            submitFormButton.backgroundColor = .gray
         }
     }
 
@@ -193,32 +195,48 @@ class SignUpViewController: UIViewController {
         let password = passwordTextField?.text ?? ""
         let fullName = fullNameTextField?.text ?? ""
         let phoneNumber = phoneTextField?.text ?? ""
-        Auth.auth().createUser(withEmail: email,
-                               password: password) { (authResult, error) in
+        Auth.auth().createUser(
+            withEmail: email,
+            password: password
+        ) { (authResult, error) in
             if let errorCreate = error {
-                  let err = errorCreate as NSError
-                  switch err.code {
-                  case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                     print("accountExistsWithDifferentCredential")
-                  case AuthErrorCode.emailAlreadyInUse.rawValue:
-                      self.validationEmailLabel.text = "Email đã tồn tại"
-                      self.validationEmailLabel.isHidden = false
-                  default:
-                     print("unknown error: \(err.localizedDescription)")
-                  }
-                  // return
-               } else {
-                   let db = Firestore.firestore()
-                   db.collection("users").addDocument(data: ["uid": authResult?.user.uid,
-                       "fullName": fullName, "password": password, "email": email, "phoneNumber": phoneNumber, "isAdmin": false]) {(error) in
-                       if error != nil {
-                           print("User not save")
-                       }
+              let err = errorCreate as NSError
+              switch err.code {
+              case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
+                 print("accountExistsWithDifferentCredential")
+              case AuthErrorCode.emailAlreadyInUse.rawValue:
+                  self.validationEmailLabel.text = "Email đã tồn tại"
+                  self.validationEmailLabel.isHidden = false
+              default:
+                  let alert = UIAlertController(
+                    title: "Warning",
+                    message: "\(err.localizedDescription)",
+                    preferredStyle: .alert
+                  )
+
+                  alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+                  self.present(alert, animated: true)
+                 print("unknown error: \(err.localizedDescription)")
+              }
+           } else {
+               let dbUser = Firestore.firestore()
+               dbUser.collection("users").addDocument(data: [
+                "uid": authResult?.user.uid ?? "",
+                "fullName": fullName,
+                "password": password,
+                "email": email,
+                "phoneNumber": phoneNumber,
+                "isAdmin": false]
+               ) {(error) in
+                   if error != nil {
+                       print("User not save")
                    }
-                   let successVC = SuccessViewController(nibName: "SuccessViewController", bundle: nil)
-                   successVC.modalPresentationStyle = .fullScreen
-                   self.present(successVC, animated: true, completion: nil)
                }
+               let successVC = SuccessViewController(nibName: "SuccessViewController", bundle: nil)
+               successVC.didSetUserName(fullName)
+               successVC.modalPresentationStyle = .fullScreen
+               self.present(successVC, animated: true, completion: nil)
+           }
         }
     }
 }
@@ -257,6 +275,7 @@ extension SignUpViewController {
 
     func resetForm() {
         submitFormButton.isEnabled = false
+        submitFormButton.backgroundColor = .gray
 
         validationNameLabel?.isHidden = true
         validationPhoneLabel?.isHidden = true

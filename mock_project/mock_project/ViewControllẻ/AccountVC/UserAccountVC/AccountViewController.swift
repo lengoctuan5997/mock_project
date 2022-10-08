@@ -14,7 +14,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var accountTableView: UITableView?
     @IBOutlet weak var avatarAccount: UIImageView?
     @IBOutlet weak var containerView: UIView?
-    
+
     private let informationCell: String = "informationCell"
     private let petPageCell: String = "petPageCell"
     private let logOutCell: String = "logOutCell"
@@ -77,9 +77,9 @@ extension AccountViewController {
         userImage.centerYAnchor.constraint(equalTo: headerTableView.containerView.centerYAnchor).isActive = true
 
         userImage.centerXAnchor.constraint(equalTo: headerTableView.containerView.centerXAnchor).isActive = true
-        userImage.heightAnchor.constraint(equalToConstant: 150).isActive = true
-        userImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        userImage.layer.cornerRadius = 75
+        userImage.heightAnchor.constraint(equalToConstant: 190).isActive = true
+        userImage.widthAnchor.constraint(equalToConstant: 190).isActive = true
+        userImage.layer.cornerRadius = 95
         userImage.contentMode = .scaleAspectFill
         userImage.clipsToBounds = true
         headerTableView.imageView.image = UIImage(named: "dog_f3")
@@ -92,7 +92,6 @@ extension AccountViewController {
         userInfo.append(user.fullName ?? "")
         userInfo.append(user.phoneNumber ?? "")
         userInfo.append(user.email ?? "")
-//        userInfo = [user.fullName, user.phoneNumber, user.email]
     }
 }
 

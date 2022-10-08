@@ -67,7 +67,7 @@ extension UIView {
         self.layer.borderWidth = width
         self.layer.borderColor = color.cgColor
     }
-    
+
     func setStyleBackButton() {
         self.setBorder(2, .white)
         self.cardShadow()

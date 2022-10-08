@@ -22,6 +22,10 @@ class LoadingView: UIViewController {
     deinit {
         view.layer.removeAllAnimations()
     }
+    
+    func didDismissView() {
+        self.dismiss(animated: true)
+    }
 
 }
 

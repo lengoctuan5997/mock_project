@@ -8,17 +8,28 @@
 import UIKit
 
 class SuccessViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel?
-    var text: String = ""
+    @IBOutlet private weak var nameLabel: UILabel?
+    @IBOutlet private weak var nextViewButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel?.text = text
+        _ = view.applyGradient()
+        nextViewButton?.setBorder(2, .white)
+        nextViewButton?.cardShadow()
+        nextViewButton?.backgroundColor = .primaryColor
+        nextViewButton?.layer.cornerRadius = 15
     }
 
     @IBAction func didTapLoginView(_ sender: Any) {
-        let tabbarVC = TabbarController(nibName: "TabbarController", bundle: nil)
-        tabbarVC.modalPresentationStyle = .fullScreen
-        self.present(tabbarVC, animated: true, completion: nil)
+        let loginVc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        loginVc.modalPresentationStyle = .fullScreen
+        self.present(loginVc, animated: true, completion: nil)
+    }
+    
+    func didSetUserName(_ userName: String) {
+        print("user \(userName)")
+        DispatchQueue.main.async { [weak self] in
+            self?.nameLabel?.text = userName
+        }
     }
 }

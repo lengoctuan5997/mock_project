@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QEF-qh-4pj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="442"/>
+                        <rect key="frame" x="20" y="0.0" width="280" height="442"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewLayout key="collectionViewLayout" id="WPT-zX-tXk" customClass="PinterestLayout" customModule="mock_project" customModuleProvider="target"/>
                     </collectionView>
@@ -26,8 +26,8 @@
                 <constraints>
                     <constraint firstItem="QEF-qh-4pj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LJZ-le-XcR"/>
                     <constraint firstAttribute="bottom" secondItem="QEF-qh-4pj" secondAttribute="bottom" id="NuJ-qC-SfF"/>
-                    <constraint firstItem="QEF-qh-4pj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bhQ-8Q-d1P"/>
-                    <constraint firstAttribute="trailing" secondItem="QEF-qh-4pj" secondAttribute="trailing" id="lJ9-JS-3TG"/>
+                    <constraint firstItem="QEF-qh-4pj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bhQ-8Q-d1P"/>
+                    <constraint firstAttribute="trailing" secondItem="QEF-qh-4pj" secondAttribute="trailing" constant="20" id="lJ9-JS-3TG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
