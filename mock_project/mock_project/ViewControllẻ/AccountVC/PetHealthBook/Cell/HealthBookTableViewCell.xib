@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="healthBookCell" rowHeight="74" id="KGk-i7-Jjw" customClass="HealthBookTableViewCell" customModule="mock_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7NU-wd-Pex">
+                        <rect key="frame" x="5" y="5" width="315" height="64"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="bX8-Y2-xFl">
+                                <rect key="frame" x="10" y="9.9999999999999982" width="295" height="19.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZZ-y0-9um">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="19.333333333333332"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Tên pet">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ib-LL-lq3">
+                                        <rect key="frame" x="203" y="0.0" width="92" height="19.333333333333332"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Thời gian">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.32549020649999999" green="0.2588235438" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yZZ-y0-9um" firstAttribute="leading" secondItem="bX8-Y2-xFl" secondAttribute="leading" id="Yjz-be-KoF"/>
+                                    <constraint firstItem="8Ib-LL-lq3" firstAttribute="leading" secondItem="yZZ-y0-9um" secondAttribute="trailing" constant="10" id="bcN-Be-V0q"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ib-LL-lq3" secondAttribute="trailing" id="oBi-m9-Xk4"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuẩn đoán" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-ku-rb5">
+                                <rect key="frame" x="10" y="39.333333333333336" width="295" height="14.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bX8-Y2-xFl" secondAttribute="trailing" constant="10" id="BFo-vF-xh0"/>
+                            <constraint firstItem="ala-ku-rb5" firstAttribute="leading" secondItem="7NU-wd-Pex" secondAttribute="leading" constant="10" id="C8b-7r-mIU"/>
+                            <constraint firstAttribute="bottom" secondItem="ala-ku-rb5" secondAttribute="bottom" constant="10" id="bMF-lL-tvy"/>
+                            <constraint firstItem="bX8-Y2-xFl" firstAttribute="top" secondItem="7NU-wd-Pex" secondAttribute="top" constant="10" id="ceN-tD-21q"/>
+                            <constraint firstAttribute="trailing" secondItem="ala-ku-rb5" secondAttribute="trailing" constant="10" id="crk-FU-UID"/>
+                            <constraint firstItem="bX8-Y2-xFl" firstAttribute="leading" secondItem="7NU-wd-Pex" secondAttribute="leading" constant="10" id="jbe-bv-wcd"/>
+                            <constraint firstItem="ala-ku-rb5" firstAttribute="top" secondItem="bX8-Y2-xFl" secondAttribute="bottom" constant="10" id="o1z-2d-4eX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="7NU-wd-Pex" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="dCq-JV-cRv"/>
+                    <constraint firstItem="7NU-wd-Pex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="kUZ-hr-Yzp"/>
+                    <constraint firstAttribute="bottom" secondItem="7NU-wd-Pex" secondAttribute="bottom" constant="5" id="rro-F5-08N"/>
+                    <constraint firstAttribute="trailing" secondItem="7NU-wd-Pex" secondAttribute="trailing" id="zDm-Wh-bif"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="7NU-wd-Pex" id="LD4-lW-XMA"/>
+                <outlet property="contentHealthBookLabel" destination="yZZ-y0-9um" id="fLR-ez-GSu"/>
+                <outlet property="dateLabel" destination="8Ib-LL-lq3" id="7aI-rc-Edz"/>
+                <outlet property="detailHealthBookLabel" destination="ala-ku-rb5" id="6xq-Mx-2JE"/>
+                <outlet property="petName" destination="yZZ-y0-9um" id="RIq-GP-oYp"/>
+            </connections>
+            <point key="canvasLocation" x="30.769230769230766" y="-0.7109004739336493"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
