@@ -198,15 +198,44 @@ extension HomeViewController: UITableViewDataSource {
             for: indexPath
         ) as? LibraryTableCell ?? LibraryTableCell()
 
-        cell.libraryTapCellClousure = { [weak self] in
+        cell.libraryTapCellClousure = { [weak self] (indexCell) in
             print("click")
-            let handBookVC = HandBookViewController(
-                nibName: String(
-                    describing: HandBookViewController.self
-                ),
-                bundle: .main
-            )
-            self?.navigationController?.pushViewController(handBookVC, animated: true)
+            let cellType = LibraryCellStyle.init(rawValue: indexCell.item)
+
+            switch cellType {
+            case .petHeath:
+                let petHeathVC = PetHealthBookViewController(
+                    nibName: String(
+                        describing: PetHealthBookViewController.self
+                    ),
+                    bundle: .main
+                )
+                self?.navigationController?.pushViewController(petHeathVC, animated: true)
+            case .myPet:
+                let myPetVC = ListPetViewController(
+                    nibName: String(
+                        describing: ListPetViewController.self
+                    ),
+                    bundle: .main
+                )
+                self?.navigationController?.pushViewController(myPetVC, animated: true)
+            case .handBook:
+                let handBookVC = HandBookViewController(
+                    nibName: String(
+                        describing: HandBookViewController.self
+                    ),
+                    bundle: .main
+                )
+                self?.navigationController?.pushViewController(handBookVC, animated: true)
+            default:
+                let trainingVC = TrainingViewController(
+                    nibName: String(
+                        describing: TrainingViewController.self
+                    ),
+                    bundle: .main
+                )
+                self?.navigationController?.pushViewController(trainingVC, animated: true)
+            }
         }
 
         return cell

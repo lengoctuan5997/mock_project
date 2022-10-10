@@ -14,7 +14,7 @@ class UserDetailVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField?
     @IBOutlet weak var backButton: UIButton?
     @IBOutlet weak var addButton: UIButton?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -50,7 +50,7 @@ extension UserDetailVC {
         emailTextField?.paddingLeft()
         emailTextField?.setBorder(1, .primaryColor)
         emailTextField?.layer.cornerRadius = 15
-        
+
         backButton?.setStyleBackButton()
         addButton?.setStyleBackButton()
     }

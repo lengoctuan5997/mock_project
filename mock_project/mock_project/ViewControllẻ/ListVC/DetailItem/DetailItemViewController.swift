@@ -86,7 +86,6 @@ extension DetailItemViewController {
 }
 // MARK: - tableview delegate
 extension DetailItemViewController: UITableViewDelegate {
-    
         func tableView(
             _ tableView: UITableView,
             heightForRowAt indexPath: IndexPath

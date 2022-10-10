@@ -46,6 +46,7 @@ class StretchyTableHeaderView: UIView {
         containerView.layer.cornerRadius = 30
         containerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         containerView.addSubview(imageView)
+        containerView.cardShadow()
     }
 
     func setViewConstraints() {

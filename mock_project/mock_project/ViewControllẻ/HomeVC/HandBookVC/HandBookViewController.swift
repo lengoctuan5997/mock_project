@@ -243,8 +243,7 @@ extension HandBookViewController {
             handBooks.append(loadData)
         }
         print("handbook \(handBooks.count)")
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             loadingView.didDismissView()
             self.handBookAnimals = handBooks
             self.handBookTableView?.reloadData()

@@ -25,7 +25,7 @@ class SuccessViewController: UIViewController {
         loginVc.modalPresentationStyle = .fullScreen
         self.present(loginVc, animated: true, completion: nil)
     }
-    
+
     func didSetUserName(_ userName: String) {
         print("user \(userName)")
         DispatchQueue.main.async { [weak self] in

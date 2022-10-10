@@ -16,47 +16,62 @@
                 <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catF" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-JQ-ChR">
-                        <rect key="frame" x="10" y="6" width="80" height="80"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vW-xT-aQs">
+                        <rect key="frame" x="10" y="0.0" width="306" height="92"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catF" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-JQ-ChR">
+                                <rect key="frame" x="10" y="6" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="gpf-ei-AV4"/>
+                                    <constraint firstAttribute="height" constant="80" id="oKd-0F-RaZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYN-Y1-LVr">
+                                <rect key="frame" x="100" y="10" width="122.33333333333331" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loài thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-vW-hdr">
+                                <rect key="frame" x="100" y="60" width="109" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OOf-mt-Gar">
+                                <rect key="frame" x="266" y="32.666666666666664" width="30" height="27.000000000000007"/>
+                                <color key="tintColor" red="0.270588249" green="0.60392159219999997" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Ec-wX-UCR"/>
+                                    <constraint firstAttribute="width" constant="30" id="xEu-nI-RqE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="gpf-ei-AV4"/>
-                            <constraint firstAttribute="height" constant="80" id="oKd-0F-RaZ"/>
+                            <constraint firstItem="HYN-Y1-LVr" firstAttribute="top" secondItem="2vW-xT-aQs" secondAttribute="top" constant="10" id="7ge-7T-iRq"/>
+                            <constraint firstItem="9wq-JQ-ChR" firstAttribute="centerY" secondItem="2vW-xT-aQs" secondAttribute="centerY" id="DfV-8l-Qpt"/>
+                            <constraint firstItem="HYN-Y1-LVr" firstAttribute="leading" secondItem="9wq-JQ-ChR" secondAttribute="trailing" constant="10" id="MSQ-4J-IVI"/>
+                            <constraint firstItem="OOf-mt-Gar" firstAttribute="centerY" secondItem="2vW-xT-aQs" secondAttribute="centerY" id="f4W-6L-Tt3"/>
+                            <constraint firstAttribute="bottom" secondItem="vh2-vW-hdr" secondAttribute="bottom" constant="10" id="gJ7-wJ-Jp3"/>
+                            <constraint firstItem="vh2-vW-hdr" firstAttribute="leading" secondItem="9wq-JQ-ChR" secondAttribute="trailing" constant="10" id="mKo-Mh-FFt"/>
+                            <constraint firstAttribute="trailing" secondItem="OOf-mt-Gar" secondAttribute="trailing" constant="10" id="x5X-dW-Qqt"/>
+                            <constraint firstItem="9wq-JQ-ChR" firstAttribute="leading" secondItem="2vW-xT-aQs" secondAttribute="leading" constant="10" id="yse-x8-qzS"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYN-Y1-LVr">
-                        <rect key="frame" x="98" y="6" width="122.33333333333331" height="24"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loài thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-vW-hdr">
-                        <rect key="frame" x="100" y="64" width="109" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OOf-mt-Gar">
-                        <rect key="frame" x="286" y="32.666666666666664" width="30" height="27.000000000000007"/>
-                        <color key="tintColor" red="0.270588249" green="0.60392159219999997" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="2Ec-wX-UCR"/>
-                            <constraint firstAttribute="width" constant="30" id="xEu-nI-RqE"/>
-                        </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="9wq-JQ-ChR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4U2-jQ-Bew"/>
-                    <constraint firstItem="HYN-Y1-LVr" firstAttribute="top" secondItem="9wq-JQ-ChR" secondAttribute="top" id="6qC-bf-VUy"/>
-                    <constraint firstItem="HYN-Y1-LVr" firstAttribute="leading" secondItem="9wq-JQ-ChR" secondAttribute="trailing" constant="8" id="7Ka-IT-Zxg"/>
-                    <constraint firstItem="vh2-vW-hdr" firstAttribute="leading" secondItem="9wq-JQ-ChR" secondAttribute="trailing" constant="10" id="MyH-IE-nDn"/>
-                    <constraint firstItem="OOf-mt-Gar" firstAttribute="centerY" secondItem="9wq-JQ-ChR" secondAttribute="centerY" id="PmV-S0-wLi"/>
-                    <constraint firstAttribute="trailing" secondItem="OOf-mt-Gar" secondAttribute="trailing" constant="10" id="RSe-3k-bSo"/>
-                    <constraint firstItem="9wq-JQ-ChR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dex-g9-c2A"/>
-                    <constraint firstItem="vh2-vW-hdr" firstAttribute="bottom" secondItem="9wq-JQ-ChR" secondAttribute="bottom" id="zkw-be-dEf"/>
+                    <constraint firstItem="2vW-xT-aQs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MJL-S5-4h9"/>
+                    <constraint firstItem="2vW-xT-aQs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oPa-Wv-yfT"/>
+                    <constraint firstAttribute="bottom" secondItem="2vW-xT-aQs" secondAttribute="bottom" id="uo3-h5-DUm"/>
+                    <constraint firstAttribute="trailing" secondItem="2vW-xT-aQs" secondAttribute="trailing" constant="10" id="xQj-ep-287"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="container" destination="2vW-xT-aQs" id="e7Q-kh-Noa"/>
                 <outlet property="petAvatar" destination="9wq-JQ-ChR" id="F4w-qi-b4a"/>
                 <outlet property="petNameLabel" destination="HYN-Y1-LVr" id="pai-V8-gWx"/>
                 <outlet property="speciesLabel" destination="vh2-vW-hdr" id="4xC-7a-Y8L"/>

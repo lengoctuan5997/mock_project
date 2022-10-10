@@ -12,7 +12,7 @@ class LibraryTableCell: UITableViewCell {
 
     @IBOutlet weak var libraryCollectionView: UICollectionView?
     var animals: [CGFloat] = [300, 200, 200, 300]
-    var libraryTapCellClousure: () -> Void = {}
+    var libraryTapCellClousure: (_ indexCell: IndexPath) -> Void = {_ in}
     var contentLibarary: [LibrariesContent] = [
         LibrariesContent(title: "Sổ sức khoẻ", image: "heath_care"),
         LibrariesContent(title: "Thú cưng", image: "my_pet_color"),
@@ -58,7 +58,7 @@ extension LibraryTableCell: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        libraryTapCellClousure()
+        libraryTapCellClousure(indexPath)
     }
 }
 

@@ -21,22 +21,26 @@ class ListPetViewController: UIViewController {
 
 extension ListPetViewController {
     private func setupUI() {
+        _ = view.applyGradient()
         self.navigationController?.isNavigationBarHidden = false
-        let addPetButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: self, action: #selector(didTapAddPetButton))
+        tabBarController?.tabBar.isHidden = true
+        let addPetButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: self,
+            action: #selector(didTapAddPetButton)
+        )
         navigationItem.rightBarButtonItem = addPetButton
         listPetTableView?.delegate = self
         listPetTableView?.dataSource = self
-        listPetTableView?.register (
+        listPetTableView?.register(
             UINib(
-                nibName: String (
+                nibName: String(
                     describing: LogoListTableViewCell.self
                 ),
                 bundle: nil
             ),
             forCellReuseIdentifier: logoCell)
-        listPetTableView?.register (
+        listPetTableView?.register(
             UINib(
-                nibName: String (
+                nibName: String(
                     describing: ListPetTableViewCell.self
                 ),
                 bundle: nil
@@ -54,7 +58,7 @@ extension ListPetViewController {
 
 extension ListPetViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        140
+        100
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -70,23 +74,14 @@ extension ListPetViewController: UITableViewDelegate {
 
 extension ListPetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        1
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
-            guard let logoCell = listPetTableView?.dequeueReusableCell(withIdentifier: logoCell) as? LogoListTableViewCell else {
-                return LogoListTableViewCell()
-            }
-            return logoCell
-        default:
-            guard let listCell = listPetTableView?.dequeueReusableCell(withIdentifier: listCell) as? ListPetTableViewCell else {
-                return ListPetTableViewCell()
-            }
-            return listCell
+        guard let listCell = listPetTableView?.dequeueReusableCell(
+            withIdentifier: listCell) as? ListPetTableViewCell else {
+            return ListPetTableViewCell()
         }
+        return listCell
     }
-    
-    
 }

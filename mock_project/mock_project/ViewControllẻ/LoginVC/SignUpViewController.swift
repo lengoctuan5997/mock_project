@@ -40,7 +40,6 @@ class SignUpViewController: UIViewController {
         self.present(loginVC, animated: true, completion: nil)
     }
 
-
     func validationSignUp() {
         if passwordTextField?.text == confirmPasswordTextField?.text {
             return

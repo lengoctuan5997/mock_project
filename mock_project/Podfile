@@ -8,5 +8,5 @@ target 'mock_project' do
   # Pods for mock_project
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
-
+pod 'FirebaseStorage'
 end

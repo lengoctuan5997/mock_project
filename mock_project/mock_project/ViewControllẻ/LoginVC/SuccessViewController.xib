@@ -43,10 +43,10 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zba-N6-lVC">
-                    <rect key="frame" x="35.5" y="283.5" width="343" height="329.5"/>
+                    <rect key="frame" x="56" y="283.5" width="302.5" height="329.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3u5-zw-9zY">
-                            <rect key="frame" x="111.5" y="0.5" width="120" height="119"/>
+                            <rect key="frame" x="91" y="0.5" width="120" height="119"/>
                             <color key="tintColor" systemColor="systemGreenColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="qAb-9I-Fiy"/>
@@ -54,7 +54,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejo-DC-dbJ">
-                            <rect key="frame" x="20.5" y="160" width="302.5" height="27.5"/>
+                            <rect key="frame" x="0.0" y="160" width="302.5" height="27.5"/>
                             <color key="tintColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <attributedString key="attributedText">
                                 <fragment content="Sign Up Successfully ">
@@ -68,21 +68,22 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z5U-Xk-wg3">
-                            <rect key="frame" x="0.0" y="227.5" width="343" height="39"/>
+                            <rect key="frame" x="54" y="227.5" width="194.5" height="39"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D13-7b-WcY">
-                                    <rect key="frame" x="0.0" y="0.0" width="171.5" height="39"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="23" height="39"/>
                                     <attributedString key="attributedText">
-                                        <fragment content="Congratulations">
+                                        <fragment content="Hi">
                                             <attributes>
                                                 <font key="NSFont" size="19" name="CourierNewPS-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-zf-MnJ">
-                                    <rect key="frame" x="179.5" y="0.0" width="163.5" height="39"/>
+                                    <rect key="frame" x="31" y="0.0" width="163.5" height="39"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Charon !">
                                             <attributes>
@@ -96,7 +97,7 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMM-HE-5Su">
-                            <rect key="frame" x="63.5" y="306.5" width="216.5" height="23"/>
+                            <rect key="frame" x="43" y="306.5" width="216.5" height="23"/>
                             <attributedString key="attributedText">
                                 <fragment content="Welcome to our app">
                                     <attributes>

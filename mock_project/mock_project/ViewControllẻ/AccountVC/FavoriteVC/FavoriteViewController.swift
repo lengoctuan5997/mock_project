@@ -11,7 +11,7 @@ private let reuseIdentifier = "favoriteCell"
 
 class FavoriteViewController: UICollectionViewController {
     @IBOutlet var collectionContainer: UICollectionView!
-    
+
     var animalFavorites: [String] = ["dog_f1", "dog_f2", "dog_f3", "dog_f4", "dog_f5", "dog_f6", "dog_f7"]
 
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ extension FavoriteViewController {
     func configUI() {
         view.backgroundColor = .white
         _ = view.applyGradient()
-        
+
         collectionView.register(
             UINib(
                 nibName: String(describing: FavoriteCell.self),

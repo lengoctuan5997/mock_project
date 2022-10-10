@@ -9,7 +9,7 @@ import UIKit
 
 class AddAvatarPetTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarPet: UIImageView?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +24,5 @@ class AddAvatarPetTableViewCell: UITableViewCell {
 
 extension AddAvatarPetTableViewCell {
     @IBAction func didTapAddPhotoPet(_ sender: Any) {
-        
     }
 }

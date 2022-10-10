@@ -11,10 +11,12 @@ class ListPetTableViewCell: UITableViewCell {
     @IBOutlet weak var speciesLabel: UILabel?
     @IBOutlet weak var petNameLabel: UILabel?
     @IBOutlet weak var petAvatar: UIImageView?
-    
+    @IBOutlet weak var container: UIView?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        petAvatar?.layer.cornerRadius = (petAvatar?.bounds.width ?? 0) / 2
+        container?.layer.cornerRadius = 15
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,5 +24,4 @@ class ListPetTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

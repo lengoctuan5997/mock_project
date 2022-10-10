@@ -103,4 +103,11 @@ extension UITextField {
         self.leftView = paddingView
         self.leftViewMode = .always
     }
+
+    func setTextFieldStyle() {
+        self.paddingLeft()
+        self.cardShadow()
+        self.layer.cornerRadius = 15
+        self.setBorder(1, .primaryColor)
+    }
 }

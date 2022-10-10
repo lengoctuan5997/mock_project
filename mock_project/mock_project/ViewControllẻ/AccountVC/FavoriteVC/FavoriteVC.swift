@@ -12,9 +12,9 @@ private let reuseIdentifier = "favoriteCell"
 class FavoriteVC: UIViewController {
     @IBOutlet weak var favoriteCollectionView: UICollectionView?
     @IBOutlet weak var backButton: UIButton!
-    
+
     var animalFavorites: [String] = ["dog_f1", "dog_f2", "dog_f3", "dog_f4", "dog_f5", "dog_f6", "dog_f7"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -28,13 +28,14 @@ class FavoriteVC: UIViewController {
 // MARK: - CONFIG UI
 extension FavoriteVC {
     func configUI() {
+        tabBarController?.tabBar.isHidden = true
         guard let favoriteCollectionView = favoriteCollectionView else {
             return
         }
 
         backButton.setStyleBackButton()
         backButton.titleLabel?.textColor = .white
-        
+
         view.backgroundColor = .white
         _ = view.applyGradient()
 
@@ -61,11 +62,11 @@ extension FavoriteVC {
 }
 // MARK: - DELEGATE
 extension FavoriteVC: UICollectionViewDelegate {
-    
+
 }
 // MARK: - DATASOURCE
 extension FavoriteVC: UICollectionViewDataSource {
-    
+
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int

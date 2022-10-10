@@ -25,21 +25,25 @@ class AddPetViewController: UIViewController {
 extension AddPetViewController {
     private func setupUI() {
         self.navigationController?.isNavigationBarHidden = false
-        let doneAddPetButton = UIBarButtonItem(title: "Xong", style: .done, target: self, action: #selector(didTapDoneAddPetButton))
+        let doneAddPetButton = UIBarButtonItem(
+            title: "Xong",
+            style: .done,
+            target: self, action: #selector(didTapDoneAddPetButton)
+        )
         navigationItem.rightBarButtonItem = doneAddPetButton
         addPetTableView?.delegate = self
         addPetTableView?.dataSource = self
-        addPetTableView?.register (
-            UINib (
-                nibName: String (
+        addPetTableView?.register(
+            UINib(
+                nibName: String(
                     describing: AddAvatarPetTableViewCell.self
                 ),
                 bundle: nil
             ), forCellReuseIdentifier: addPhotoPetCell
         )
-        addPetTableView?.register (
-            UINib (
-                nibName: String (
+        addPetTableView?.register(
+            UINib(
+                nibName: String(
                     describing: AddInformationPetTableViewCell.self
                 ),
                 bundle: nil
@@ -69,16 +73,20 @@ extension AddPetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            guard let addPhotoPetCell = addPetTableView?.dequeueReusableCell(withIdentifier: addPhotoPetCell) as? AddAvatarPetTableViewCell else {
+            guard let addPhotoPetCell = addPetTableView?.dequeueReusableCell(
+                withIdentifier: addPhotoPetCell) as? AddAvatarPetTableViewCell
+            else {
                 return AddAvatarPetTableViewCell()
             }
             return addPhotoPetCell
         default:
-            guard let addInforPetCell = addPetTableView?.dequeueReusableCell(withIdentifier: addInforPetCell) as? AddInformationPetTableViewCell else {
+            guard let addInforPetCell = addPetTableView?.dequeueReusableCell(
+                withIdentifier: addInforPetCell) as? AddInformationPetTableViewCell
+            else {
                 return AddInformationPetTableViewCell()
             }
             addInforPetCell.titleLabel?.text = titleAdd[indexPath.row]
@@ -87,7 +95,8 @@ extension AddPetViewController: UITableViewDataSource {
                 let toolbar = UIToolbar()
                 toolbar.sizeToFit()
 
-                let doneButton = UIBarButtonItem(title: "Xong", style: .done, target: self, action: #selector(didTapDonePickDate))
+                let doneButton = UIBarButtonItem(title: "Xong",
+                style: .done, target: self, action: #selector(didTapDonePickDate))
                 toolbar.setItems([doneButton], animated: true)
 
                 addInforPetCell.detailTextField?.inputAccessoryView = toolbar
