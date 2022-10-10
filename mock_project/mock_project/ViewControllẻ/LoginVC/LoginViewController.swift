@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var validationEmailLabel: UILabel?
     @IBOutlet weak var validationPasswordLabel: UILabel?
     @IBOutlet weak var signinButton: UIButton!
-    
+
     var userManager = UserManager.shared
     let authen = Auth.auth()
 
@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         onCheckUserIsLogin()
         configUI()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
     }
 
@@ -85,7 +85,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func configUI() {
         _ = view.applyGradient()
- 
+
         emailTextField?.cardShadow()
         emailTextField?.paddingLeft()
         emailTextField?.setBorder(1, .primaryColor)
@@ -96,10 +96,10 @@ extension LoginViewController {
 
         emailTextField?.layer.cornerRadius = 15
         passwordTextField?.layer.cornerRadius = 15
-        
+
         signinButton.setBorder(1, .white)
         signinButton.cardShadow()
-        
+
     }
 }
 

@@ -41,7 +41,7 @@ class HandBook {
         }
         return handBooks
     }
-    
+
     func setData(_ querySnapshot: QuerySnapshot) -> [HandBook] {
         var handBooks: [HandBook] = []
         for document in querySnapshot.documents {

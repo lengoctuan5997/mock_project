@@ -10,7 +10,7 @@ import UIKit
 class HandBookDetailVC: UIViewController {
     @IBOutlet weak var handBookDetailTable: UITableView?
     @IBOutlet weak var backButton: UIButton?
-    
+
     private var handBook: HandBook?
     private var handBookCell: String = "cell"
 
@@ -19,11 +19,11 @@ class HandBookDetailVC: UIViewController {
         configUI()
         navigationController?.isNavigationBarHidden = true
     }
-    
+
     @IBAction func didBackToPrevView(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
+
 }
 // MARK: - CONFIG UI
 extension HandBookDetailVC {
@@ -68,9 +68,7 @@ extension HandBookDetailVC: UITableViewDelegate {
 
 // MARK: - DATASOURCE
 extension HandBookDetailVC: UITableViewDataSource {
-    func tableView(
-        _ tableView: UITableView, 
-        numberOfRowsInSection section: Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int
     ) -> Int {
         1
     }

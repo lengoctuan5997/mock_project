@@ -14,7 +14,7 @@ class DescriptionTableViewCell: UITableViewCell {
     @IBOutlet weak var ageLabel: UILabel?
     @IBOutlet weak var weightLabel: UILabel?
     @IBOutlet weak var heightLabel: UILabel?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,13 +40,13 @@ class DescriptionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     override func prepareForReuse() {
         heightLabel?.text = nil
         weightLabel?.text = nil
         ageLabel?.text = nil
     }
-    
+
     func setInfoAnimal(_ animal: Animal) {
         heightLabel?.text = animal.height
         weightLabel?.text = animal.weight

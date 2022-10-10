@@ -13,6 +13,12 @@ enum TableCellStyle: Int {
     case library
 }
 
+enum LibraryCellStyle: Int {
+    case petHeath = 0
+    case myPet
+    case handBook
+    case training
+}
 struct LibrariesContent {
     let title: String
     let image: String

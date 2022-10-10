@@ -162,10 +162,12 @@ extension ListViewController: UITableViewDataSource {
 
             self?.isSelectype = true
             self?.filterAnimals = self?.animals.filter({ animal in
-                return (animal.animal.lowercased() == self?.animalType.lowercased()) && animal.species.lowercased().contains(searchText.lowercased())
+                return (animal.animal.lowercased() == self?.animalType.lowercased()) &&
+                animal.species.lowercased().contains(searchText.lowercased())
             }) ?? []
 
-            DispatchQueue.main.async {                self?.listTableView?.reloadData()
+            DispatchQueue.main.async {
+                self?.listTableView?.reloadData()
             }
         }
         return cell

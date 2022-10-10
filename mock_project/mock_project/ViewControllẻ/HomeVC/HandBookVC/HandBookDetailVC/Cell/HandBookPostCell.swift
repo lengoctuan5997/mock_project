@@ -22,7 +22,7 @@ class HandBookPostCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     override func prepareForReuse() {
         titleHandBook?.text = nil
         descriptionHandBook?.text = nil

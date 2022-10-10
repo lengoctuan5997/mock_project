@@ -12,7 +12,7 @@ class CategoriesCell: UICollectionViewCell {
     @IBOutlet weak var animalsNameLabel: UILabel?
     @IBOutlet weak var contentNameView: UIView?
     @IBOutlet weak var categoriesView: UIView?
-    
+
 //    override var isHighlighted: Bool {
 //        didSet {
 //            print(isHighlighted)

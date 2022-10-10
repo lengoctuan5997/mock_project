@@ -14,7 +14,7 @@ class UserManager {
     func setUserInfo(_ user: User) {
         self.user = user
     }
-    
+
     func getUserInfo() -> User {
         return user
     }

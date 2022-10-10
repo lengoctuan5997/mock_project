@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="1011" id="KGk-i7-Jjw" customClass="NewPetHeathCell" customModule="mock_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1011"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="1011"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDr-Vj-Ozs">
+                        <rect key="frame" x="15" y="39.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="Vd3-Wm-pHT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-4n-OkL">
+                        <rect key="frame" x="15" y="10" width="290" height="19.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Tên thú cưng">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="257" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzG-pB-JBs">
+                        <rect key="frame" x="15" y="99.5" width="92" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Ngày khám">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-qr-YgY">
+                        <rect key="frame" x="15" y="129.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="nxx-UX-eqX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-Vv-thX">
+                        <rect key="frame" x="15" y="189.5" width="82" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Nơi khám">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T60-QL-sgF">
+                        <rect key="frame" x="15" y="219.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="J08-7Y-wlX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO0-O9-uej">
+                        <rect key="frame" x="15" y="279.5" width="113" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Triệu chứng">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDs-B0-Gjm">
+                        <rect key="frame" x="15" y="309.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="CdU-kZ-YWK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEs-1O-zvl">
+                        <rect key="frame" x="15" y="369.5" width="103" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Chuẩn đoán">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnK-j4-Upt">
+                        <rect key="frame" x="15" y="399.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="11S-KI-3tr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-vl-NhJ">
+                        <rect key="frame" x="15" y="459.5" width="143" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Lần tiêm chủng">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlW-0f-yNF">
+                        <rect key="frame" x="15" y="489.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="VwN-eI-i3Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-or-Vxg">
+                        <rect key="frame" x="15" y="549.5" width="113" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Loại Vacxin">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GoK-Nd-mZB">
+                        <rect key="frame" x="15" y="579.5" width="290" height="45"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="nfV-iH-LSP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQG-uk-VEf">
+                        <rect key="frame" x="15" y="639.5" width="184" height="20"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Quá trình điều trị">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFN-Ff-rLp">
+                        <rect key="frame" x="15" y="784.5" width="72" height="106.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Ghi chú">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CKC-Fe-ZKv">
+                        <rect key="frame" x="15" y="901" width="290" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="9bi-I3-ecW"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Moe-1Z-3FK">
+                        <rect key="frame" x="15" y="669.5" width="290" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="D0e-ey-8bs"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="MQG-uk-VEf" firstAttribute="top" secondItem="GoK-Nd-mZB" secondAttribute="bottom" constant="15" id="26e-sw-YUC"/>
+                    <constraint firstItem="GoK-Nd-mZB" firstAttribute="top" secondItem="jdD-or-Vxg" secondAttribute="bottom" constant="10" id="2gs-OZ-mKj"/>
+                    <constraint firstAttribute="trailing" secondItem="e6a-qr-YgY" secondAttribute="trailing" constant="15" id="3Mk-Ax-Hq4"/>
+                    <constraint firstItem="OnK-j4-Upt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="3r6-90-kk1"/>
+                    <constraint firstItem="GoK-Nd-mZB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="4ms-TU-47i"/>
+                    <constraint firstItem="T60-QL-sgF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="51C-2T-LWN"/>
+                    <constraint firstItem="T60-QL-sgF" firstAttribute="top" secondItem="K4I-Vv-thX" secondAttribute="bottom" constant="10" id="6l3-eq-OBH"/>
+                    <constraint firstItem="jdD-or-Vxg" firstAttribute="top" secondItem="HlW-0f-yNF" secondAttribute="bottom" constant="15" id="A2b-im-Nqn"/>
+                    <constraint firstItem="NEs-1O-zvl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="BvI-OI-uWx"/>
+                    <constraint firstAttribute="trailing" secondItem="Moe-1Z-3FK" secondAttribute="trailing" constant="15" id="F0x-bN-9qM"/>
+                    <constraint firstItem="CKC-Fe-ZKv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Fh0-iC-tXa"/>
+                    <constraint firstItem="bzG-pB-JBs" firstAttribute="top" secondItem="iDr-Vj-Ozs" secondAttribute="bottom" constant="15" id="Ifb-IN-zBQ"/>
+                    <constraint firstItem="jdD-or-Vxg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JSS-iM-JMp"/>
+                    <constraint firstItem="iDr-Vj-Ozs" firstAttribute="top" secondItem="2o0-4n-OkL" secondAttribute="bottom" constant="10" id="JWK-sG-cNJ"/>
+                    <constraint firstItem="HO0-O9-uej" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="LM7-ZD-KYo"/>
+                    <constraint firstItem="oFN-Ff-rLp" firstAttribute="top" secondItem="Moe-1Z-3FK" secondAttribute="bottom" constant="15" id="MWB-dE-ul7"/>
+                    <constraint firstAttribute="trailing" secondItem="2o0-4n-OkL" secondAttribute="trailing" constant="15" id="NKT-HZ-Qpx"/>
+                    <constraint firstItem="2o0-4n-OkL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NVk-oc-4Ct"/>
+                    <constraint firstItem="CKC-Fe-ZKv" firstAttribute="top" secondItem="oFN-Ff-rLp" secondAttribute="bottom" constant="10" id="Owd-ih-ZX6"/>
+                    <constraint firstItem="Moe-1Z-3FK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="PP7-gy-Ctm"/>
+                    <constraint firstItem="Lmh-vl-NhJ" firstAttribute="top" secondItem="OnK-j4-Upt" secondAttribute="bottom" constant="15" id="Pbi-3B-bJK"/>
+                    <constraint firstItem="Lmh-vl-NhJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Rzh-fA-a4G"/>
+                    <constraint firstItem="e6a-qr-YgY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="TEo-SJ-2sh"/>
+                    <constraint firstItem="kDs-B0-Gjm" firstAttribute="top" secondItem="HO0-O9-uej" secondAttribute="bottom" constant="10" id="TK4-yr-1Zd"/>
+                    <constraint firstAttribute="trailing" secondItem="HlW-0f-yNF" secondAttribute="trailing" constant="15" id="WBm-br-vjU"/>
+                    <constraint firstItem="MQG-uk-VEf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Yzn-eb-d5h"/>
+                    <constraint firstItem="bzG-pB-JBs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Z7x-mP-yEy"/>
+                    <constraint firstItem="K4I-Vv-thX" firstAttribute="top" secondItem="e6a-qr-YgY" secondAttribute="bottom" constant="15" id="ZBz-oy-BBP"/>
+                    <constraint firstItem="K4I-Vv-thX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="bJ6-Ar-OqR"/>
+                    <constraint firstAttribute="trailing" secondItem="iDr-Vj-Ozs" secondAttribute="trailing" constant="15" id="bRP-FW-TZP"/>
+                    <constraint firstItem="NEs-1O-zvl" firstAttribute="top" secondItem="kDs-B0-Gjm" secondAttribute="bottom" constant="15" id="bZL-9j-387"/>
+                    <constraint firstItem="oFN-Ff-rLp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="c3I-LI-aUi"/>
+                    <constraint firstAttribute="trailing" secondItem="CKC-Fe-ZKv" secondAttribute="trailing" constant="15" id="cc8-LH-TEM"/>
+                    <constraint firstItem="e6a-qr-YgY" firstAttribute="top" secondItem="bzG-pB-JBs" secondAttribute="bottom" constant="10" id="hgQ-Zx-ljk"/>
+                    <constraint firstAttribute="bottom" secondItem="CKC-Fe-ZKv" secondAttribute="bottom" constant="10" id="jLa-g7-IC2"/>
+                    <constraint firstItem="kDs-B0-Gjm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kNQ-4q-cUe"/>
+                    <constraint firstItem="HlW-0f-yNF" firstAttribute="top" secondItem="Lmh-vl-NhJ" secondAttribute="bottom" constant="10" id="pa0-ye-YAf"/>
+                    <constraint firstItem="HlW-0f-yNF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="q5N-ZO-CnU"/>
+                    <constraint firstAttribute="trailing" secondItem="OnK-j4-Upt" secondAttribute="trailing" constant="15" id="rz7-GE-nKA"/>
+                    <constraint firstAttribute="trailing" secondItem="GoK-Nd-mZB" secondAttribute="trailing" constant="15" id="tQD-pT-6Tl"/>
+                    <constraint firstItem="Moe-1Z-3FK" firstAttribute="top" secondItem="MQG-uk-VEf" secondAttribute="bottom" constant="10" id="thI-Wc-M74"/>
+                    <constraint firstItem="HO0-O9-uej" firstAttribute="top" secondItem="T60-QL-sgF" secondAttribute="bottom" constant="15" id="uzg-s0-JHs"/>
+                    <constraint firstAttribute="trailing" secondItem="kDs-B0-Gjm" secondAttribute="trailing" constant="15" id="y9J-JS-NrI"/>
+                    <constraint firstItem="OnK-j4-Upt" firstAttribute="top" secondItem="NEs-1O-zvl" secondAttribute="bottom" constant="10" id="yne-ST-gya"/>
+                    <constraint firstItem="iDr-Vj-Ozs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zIQ-Sr-qfV"/>
+                    <constraint firstAttribute="trailing" secondItem="T60-QL-sgF" secondAttribute="trailing" constant="15" id="zVp-v9-C3k"/>
+                    <constraint firstItem="2o0-4n-OkL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zwA-ci-T8N"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dayExaminationTf" destination="e6a-qr-YgY" id="81f-hJ-igg"/>
+                <outlet property="diagnosticTF" destination="OnK-j4-Upt" id="f6z-EI-rL6"/>
+                <outlet property="examinationPlaceTf" destination="T60-QL-sgF" id="Lew-ji-7D3"/>
+                <outlet property="noteTF" destination="CKC-Fe-ZKv" id="JTb-nI-sgm"/>
+                <outlet property="petNameTF" destination="iDr-Vj-Ozs" id="52V-gc-Ihy"/>
+                <outlet property="processTF" destination="Moe-1Z-3FK" id="Mig-98-Tzg"/>
+                <outlet property="symptomTf" destination="kDs-B0-Gjm" id="4ML-WW-Iyc"/>
+                <outlet property="vaccinTimesTf" destination="HlW-0f-yNF" id="Ams-2c-6Tc"/>
+                <outlet property="vaccinTypeTF" destination="GoK-Nd-mZB" id="bjA-K0-5SF"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="391.40625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

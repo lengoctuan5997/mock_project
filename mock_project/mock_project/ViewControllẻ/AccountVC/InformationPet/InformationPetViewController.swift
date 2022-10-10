@@ -30,9 +30,9 @@ extension InformationPetViewController {
         navigationItem.rightBarButtonItem = editButton
         informationPetTableView?.delegate = self
         informationPetTableView?.dataSource = self
-        informationPetTableView?.register (
+        informationPetTableView?.register(
             UINib(
-                nibName: String (
+                nibName: String(
                     describing: InforPetTableViewCell.self
                 ),
                 bundle: nil
@@ -63,9 +63,9 @@ extension InformationPetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         content.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let inforPetCell = informationPetTableView?.dequeueReusableCell (
+        guard let inforPetCell = informationPetTableView?.dequeueReusableCell(
             withIdentifier: informationPetCell
         ) as? InforPetTableViewCell else {
             return InforPetTableViewCell()

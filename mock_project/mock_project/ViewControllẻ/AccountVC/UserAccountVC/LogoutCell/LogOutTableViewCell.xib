@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,20 +17,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzx-1S-FVw">
-                        <rect key="frame" x="9.9999999999999964" y="10" width="57.666666666666657" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.874513474321857" green="0.067270267255527413" blue="0.067270267255527413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzx-1S-FVw">
+                        <rect key="frame" x="67" y="11.333333333333334" width="71.666666666666686" height="19.333333333333329"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Log out">
+                                <attributes>
+                                    <color key="NSColor" red="0.874513474321857" green="0.067270267255527413" blue="0.067270267255527413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hup-mA-8Ew">
+                        <rect key="frame" x="10" y="5.6666666666666679" width="42" height="31.000000000000004"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="figure.walk" catalog="system"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Kzx-1S-FVw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="X4y-O8-cyO"/>
-                    <constraint firstItem="Kzx-1S-FVw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wPa-D2-5ZX"/>
+                    <constraint firstItem="hup-mA-8Ew" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CeZ-VG-050"/>
+                    <constraint firstItem="Kzx-1S-FVw" firstAttribute="leading" secondItem="hup-mA-8Ew" secondAttribute="trailing" constant="15" id="G8S-ug-X04"/>
+                    <constraint firstItem="hup-mA-8Ew" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q7k-fj-ud2"/>
+                    <constraint firstItem="Kzx-1S-FVw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ltT-Cu-apg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="30.769230769230766" y="-12.085308056872037"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

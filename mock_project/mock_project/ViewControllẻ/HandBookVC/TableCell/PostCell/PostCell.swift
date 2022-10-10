@@ -11,7 +11,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postView: UIView?
     @IBOutlet weak var contentPostView: UIView?
     @IBOutlet weak var postImage: UIImageView?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         postView?.cardShadow()
