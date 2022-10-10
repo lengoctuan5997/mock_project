@@ -171,6 +171,9 @@ class SignUpViewController: UIViewController {
     }
 
     func invalidConfirmPassword(_ value: String) -> String? {
+        if value.isEmpty == true {
+            return "Không được để trống thông tin này"
+        }
         if value != passwordTextField?.text {
             return "Mật khẩu không chính xác"
         }
@@ -179,7 +182,8 @@ class SignUpViewController: UIViewController {
 
     func checkValidForm() {
         if validationNameLabel.isHidden && validationPhoneLabel.isHidden &&
-            validationEmailLabel.isHidden && validationPassword.isHidden && validationConfirmPassLabel.isHidden {
+            validationEmailLabel.isHidden && validationPassword.isHidden &&
+            validationConfirmPassLabel.isHidden && confirmPasswordTextField?.text?.isEmpty == false{
             submitFormButton.isEnabled = true
             submitFormButton.backgroundColor = .primaryColor
         } else {
@@ -190,6 +194,7 @@ class SignUpViewController: UIViewController {
 
     func signUp() {
         resetForm()
+        checkValidForm()
         let email = emailTextField?.text ?? ""
         let password = passwordTextField?.text ?? ""
         let fullName = fullNameTextField?.text ?? ""
