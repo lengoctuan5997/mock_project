@@ -12,7 +12,6 @@ class FavoriteCollectionCell: UICollectionViewCell {
     @IBOutlet weak var animalName: UILabel?
     @IBOutlet weak var animalsImage: UIImageView?
     @IBOutlet weak var cellView: UIView?
-    @IBOutlet weak var heartButton: UIButton?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,21 +20,19 @@ class FavoriteCollectionCell: UICollectionViewCell {
         cellView?.cardShadow()
         cellView?.layer.cornerRadius = 15
         animalsImage?.layer.cornerRadius = 15
-        heartButton?.layer.cornerRadius = (heartButton?.bounds.size.width ?? 0) / 2
     }
 
-    @IBAction func didTapAddFavorite(_ sender: Any) {
-        heartButton?.tintColor = .red
-    }
 
+    override func prepareForReuse() {
+        animalsImage?.image = nil
+    }
 }
 
 // MARK: - config UI
 extension FavoriteCollectionCell {
     func configDataUI(
-        _ name: String
+        _ imageData: Data
     ) {
-        animalName?.text = name
-        animalsImage?.image = UIImage(named: name)
+        animalsImage?.image = UIImage(data: imageData)
     }
 }

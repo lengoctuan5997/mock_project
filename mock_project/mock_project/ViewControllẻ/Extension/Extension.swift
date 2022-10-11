@@ -95,6 +95,12 @@ extension Notification.Name {
     static let notiFicationNameList: Notification.Name = Notification.Name("tabBar.List")
 
     static let notiFicationNameHandBook: Notification.Name = Notification.Name("tabBar.handBook")
+
+    static let notiFicationNameFavorite: Notification.Name = Notification.Name("home.favorite")
+
+    static let notiFicationNameUser: Notification.Name = Notification.Name("User.update")
+    
+    static let notiFiTabbarHidden: Notification.Name = Notification.Name("tabbar.hidden")
 }
 
 extension UITextField {

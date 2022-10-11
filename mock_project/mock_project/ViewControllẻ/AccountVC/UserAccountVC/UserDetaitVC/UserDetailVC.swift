@@ -25,7 +25,7 @@ class UserDetailVC: UIViewController {
         super.viewDidLoad()
         configUI()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         print("destroy")
         onGetCurrentUserLogin()
@@ -94,7 +94,7 @@ extension UserDetailVC {
         emailTextField?.text = user.email
         userImage?.image = user.image
     }
-    
+
     private func getUserImage() {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("Handle Error")
@@ -135,12 +135,17 @@ extension UserDetailVC {
     }
 
     func updateFirestoreUserProfile(uid: String, data: [String: Any]) {
-        Firestore.firestore().collection("users").document(uid).updateData(data) { err in
+        Firestore.firestore().collection("users").document(uid).updateData(data) { [weak self] err in
             if let err = err {
                 print("Error updating document: \(err) ")
             } else {
                 print("Document successfully updated")
             }
+            self?.navigationController?.popViewController(animated: true)
+            NotificationCenter.default.post(
+                name: NSNotification.Name.notiFicationNameUser, 
+                object: nil
+            )
         }
     }
 }

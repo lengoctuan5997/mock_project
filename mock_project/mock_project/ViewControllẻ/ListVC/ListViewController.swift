@@ -118,8 +118,7 @@ extension ListViewController: UITableViewDataSource {
                 } else {
                     animalCount = ( isSelectype ? filterAnimals.count : animals.count) / 2
                 }
-                height = CGFloat(animalCount * 255
-                )
+                height = CGFloat(animalCount * 255)
             }
         return height
     }

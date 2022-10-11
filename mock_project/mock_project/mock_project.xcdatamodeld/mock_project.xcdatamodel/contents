@@ -3,6 +3,7 @@
     <entity name="Favorite" representedClassName=".Favorite" syncable="YES">
         <attribute name="age" optional="YES" attributeType="String"/>
         <attribute name="animal" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
         <attribute name="history" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="information" optional="YES" attributeType="String"/>
@@ -13,6 +14,6 @@
         <attribute name="weight" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="194"/>
     </elements>
 </model>

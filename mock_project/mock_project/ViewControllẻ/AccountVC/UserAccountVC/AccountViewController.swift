@@ -60,7 +60,17 @@ extension AccountViewController {
             ),
             forCellReuseIdentifier: logOutCell
         )
-
+        initHeaderTableView()
+        
+        NotificationCenter.default.addObserver(
+            self, 
+            selector: #selector(didShowTabbar), 
+            name: Notification.Name.notiFiTabbarHidden, 
+            object: nil
+        )
+    }
+    
+    func initHeaderTableView() {
         let headerTableView = StretchyTableHeaderView(
             frame: CGRect(
                 x: 0,
@@ -82,16 +92,47 @@ extension AccountViewController {
         userImage.layer.cornerRadius = 95
         userImage.contentMode = .scaleAspectFill
         userImage.clipsToBounds = true
+        userImage.isUserInteractionEnabled = true
         headerTableView.imageView.image = userManager.getUserInfo().image
         headerTableView.imageView.alpha = 0.5
         headerTableView.imageView.backgroundColor = .primaryColor
         headerTableView.imageView.frame.size.height = 100
         accountTableView?.tableHeaderView = headerTableView
         accountTableView?.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+
         let user: User = userManager.getUserInfo()
         userInfo.append(user.fullName ?? "")
         userInfo.append(user.phoneNumber ?? "")
         userInfo.append(user.email ?? "")
+
+        userImage.addGestureRecognizer(
+            UITapGestureRecognizer(
+                target: self, 
+                action: #selector(didTapViewUserImage)
+            )
+        )
+    }
+    
+    @objc
+    func didShowTabbar() {
+        tabBarController?.tabBar.isHidden = false
+    }
+
+    @objc
+    func didTapViewUserImage() {
+        let userImagePreviewView = UserImageView(
+            nibName: String(
+                describing: UserImageView.self
+            ),
+            bundle: .main
+        )
+
+        userImagePreviewView.didSetUserImage(userManager.getUserInfo().image ?? UIImage())
+        userImagePreviewView.modalTransitionStyle = .crossDissolve
+        userImagePreviewView.modalPresentationStyle = .overCurrentContext
+        self.tabBarController?.tabBar.isHidden = true
+
+        self.present(userImagePreviewView, animated: true)
     }
 }
 

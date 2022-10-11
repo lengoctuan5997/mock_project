@@ -127,6 +127,8 @@
 		9DBA745B28F04C00005E7089 /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA745928F04BFF005E7089 /* UserDetailVC.xib */; };
 		9DEEFCAA28F46D2800DBB3D6 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEFCA828F46D2800DBB3D6 /* Favorite+CoreDataClass.swift */; };
 		9DEEFCAB28F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEFCA928F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift */; };
+		9DEEFCB428F5372100DBB3D6 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEFCB228F5372000DBB3D6 /* UserImageView.swift */; };
+		9DEEFCB528F5372100DBB3D6 /* UserImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEFCB328F5372000DBB3D6 /* UserImageView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +255,8 @@
 		9DBA745928F04BFF005E7089 /* UserDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailVC.xib; sourceTree = "<group>"; };
 		9DEEFCA828F46D2800DBB3D6 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9DEEFCA928F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9DEEFCB228F5372000DBB3D6 /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
+		9DEEFCB328F5372000DBB3D6 /* UserImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserImageView.xib; sourceTree = "<group>"; };
 		ABEE748361B55BC44C276FFB /* Pods-mock_project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock_project.debug.xcconfig"; path = "Target Support Files/Pods-mock_project/Pods-mock_project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -634,6 +638,7 @@
 		9D8DD34428EC35F3002DEE57 /* UserAccountVC */ = {
 			isa = PBXGroup;
 			children = (
+				9DEEFCB128F536FA00DBB3D6 /* UserImageView */,
 				9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */,
 				9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */,
 				9D8DD36928EC367D002DEE57 /* InfomationCell */,
@@ -814,6 +819,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		9DEEFCB128F536FA00DBB3D6 /* UserImageView */ = {
+			isa = PBXGroup;
+			children = (
+				9DEEFCB228F5372000DBB3D6 /* UserImageView.swift */,
+				9DEEFCB328F5372000DBB3D6 /* UserImageView.xib */,
+			);
+			path = UserImageView;
+			sourceTree = "<group>";
+		};
 		E1E6063217B04F4C049F324C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +940,7 @@
 				9D36D49428E5B426009B4061 /* HomeViewController.xib in Resources */,
 				9D352FDF28F1D3CB00793B80 /* PetHeathDetailVC.xib in Resources */,
 				9D7BA91B28E9595B00319CCE /* CategoriesTableCell.xib in Resources */,
+				9DEEFCB528F5372100DBB3D6 /* UserImageView.xib in Resources */,
 				9D9121C428F3B4B40066943F /* TrainingViewController.xib in Resources */,
 				9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */,
 				9D82710428EE730500C9D6D3 /* ListPetViewController.xib in Resources */,
@@ -1070,6 +1085,7 @@
 				9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */,
 				9D9121BF28F3B4AC0066943F /* TrainingDetailVC.swift in Sources */,
 				9D82710C28EE730500C9D6D3 /* AddPetViewController.swift in Sources */,
+				9DEEFCB428F5372100DBB3D6 /* UserImageView.swift in Sources */,
 				9D8DD3CA28EDA178002DEE57 /* ListViewController.swift in Sources */,
 				9D7BA92528E959A600319CCE /* LibraryTableCell.swift in Sources */,
 			);

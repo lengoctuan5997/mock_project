@@ -248,6 +248,7 @@ class SignUpViewController: UIViewController {
 // MARK: - CONFIG
 extension SignUpViewController {
     func configUI() {
+        self.setupToHideKeyboardOnTapOnView()
         _ = view.applyGradient()
         fullNameTextField?.cardShadow()
         fullNameTextField?.paddingLeft()

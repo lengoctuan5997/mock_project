@@ -9,7 +9,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var contentView: UIView?
     @IBOutlet weak var homeContentTable: UITableView?
     @IBOutlet weak var accountNameLabel: UILabel?
@@ -21,14 +21,16 @@ class HomeViewController: UIViewController {
         configView()
 
         configTableView()
+        print("re run")
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        tabBarController?.tabBar.isHidden = false    }
+        tabBarController?.tabBar.isHidden = false
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         self.accountNameLabel?.text = self.userManager.getUserInfo().fullName
-
+        self.tabBarController?.delegate = self
     }
 }
 // MARK: - config View

@@ -26,5 +26,6 @@ extension Favorite {
     @NSManaged public var type: String?
     @NSManaged public var weight: String?
     @NSManaged public var uid: String?
+    @NSManaged public var height: String?
 
 }

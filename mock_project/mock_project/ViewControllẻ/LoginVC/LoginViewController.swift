@@ -96,6 +96,7 @@ class LoginViewController: UIViewController {
 // MARK: - config UI
 extension LoginViewController {
     func configUI() {
+        self.setupToHideKeyboardOnTapOnView()
         _ = view.applyGradient()
 
         emailTextField?.cardShadow()
