@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import CoreData
 
 private let reuseIdentifier = "favoriteCell"
 
 class FavoriteVC: UIViewController {
-    @IBOutlet weak var favoriteCollectionView: UICollectionView?
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet private weak var favoriteCollectionView: UICollectionView?
+    @IBOutlet private weak var backButton: UIButton?
 
-    var animalFavorites: [String] = ["dog_f1", "dog_f2", "dog_f3", "dog_f4", "dog_f5", "dog_f6", "dog_f7"]
+    private var favorites: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        initData()
     }
 
     @IBAction func didTapBackToPreView(_ sender: Any) {
@@ -33,8 +35,8 @@ extension FavoriteVC {
             return
         }
 
-        backButton.setStyleBackButton()
-        backButton.titleLabel?.textColor = .white
+        backButton?.setStyleBackButton()
+        backButton?.titleLabel?.textColor = .white
 
         view.backgroundColor = .white
         _ = view.applyGradient()
@@ -59,6 +61,10 @@ extension FavoriteVC {
             layout.delegate = self
         }
     }
+
+    func initData() {
+        favorites = Favorite.getFavoriteOfCurrentUser()
+    }
 }
 // MARK: - DELEGATE
 extension FavoriteVC: UICollectionViewDelegate {
@@ -71,7 +77,7 @@ extension FavoriteVC: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return animalFavorites.count
+        favorites.count
     }
 
     func collectionView(
@@ -83,7 +89,19 @@ extension FavoriteVC: UICollectionViewDataSource {
             for: indexPath
         ) as? FavoriteCell ?? FavoriteCell()
 
-        cell.configData(animalFavorites[indexPath.item])
+        let imageData = favorites[indexPath.item].value(forKey: "image") as? Data ?? Data()
+
+        cell.configData(imageData)
+
+        cell.unsaveFavoriteClousure = { [weak self] in
+            _ = Favorite.deleteFavorite(self?.favorites[indexPath.row] ?? Favorite())
+            self?.initData()
+            self?.favoriteCollectionView?.deleteItems(at: [IndexPath(row: indexPath.item, section: 0)])
+
+            DispatchQueue.main.async {
+//                collectionView.reloadData()
+            }
+        }
 
         return cell
     }
@@ -94,9 +112,11 @@ extension FavoriteVC: PinterestLayoutDelegate {
         _ collectionView: UICollectionView,
         heightForCellAtIndexPath indexPath: IndexPath
     ) -> CGFloat {
-        guard let height = UIImage(named: animalFavorites[indexPath.item])?.size.height else {
+        let imageData = favorites[indexPath.item].value(forKey: "image") as? Data ?? Data()
+        guard let height = UIImage(data: imageData)?.size.height else {
             return 0
         }
+        print(height)
         return height
     }
 }

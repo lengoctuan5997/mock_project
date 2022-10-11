@@ -61,7 +61,7 @@ extension FavoriteViewController {
             for: indexPath
         ) as? FavoriteCell ?? FavoriteCell()
 
-        cell.configData(animalFavorites[indexPath.item])
+//        cell.configData(animalFavorites[indexPath.item])
 
         return cell
     }

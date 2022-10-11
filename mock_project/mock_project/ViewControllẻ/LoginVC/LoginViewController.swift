@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField?
@@ -18,6 +19,17 @@ class LoginViewController: UIViewController {
 
     var userManager = UserManager.shared
     let authen = Auth.auth()
+    private let loadingView: LoadingView = {
+        let loadingView = LoadingView(
+            nibName: "LoadingView",
+            bundle: .main
+        )
+
+        loadingView.modalPresentationStyle = .overCurrentContext
+        loadingView.modalTransitionStyle = .crossDissolve
+
+        return loadingView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,26 +118,19 @@ extension LoginViewController {
 // MARK: - login
 extension LoginViewController {
     func login() {
-        let loadingView = LoadingView(
-            nibName: "LoadingView",
-            bundle: .main
-        )
-
-        loadingView.modalPresentationStyle = .overCurrentContext
-        loadingView.modalTransitionStyle = .crossDissolve
 
         self.present(loadingView, animated: true)
 
         authen.signIn(
             withEmail: emailTextField?.text ?? "",
             password: passwordTextField?.text ?? ""
-        ) { (_, error) in
+        ) { [weak self] (_, error) in
             if let errorCreate = error {
               let err = errorCreate as NSError
               switch err.code {
               case AuthErrorCode.wrongPassword.rawValue:
-                  self.validationPasswordLabel?.text = "Password không chính xác"
-                  self.validationPasswordLabel?.isHidden = false
+                  self?.validationPasswordLabel?.text = "Password không chính xác"
+                  self?.validationPasswordLabel?.isHidden = false
               default:
                   let alert = UIAlertController(
                     title: "Warning",
@@ -135,36 +140,89 @@ extension LoginViewController {
 
                   alert.addAction(UIAlertAction(title: "Close", style: .cancel))
                   DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                      self.present(alert, animated: true)
+                      self?.present(alert, animated: true)
                   }
               }
+                self?.loadingView.didDismissView()
            } else {
-               self.onCheckUserIsLogin()
+               self?.onCheckUserIsLogin()
            }
-            loadingView.self.dismiss(animated: true)
         }
     }
 
     private func onCheckUserIsLogin() {
         if authen.currentUser != nil {
+//            onGetCurrentUserLogin()
+            
+            let id = authen.currentUser?.uid
+            Firestore.firestore().collection("users").getDocuments { [weak self] (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents
+                    where id == document["uid"] as? String {
+                        guard let fullName = document["fullName"] as? String else {
+                            return
+                        }
+                        guard let phoneNumber = document["phoneNumber"] as? String else {
+                            return
+                        }
+                        guard let isAdmin = document["isAdmin"] as? Bool else {
+                            return
+                        }
+                        guard let password = document["password"] as? String else {
+                            return
+                        }
+                        guard let uid = document["uid"] as? String else {
+                            return
+                        }
+                        guard let email = document["email"] as? String else {
+                            return
+                        }
+                        
+                        let storage = Storage.storage().reference().child("user_avatar/\(uid).jpg")
 
-            onGetCurrentUserLogin()
+                        storage.getData(maxSize: 15 * 1024 * 1024) { data, error in
+                            if error != nil {
+                                print(error?.localizedDescription ?? "errror")
+                            } else {
+                                let image = UIImage(data: data ?? Data())
+                                let user = User(
+                                    fullName: fullName,
+                                    phoneNumber: phoneNumber,
+                                    isAdmin: isAdmin,
+                                    password: password,
+                                    uid: uid,
+                                    email: email,
+                                    image: image
+                                )
 
-            let tabbarVC = TabbarController(
-                nibName: "TabbarController",
-                bundle: nil
-            )
-            tabbarVC.modalPresentationStyle = .fullScreen
-            self.present(
-                tabbarVC,
-                animated: true,
-                completion: nil
-            )
+                                DispatchQueue.main.async {
+                                    self?.userManager.setUserInfo(user)
+                                    self?.loadingView.didDismissView()
+                                }
+
+                                let tabbarVC = TabbarController(
+                                    nibName: "TabbarController",
+                                    bundle: nil
+                                )
+                                tabbarVC.modalPresentationStyle = .fullScreen
+                                self?.present(
+                                    tabbarVC,
+                                    animated: true,
+                                    completion: nil
+                                )
+                            }
+                        }
+
+                    }
+                }
+            }
         }
     }
 
     private func onGetCurrentUserLogin() {
-        let id = Auth.auth().currentUser?.uid
+        let id = authen.currentUser?.uid
         Firestore.firestore().collection("users").getDocuments { [weak self] (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -189,18 +247,29 @@ extension LoginViewController {
                     guard let email = document["email"] as? String else {
                         return
                     }
+                    
+                    let storage = Storage.storage().reference().child("user_avatar/\(uid).jpg")
 
-                    let user = User(
-                        fullName: fullName,
-                        phoneNumber: phoneNumber,
-                        isAdmin: isAdmin,
-                        password: password,
-                        uid: uid,
-                        email: email
-                    )
-                    DispatchQueue.main.async {
-                        self?.userManager.setUserInfo(user)
+                    storage.getData(maxSize: 15 * 1024 * 1024) { data, error in
+                        if error != nil {
+                            print(error?.localizedDescription ?? "errror")
+                        } else {
+                            let image = UIImage(data: data ?? Data())
+                            let user = User(
+                                fullName: fullName,
+                                phoneNumber: phoneNumber,
+                                isAdmin: isAdmin,
+                                password: password,
+                                uid: uid,
+                                email: email,
+                                image: image
+                            )
+                            DispatchQueue.main.async {
+                                self?.userManager.setUserInfo(user)
+                            }
+                        }
                     }
+
                 }
             }
         }

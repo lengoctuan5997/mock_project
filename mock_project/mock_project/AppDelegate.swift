@@ -14,13 +14,14 @@ import FirebaseAuth
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    static var managedObjectContext: NSManagedObjectContext?
 
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         FirebaseApp.configure()
-
+        AppDelegate.managedObjectContext = persistentContainer.viewContext
         return true
     }
 

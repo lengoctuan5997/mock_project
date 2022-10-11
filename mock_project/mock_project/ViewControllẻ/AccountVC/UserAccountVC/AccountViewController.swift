@@ -71,7 +71,7 @@ extension AccountViewController {
         )
         let userImage = UIImageView()
         userImage.translatesAutoresizingMaskIntoConstraints = false
-        userImage.image = UIImage(named: "dog_f3")
+        userImage.image = userManager.getUserInfo().image
 
         headerTableView.containerView.addSubview(userImage)
         userImage.centerYAnchor.constraint(equalTo: headerTableView.containerView.centerYAnchor).isActive = true
@@ -82,7 +82,7 @@ extension AccountViewController {
         userImage.layer.cornerRadius = 95
         userImage.contentMode = .scaleAspectFill
         userImage.clipsToBounds = true
-        headerTableView.imageView.image = UIImage(named: "dog_f3")
+        headerTableView.imageView.image = userManager.getUserInfo().image
         headerTableView.imageView.alpha = 0.5
         headerTableView.imageView.backgroundColor = .primaryColor
         headerTableView.imageView.frame.size.height = 100

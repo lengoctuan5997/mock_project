@@ -7,10 +7,12 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class LaunchController: UIViewController {
+    @IBOutlet var launchView: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        launchView?.backgroundColor = .red
+//        _ = launchView?.applyGradient()
     }
 }
