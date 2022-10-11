@@ -8,10 +8,12 @@
 import UIKit
 
 class NameTableViewCell: UITableViewCell {
-    @IBOutlet weak var animalName: UILabel?
-    @IBOutlet weak var animalOrigin: UILabel?
-    @IBOutlet weak var animalSpecies: UILabel?
-    @IBOutlet weak var heartButton: UIButton?
+    @IBOutlet private weak var animalName: UILabel?
+    @IBOutlet private weak var animalOrigin: UILabel?
+    @IBOutlet private weak var animalSpecies: UILabel?
+    @IBOutlet private weak var heartButton: UIButton?
+    
+    var heartButtonClousure: () -> Void = {}
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +25,11 @@ class NameTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func didAddToFavorite(_ sender: Any) {
+        heartButtonClousure()
+    }
+    
     override func prepareForReuse() {
         animalName?.text = nil
         animalOrigin?.text = nil

@@ -125,6 +125,8 @@
 		9DBA745628EFFC6D005E7089 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA745428EFFC6D005E7089 /* LoadingView.xib */; };
 		9DBA745A28F04C00005E7089 /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA745828F04BFF005E7089 /* UserDetailVC.swift */; };
 		9DBA745B28F04C00005E7089 /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA745928F04BFF005E7089 /* UserDetailVC.xib */; };
+		9DEEFCAA28F46D2800DBB3D6 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEFCA828F46D2800DBB3D6 /* Favorite+CoreDataClass.swift */; };
+		9DEEFCAB28F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEFCA928F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,6 +251,8 @@
 		9DBA745428EFFC6D005E7089 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		9DBA745828F04BFF005E7089 /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
 		9DBA745928F04BFF005E7089 /* UserDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailVC.xib; sourceTree = "<group>"; };
+		9DEEFCA828F46D2800DBB3D6 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9DEEFCA928F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABEE748361B55BC44C276FFB /* Pods-mock_project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock_project.debug.xcconfig"; path = "Target Support Files/Pods-mock_project/Pods-mock_project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -340,6 +344,7 @@
 		9D36D47328E5B20C009B4061 /* mock_project */ = {
 			isa = PBXGroup;
 			children = (
+				9DEEFCA728F46D1B00DBB3D6 /* CoreData */,
 				9D82711F28EEC82600C9D6D3 /* GoogleService-Info.plist */,
 				9D7BA90F28E9561A00319CCE /* Model */,
 				9D36D48B28E5B32F009B4061 /* ViewControl */,
@@ -629,12 +634,12 @@
 		9D8DD34428EC35F3002DEE57 /* UserAccountVC */ = {
 			isa = PBXGroup;
 			children = (
-				9DBA745728F04BD7005E7089 /* UserDetaitVC */,
+				9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */,
+				9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */,
 				9D8DD36928EC367D002DEE57 /* InfomationCell */,
 				9D8DD36828EC366D002DEE57 /* LogoutCell */,
 				9D8DD36728EC365D002DEE57 /* PetCell */,
-				9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */,
-				9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */,
+				9DBA745728F04BD7005E7089 /* UserDetaitVC */,
 			);
 			path = UserAccountVC;
 			sourceTree = "<group>";
@@ -798,6 +803,15 @@
 				9DBA745928F04BFF005E7089 /* UserDetailVC.xib */,
 			);
 			path = UserDetaitVC;
+			sourceTree = "<group>";
+		};
+		9DEEFCA728F46D1B00DBB3D6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9DEEFCA828F46D2800DBB3D6 /* Favorite+CoreDataClass.swift */,
+				9DEEFCA928F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		E1E6063217B04F4C049F324C /* Pods */ = {
@@ -1020,9 +1034,11 @@
 				9D8DD3B528EDA034002DEE57 /* DetailItemViewController.swift in Sources */,
 				9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */,
 				9D7BA94228EAEAE900319CCE /* SearchTableCell.swift in Sources */,
+				9DEEFCAA28F46D2800DBB3D6 /* Favorite+CoreDataClass.swift in Sources */,
 				9D352FE328F1D43800793B80 /* NewPetHeathVC.swift in Sources */,
 				9D8DD35428EC35F3002DEE57 /* AccountViewController.swift in Sources */,
 				9D8DD3B628EDA034002DEE57 /* NameTableViewCell.swift in Sources */,
+				9DEEFCAB28F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift in Sources */,
 				9D352FDE28F1D3CB00793B80 /* PetHeathDetailVC.swift in Sources */,
 				9D8270F328EE72D100C9D6D3 /* PetHealthBookViewController.swift in Sources */,
 				9D8DD3AC28EDA034002DEE57 /* ItemCollectionViewCell.swift in Sources */,

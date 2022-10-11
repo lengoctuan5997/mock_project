@@ -25,16 +25,17 @@ class UserDetailVC: UIViewController {
         super.viewDidLoad()
         configUI()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("destroy")
+        onGetCurrentUserLogin()
+    }
 
     @IBAction func didTapBackToPrevView(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 
     @IBAction func didTapSaveInfo(_ sender: Any) {
-        let db = Firestore.firestore()
-        guard let userId = Auth.auth().currentUser?.uid else {
-            return
-        }
         guard let name = self.nameTextField?.text else {
             return
         }
@@ -83,16 +84,18 @@ extension UserDetailVC {
         userImage?.addGestureRecognizer(
             UITapGestureRecognizer(
                 target: self,
-                action: #selector(didTapAddImagePet)
+                action: #selector(didTapAddUserImage)
             )
         )
-        
+
         let user: User = userManager.getUserInfo()
-        print("User \(user)")
         nameTextField?.text = user.fullName
         phoneTextField?.text = user.phoneNumber
         emailTextField?.text = user.email
-
+        userImage?.image = user.image
+    }
+    
+    private func getUserImage() {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("Handle Error")
             return
@@ -105,7 +108,10 @@ extension UserDetailVC {
                 print(error?.localizedDescription ?? "errror")
             } else {
                 let image = UIImage(data: data!)
-                self.userImage?.image = image
+
+                DispatchQueue.main.async {
+                    self.userImage?.image = image
+                }
 
                 storage.downloadURL { url, error in
                     if error != nil {
@@ -119,7 +125,7 @@ extension UserDetailVC {
     }
 
     @objc
-    func didTapAddImagePet() {
+    func didTapAddUserImage() {
         print("tap")
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
@@ -143,8 +149,10 @@ extension UserDetailVC: UIImagePickerControllerDelegate & UINavigationController
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
-    func imagePickerController(_ picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+    func imagePickerController(
+        _ picker: UIImagePickerController,
+       didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
+    ) {
         if let im: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage,
            let imageData = im.pngData() {
             userImage?.image = im
@@ -157,7 +165,7 @@ extension UserDetailVC: UIImagePickerControllerDelegate & UINavigationController
             let path = "user_avatar/\(uid).jpg"
             let ref = Storage.storage().reference().child(path)
 
-             ref.putData(imageData, metadata: md) { (metadata, error) in
+             ref.putData(imageData, metadata: md) { [weak self] (metadata, error) in
                  if error == nil {
                      ref.downloadURL(completion: { (url, error) in
                          print("Done, url is \(String(describing: url))")
@@ -165,12 +173,66 @@ extension UserDetailVC: UIImagePickerControllerDelegate & UINavigationController
                      let data = [
                         "image": path
                      ]
-                     self.updateFirestoreUserProfile(uid: "r6YYyxieUxivIk8x8ESr", data: data)
+                     self?.updateFirestoreUserProfile(uid: "r6YYyxieUxivIk8x8ESr", data: data)
                  } else {
                      print("error \(String(describing: error))")
                  }
              }
         }
         picker.dismiss(animated: true)
+    }
+    
+    private func onGetCurrentUserLogin() {
+        let id = Auth.auth().currentUser?.uid
+        Firestore.firestore().collection("users").getDocuments { [weak self] (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents
+                where id == document["uid"] as? String {
+                    guard let fullName = document["fullName"] as? String else {
+                        return
+                    }
+                    guard let phoneNumber = document["phoneNumber"] as? String else {
+                        return
+                    }
+                    guard let isAdmin = document["isAdmin"] as? Bool else {
+                        return
+                    }
+                    guard let password = document["password"] as? String else {
+                        return
+                    }
+                    guard let uid = document["uid"] as? String else {
+                        return
+                    }
+                    guard let email = document["email"] as? String else {
+                        return
+                    }
+                    
+                    let storage = Storage.storage().reference().child("user_avatar/\(uid).jpg")
+
+                    storage.getData(maxSize: 15 * 1024 * 1024) { data, error in
+                        if error != nil {
+                            print(error?.localizedDescription ?? "errror")
+                        } else {
+                            let image = UIImage(data: data ?? Data())
+                            let user = User(
+                                fullName: fullName,
+                                phoneNumber: phoneNumber,
+                                isAdmin: isAdmin,
+                                password: password,
+                                uid: uid,
+                                email: email,
+                                image: image
+                            )
+                            DispatchQueue.main.async {
+                                self?.userManager.setUserInfo(user)
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
     }
 }

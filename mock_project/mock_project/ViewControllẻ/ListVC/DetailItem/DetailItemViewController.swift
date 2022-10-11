@@ -13,6 +13,7 @@ class DetailItemViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton?
 
     private var animal: Animal?
+    private let userManager = UserManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +147,13 @@ extension DetailItemViewController: UITableViewDataSource {
 
         if let animal = animal {
             cell.setAnimalInfo(animal)
+
+            cell.heartButtonClousure = { [weak self] in
+                _ = Favorite.insertFavorite(
+                    animal, 
+                    self?.userManager.getUserInfo().uid ?? ""
+                )
+            }
         }
 
         return cell

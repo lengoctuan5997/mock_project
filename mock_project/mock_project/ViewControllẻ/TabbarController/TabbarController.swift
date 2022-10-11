@@ -56,6 +56,7 @@ extension TabbarController {
         )
         navController.title = title
         navController.tabBarItem.image = UIImage(systemName: navImage)
+
         return navController
     }
 
@@ -86,10 +87,10 @@ extension TabbarController {
 
         tabBar.itemWidth = width / 3
         tabBar.itemPositioning = .centered
-        tabBar.tintColor = .tabBarItemLight
+        tabBar.tintColor = .primaryColor
         tabBar.unselectedItemTintColor = .tabBarColor
         tabBar.layer.cornerRadius = 20
-        tabBar.layer.masksToBounds = true
+        tabBar.clipsToBounds = true
         tabBar.backgroundColor = .white
         tabBar.cardShadow()
     }

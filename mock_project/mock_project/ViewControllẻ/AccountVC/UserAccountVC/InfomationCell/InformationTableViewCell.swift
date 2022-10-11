@@ -26,7 +26,10 @@ class InformationTableViewCell: UITableViewCell {
 // MARK: - config UI
 extension InformationTableViewCell {
     func configUI(_ title: String, _ detail: String) {
-        titleLabel?.text = title
-        detailLabel?.text = detail
+        print(detail)
+        DispatchQueue.main.async { [weak self] in
+            self?.titleLabel?.text = title
+            self?.detailLabel?.text = detail
+        }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class UserManager {
     public static let shared = UserManager()
@@ -18,6 +19,10 @@ class UserManager {
     func getUserInfo() -> User {
         return user
     }
+    
+    func setUserImage(_ image: UIImage) {
+        self.user.image = image
+    }
 }
 
 struct User {
@@ -27,4 +32,5 @@ struct User {
     var password: String?
     var uid: String?
     var email: String?
+    var image: UIImage?
 }
