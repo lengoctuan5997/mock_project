@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserImageView" customModule="mock_project" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="8bv-eK-dRJ" id="ovB-YZ-qRE"/>
+                <outlet property="container" destination="CuH-uI-8xs" id="ZEt-5o-flg"/>
+                <outlet property="userImage" destination="uI2-Ux-90F" id="Cv7-UY-cT3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuH-uI-8xs">
+                    <rect key="frame" x="0.0" y="248" width="414" height="400"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-Ux-90F">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="uI2-Ux-90F" secondAttribute="bottom" id="5fv-zQ-8eH"/>
+                        <constraint firstItem="uI2-Ux-90F" firstAttribute="leading" secondItem="CuH-uI-8xs" secondAttribute="leading" id="QKg-l7-XRh"/>
+                        <constraint firstItem="uI2-Ux-90F" firstAttribute="top" secondItem="CuH-uI-8xs" secondAttribute="top" id="aDB-lB-DZ7"/>
+                        <constraint firstAttribute="height" constant="400" id="o7B-Tj-IUY"/>
+                        <constraint firstAttribute="trailing" secondItem="uI2-Ux-90F" secondAttribute="trailing" id="tXR-uy-X8d"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bv-eK-dRJ">
+                    <rect key="frame" x="367" y="54" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="1sn-pX-fYo"/>
+                        <constraint firstAttribute="width" secondItem="8bv-eK-dRJ" secondAttribute="height" multiplier="1:1" id="UiO-3Z-bwD"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="didTapCloseView:" destination="-1" eventType="touchUpInside" id="P9x-WV-5sZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CuH-uI-8xs" secondAttribute="trailing" id="7jq-5h-J8X"/>
+                <constraint firstItem="CuH-uI-8xs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N5I-1y-mR0"/>
+                <constraint firstItem="8bv-eK-dRJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Wl5-pS-gcB"/>
+                <constraint firstItem="CuH-uI-8xs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bmr-Et-kmZ"/>
+                <constraint firstItem="CuH-uI-8xs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dw3-4A-Uah"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8bv-eK-dRJ" secondAttribute="trailing" constant="10" id="s9e-pV-xQz"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="64"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

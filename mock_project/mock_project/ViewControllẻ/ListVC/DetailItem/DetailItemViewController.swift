@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailItemViewController: UIViewController {
     @IBOutlet weak var animalTableView: UITableView?
@@ -14,6 +15,7 @@ class DetailItemViewController: UIViewController {
 
     private var animal: Animal?
     private let userManager = UserManager.shared
+    private var favorites: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,7 @@ extension DetailItemViewController {
 // MARK: - config UI
 extension DetailItemViewController {
     func configUI() {
+        favorites = Favorite.getFavoriteOfCurrentUser()
         backButton?.setStyleBackButton()
         guard let animalTableView = animalTableView else {
             return
@@ -148,11 +151,40 @@ extension DetailItemViewController: UITableViewDataSource {
         if let animal = animal {
             cell.setAnimalInfo(animal)
 
+            let isContains = favorites.contains { favoriteObject in
+                (favoriteObject.value(forKey: "species") as? String) == animal.species
+            }
+
+            if isContains {
+                cell.setColordHeartButton(.red)
+            } else {
+                cell.setColordHeartButton(.white)
+            }
+
             cell.heartButtonClousure = { [weak self] in
-                _ = Favorite.insertFavorite(
-                    animal, 
-                    self?.userManager.getUserInfo().uid ?? ""
-                )
+
+                let isInclude = self?.favorites.contains { favoriteObject in
+                    (favoriteObject.value(forKey: "species") as? String) == animal.species
+                }
+
+                let animalObject = self?.favorites.filter { favoriteObject in
+                    (favoriteObject.value(forKey: "species") as? String) == animal.species
+                }
+
+                if isInclude ?? true {
+                    _ = Favorite.deleteFavorite(animalObject?[0] ?? NSManagedObject())
+                    cell.setColordHeartButton(.white)
+                } else {
+                    cell.setColordHeartButton(.red)
+                    _ = Favorite.insertFavorite(
+                        animal,
+                        self?.userManager.getUserInfo().uid ?? ""
+                    )
+                }
+                NotificationCenter.default.post(name: NSNotification.Name.notiFicationNameFavorite, object: nil)
+                DispatchQueue.main.async {
+                    self?.favorites = Favorite.getFavoriteOfCurrentUser()
+                }
             }
         }
 

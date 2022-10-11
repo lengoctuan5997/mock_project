@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoriteTableCell: UITableViewCell {
     @IBOutlet weak var favoriteCollectionView: UICollectionView?
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
-    private var animalsFavorite: [String] = ["dogF", "catF"]
+    private var animalsFavorite: [NSManagedObject] = []
 
     var favoriteTapCellClousure: () -> Void = {}
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        getFavorite()
         configCollectionView()
     }
 
@@ -38,6 +40,24 @@ extension FavoriteTableCell {
         favoriteCollectionView?.delegate = self
         favoriteCollectionView?.dataSource = self
         flowLayout?.scrollDirection = .horizontal
+
+        animalsFavorite = Favorite.getFavoriteOfCurrentUser()
+    }
+
+    func getFavorite() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didUpdateFavorite),
+            name: Notification.Name.notiFicationNameFavorite,
+            object: nil
+        )
+    }
+
+    @objc
+    func didUpdateFavorite() {
+        print("work")
+        animalsFavorite = Favorite.getFavoriteOfCurrentUser()
+        favoriteCollectionView?.reloadData()
     }
 }
 
@@ -75,7 +95,10 @@ extension FavoriteTableCell: UICollectionViewDataSource {
             withReuseIdentifier: "favoriteCollectionCell",
             for: indexPath
         ) as? FavoriteCollectionCell ?? FavoriteCollectionCell()
-        cell.configDataUI(animalsFavorite[indexPath.row])
+
+        let imageData = animalsFavorite[indexPath.item].value(forKey: "image") as? Data ?? Data()
+    
+        cell.configDataUI(imageData)
         return cell
     }
 }

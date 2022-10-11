@@ -12,7 +12,7 @@ class NameTableViewCell: UITableViewCell {
     @IBOutlet private weak var animalOrigin: UILabel?
     @IBOutlet private weak var animalSpecies: UILabel?
     @IBOutlet private weak var heartButton: UIButton?
-    
+
     var heartButtonClousure: () -> Void = {}
 
     override func awakeFromNib() {
@@ -25,11 +25,11 @@ class NameTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     @IBAction func didAddToFavorite(_ sender: Any) {
         heartButtonClousure()
     }
-    
+
     override func prepareForReuse() {
         animalName?.text = nil
         animalOrigin?.text = nil
@@ -40,6 +40,10 @@ class NameTableViewCell: UITableViewCell {
         animalName?.text = animal.species
         animalOrigin?.text = animal.origin
         animalSpecies?.text = animal.type
+    }
+    
+    func setColordHeartButton(_ color: UIColor) {
+        heartButton?.tintColor = color
     }
 
 }

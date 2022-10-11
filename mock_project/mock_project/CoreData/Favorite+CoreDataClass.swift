@@ -26,6 +26,9 @@ public class Favorite: NSManagedObject {
         favorite?.information = animal.information
         favorite?.origin = animal.origin
         favorite?.species = animal.species
+        favorite?.weight = animal.weight
+        favorite?.height = animal.height
+        favorite?.type = animal.type
 
         do {
             try AppDelegate.managedObjectContext?.save()

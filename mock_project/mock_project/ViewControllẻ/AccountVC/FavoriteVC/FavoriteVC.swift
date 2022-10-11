@@ -68,7 +68,33 @@ extension FavoriteVC {
 }
 // MARK: - DELEGATE
 extension FavoriteVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailVC = DetailItemViewController(
+            nibName: String(describing: DetailItemViewController.self),
+            bundle: .main
+        )
+        
+        let favorite = favorites[indexPath.item]
+        let imageData = favorites[indexPath.item].value(forKey: "image") as? Data ?? Data()
+        guard let image = UIImage(data: imageData) else { return }
+        
+        let animal = Animal(
+            height: favorite.value(forKey: "height") as? String ?? "",
+            weight: favorite.value(forKey: "weight") as? String ?? "",
+            age: favorite.value(forKey: "age") as? String ?? "",
+            origin: favorite.value(forKey: "origin") as? String ?? "",
+            type: favorite.value(forKey: "type") as? String ?? "",
+            species: favorite.value(forKey: "species") as? String ?? "",
+            information: favorite.value(forKey: "information") as? String ?? "",
+            history: favorite.value(forKey: "history") as? String ?? "",
+            image: image, 
+            animal: favorite.value(forKey: "animal") as? String ?? ""
+        )
 
+        detailVC.setAnimal(animal)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 // MARK: - DATASOURCE
 extension FavoriteVC: UICollectionViewDataSource {
@@ -98,9 +124,7 @@ extension FavoriteVC: UICollectionViewDataSource {
             self?.initData()
             self?.favoriteCollectionView?.deleteItems(at: [IndexPath(row: indexPath.item, section: 0)])
 
-            DispatchQueue.main.async {
-//                collectionView.reloadData()
-            }
+            NotificationCenter.default.post(name: NSNotification.Name.notiFicationNameFavorite, object: nil)
         }
 
         return cell
