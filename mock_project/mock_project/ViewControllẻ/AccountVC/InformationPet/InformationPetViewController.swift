@@ -8,12 +8,10 @@
 import UIKit
 
 class InformationPetViewController: UIViewController {
-    @IBOutlet weak var avatarPet: UIImageView?
-    @IBOutlet weak var petNameLabel: UILabel?
     @IBOutlet weak var informationPetTableView: UITableView?
 
     let informationPetCell: String = "informationPetCell"
-    var content: [String] = ["Ngày sinh", "Loài thú cưng", "Giới tính", "Màu thú cưng"]
+    private var petInformation = PetInformation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +21,8 @@ class InformationPetViewController: UIViewController {
 
 extension InformationPetViewController {
     private func setupUI() {
-        avatarPet?.layer.cornerRadius = (avatarPet?.frame.height ?? 100) / 2
-        petNameLabel?.text = "Chos Quang"
+        _ = view.applyGradient()
         navigationController?.isNavigationBarHidden = false
-        let editButton = UIBarButtonItem(title: "Sửa", style: .done, target: self, action: #selector(didTapEditButton))
-        navigationItem.rightBarButtonItem = editButton
         informationPetTableView?.delegate = self
         informationPetTableView?.dataSource = self
         informationPetTableView?.register(
@@ -40,18 +35,15 @@ extension InformationPetViewController {
             forCellReuseIdentifier: informationPetCell
         )
     }
-}
 
-extension InformationPetViewController {
-    @objc
-    func didTapEditButton() {
-        navigationController?.popViewController(animated: true)
+    func setPetInfor(_ petInformation: PetInformation) {
+        self.petInformation = petInformation
     }
 }
 
 extension InformationPetViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        350
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -61,16 +53,18 @@ extension InformationPetViewController: UITableViewDelegate {
 
 extension InformationPetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        content.count
+        1
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = informationPetTableView?.dequeueReusableCell(
+            withIdentifier: informationPetCell,
+            for: indexPath
+        ) as? InforPetTableViewCell ?? InforPetTableViewCell()
+            cell.didSetData(self.petInformation)
+        return cell
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let inforPetCell = informationPetTableView?.dequeueReusableCell(
-            withIdentifier: informationPetCell
-        ) as? InforPetTableViewCell else {
-            return InforPetTableViewCell()
-        }
-        inforPetCell.contentLabel?.text = content[indexPath.row]
-        return inforPetCell
-    }
 }

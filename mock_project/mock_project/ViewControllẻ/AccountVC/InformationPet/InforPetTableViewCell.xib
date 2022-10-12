@@ -10,21 +10,69 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="informationPetCell" rowHeight="80" id="KGk-i7-Jjw" customClass="InforPetTableViewCell" customModule="mock_project" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="319" height="80"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="informationPetCell" rowHeight="352" id="KGk-i7-Jjw" customClass="InforPetTableViewCell" customModule="mock_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="352"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="319" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="319" height="352"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3I-kJ-6A8">
-                        <rect key="frame" x="10" y="5" width="65.666666666666671" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3I-kJ-6A8">
+                        <rect key="frame" x="10" y="5" width="106" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4V-RN-9ls">
-                        <rect key="frame" x="10" y="46" width="43.666666666666664" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Màu thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdI-T9-9iU">
+                        <rect key="frame" x="9.9999999999999929" y="206" width="111.33333333333331" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-uQ-fuq">
+                        <rect key="frame" x="10" y="273" width="80.666666666666671" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C21-77-AKO">
+                        <rect key="frame" x="10" y="139" width="67.666666666666671" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loài thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzP-74-KV9">
+                        <rect key="frame" x="10" y="72" width="110" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu tên thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4V-RN-9ls">
+                        <rect key="frame" x="10" y="46" width="228.33333333333334" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu màu thú cưng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gk-2R-YdV">
+                        <rect key="frame" x="10" y="247" width="237" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu loài" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP6-qc-YbL">
+                        <rect key="frame" x="10" y="113" width="158.33333333333334" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjk-2X-GD7">
+                        <rect key="frame" x="10" y="180" width="192" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1H-w1-4wt">
+                        <rect key="frame" x="10" y="314" width="204.33333333333334" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,17 +80,36 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="D3I-kJ-6A8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0dY-3Z-QkY"/>
+                    <constraint firstItem="4Gk-2R-YdV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1Jp-SZ-Rkc"/>
+                    <constraint firstItem="CdI-T9-9iU" firstAttribute="top" secondItem="Pjk-2X-GD7" secondAttribute="bottom" constant="5" id="1bY-Gf-zBz"/>
                     <constraint firstItem="Y4V-RN-9ls" firstAttribute="top" secondItem="D3I-kJ-6A8" secondAttribute="bottom" constant="20" id="58T-oU-a4V"/>
+                    <constraint firstItem="Pjk-2X-GD7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="5Re-IE-N3w"/>
                     <constraint firstItem="D3I-kJ-6A8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Gpz-r2-PRt"/>
+                    <constraint firstItem="4Gk-2R-YdV" firstAttribute="top" secondItem="CdI-T9-9iU" secondAttribute="bottom" constant="20" id="I3P-tK-ol4"/>
+                    <constraint firstItem="wP6-qc-YbL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ISe-ET-bff"/>
+                    <constraint firstItem="MfM-uQ-fuq" firstAttribute="top" secondItem="4Gk-2R-YdV" secondAttribute="bottom" constant="5" id="Jvj-s8-HzL"/>
+                    <constraint firstItem="CdI-T9-9iU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Me7-R7-XKI"/>
+                    <constraint firstItem="MfM-uQ-fuq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OKJ-ia-dMa"/>
+                    <constraint firstItem="R1H-w1-4wt" firstAttribute="top" secondItem="MfM-uQ-fuq" secondAttribute="bottom" constant="20" id="VP4-xX-60a"/>
+                    <constraint firstItem="R1H-w1-4wt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dpc-52-R4q"/>
+                    <constraint firstItem="C21-77-AKO" firstAttribute="top" secondItem="wP6-qc-YbL" secondAttribute="bottom" constant="5" id="fkD-MH-crr"/>
+                    <constraint firstItem="Pjk-2X-GD7" firstAttribute="top" secondItem="C21-77-AKO" secondAttribute="bottom" constant="20" id="kSO-IV-Jry"/>
+                    <constraint firstItem="CzP-74-KV9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nDA-Ks-aRP"/>
                     <constraint firstItem="Y4V-RN-9ls" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="p3b-Cx-7C5"/>
+                    <constraint firstItem="CzP-74-KV9" firstAttribute="top" secondItem="Y4V-RN-9ls" secondAttribute="bottom" constant="5" id="pnn-nM-FlO"/>
+                    <constraint firstItem="wP6-qc-YbL" firstAttribute="top" secondItem="CzP-74-KV9" secondAttribute="bottom" constant="20" id="r2l-NW-6aF"/>
+                    <constraint firstItem="C21-77-AKO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="utX-f9-lEy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="contentLabel" destination="D3I-kJ-6A8" id="JYV-VV-5DY"/>
-                <outlet property="detailLabel" destination="Y4V-RN-9ls" id="MZU-ql-jHa"/>
+                <outlet property="birthdayLabel" destination="R1H-w1-4wt" id="o4q-gY-bY2"/>
+                <outlet property="colorLabel" destination="4Gk-2R-YdV" id="NXD-at-VI9"/>
+                <outlet property="nameLabel" destination="Y4V-RN-9ls" id="4Na-6W-aZL"/>
+                <outlet property="sexLabel" destination="Pjk-2X-GD7" id="Bcy-3e-BWM"/>
+                <outlet property="speciesLabel" destination="wP6-qc-YbL" id="HTT-CI-peB"/>
             </connections>
-            <point key="canvasLocation" x="30" y="1.4218009478672986"/>
+            <point key="canvasLocation" x="30" y="82.464454976303315"/>
         </tableViewCell>
     </objects>
 </document>
