@@ -97,6 +97,13 @@ extension HomeViewController: UITableViewDelegate {
     ) -> CGFloat {
         return 0
     }
+
+    func tableView(
+        _ tableView: UITableView,
+        shouldHighlightRowAt indexPath: IndexPath
+    ) -> Bool {
+        false
+    }
 }
 
 // MARK: - table datasource

@@ -16,6 +16,17 @@ class PetHealthBookViewController: UIViewController {
     private let healthBookCell: String = "healthBookCell"
     private var heathBooks: [HeathBook] = []
     private let userManager = UserManager.shared
+    private let loadingView: LoadingView = {
+        let loadingView = LoadingView(
+            nibName: "LoadingView",
+            bundle: .main
+        )
+
+        loadingView.modalPresentationStyle = .overCurrentContext
+        loadingView.modalTransitionStyle = .crossDissolve
+
+        return loadingView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +34,6 @@ class PetHealthBookViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        let loadingView = LoadingView(nibName: String(describing: LoadingView.self), bundle: .main)
-        loadingView.modalTransitionStyle = .crossDissolve
-        loadingView.modalPresentationStyle = .overCurrentContext
-
-        self.present(loadingView, animated: true)
-        initData(loadingView)
     }
 
     @IBAction func didTapBackToPrevView(_ sender: Any) {
@@ -44,6 +49,7 @@ class PetHealthBookViewController: UIViewController {
 
 extension PetHealthBookViewController {
     private func setupUI() {
+        self.present(loadingView, animated: true)
         _ = view.applyGradient()
         backButton?.setStyleBackButton()
         addButton?.setStyleBackButton()
@@ -62,6 +68,7 @@ extension PetHealthBookViewController {
             ),
             forCellReuseIdentifier: healthBookCell
         )
+        initData()
     }
 }
 
@@ -127,8 +134,7 @@ extension PetHealthBookViewController: UITableViewDataSource {
 
 // MARK: - GET DATA FROM FIREBASE
 extension PetHealthBookViewController {
-    func initData(_ loadingView: LoadingView) {
-
+    func initData() {
         let dbFirestore = Firestore.firestore()
         dbFirestore
             .collection("heathBook")
@@ -136,6 +142,7 @@ extension PetHealthBookViewController {
 
             if let err = err {
                 print("Error getting documents: \(err)")
+                self?.loadingView.didDismissView()
             } else {
                 guard let querySnapshot = querySnapshot
                 else {
@@ -143,10 +150,6 @@ extension PetHealthBookViewController {
                 }
                 self?.setData(querySnapshot)
             }
-
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    loadingView.didDismissView()
-                }
         }
     }
 
@@ -171,9 +174,12 @@ extension PetHealthBookViewController {
                 heathBooks.append(heathBook)
             }
         }
-        DispatchQueue.main.async {
-            self.heathBooks = heathBooks
-            self.healthBookTableView?.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.heathBooks = heathBooks
+            self?.healthBookTableView?.reloadData()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.loadingView.didDismissView()
         }
     }
 }

@@ -11,6 +11,7 @@ import CoreData
 class FavoriteTableCell: UITableViewCell {
     @IBOutlet weak var favoriteCollectionView: UICollectionView?
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout?
+    @IBOutlet weak var noDataView: UIView?
     private var animalsFavorite: [NSManagedObject] = []
 
     var favoriteTapCellClousure: () -> Void = {}
@@ -42,6 +43,7 @@ extension FavoriteTableCell {
         flowLayout?.scrollDirection = .horizontal
 
         animalsFavorite = Favorite.getFavoriteOfCurrentUser()
+        noDataView?.isHidden = animalsFavorite.count > 0 ? true : false
     }
 
     func getFavorite() {
@@ -55,8 +57,8 @@ extension FavoriteTableCell {
 
     @objc
     func didUpdateFavorite() {
-        print("work")
         animalsFavorite = Favorite.getFavoriteOfCurrentUser()
+        noDataView?.isHidden = animalsFavorite.count > 0 ? true : false
         favoriteCollectionView?.reloadData()
     }
 }

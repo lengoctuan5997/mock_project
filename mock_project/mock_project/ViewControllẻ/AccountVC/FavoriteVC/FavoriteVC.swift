@@ -74,11 +74,11 @@ extension FavoriteVC: UICollectionViewDelegate {
             nibName: String(describing: DetailItemViewController.self),
             bundle: .main
         )
-        
+
         let favorite = favorites[indexPath.item]
         let imageData = favorites[indexPath.item].value(forKey: "image") as? Data ?? Data()
         guard let image = UIImage(data: imageData) else { return }
-        
+
         let animal = Animal(
             height: favorite.value(forKey: "height") as? String ?? "",
             weight: favorite.value(forKey: "weight") as? String ?? "",
@@ -88,7 +88,7 @@ extension FavoriteVC: UICollectionViewDelegate {
             species: favorite.value(forKey: "species") as? String ?? "",
             information: favorite.value(forKey: "information") as? String ?? "",
             history: favorite.value(forKey: "history") as? String ?? "",
-            image: image, 
+            image: image,
             animal: favorite.value(forKey: "animal") as? String ?? ""
         )
 

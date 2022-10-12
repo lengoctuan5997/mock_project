@@ -14,6 +14,17 @@ class ListViewController: UIViewController {
     private var filterAnimals: [Animal] = []
     private var isSelectype: Bool = false
     var animalType: String = ""
+    private let loadingView: LoadingView = {
+        let loadingView = LoadingView(
+            nibName: "LoadingView",
+            bundle: .main
+        )
+
+        loadingView.modalPresentationStyle = .overCurrentContext
+        loadingView.modalTransitionStyle = .crossDissolve
+
+        return loadingView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -260,7 +271,7 @@ extension ListViewController {
                 species: species,
                 information: information,
                 history: history,
-                image: imageAnimal,
+                image: resizeImage(image: imageAnimal, targetSize: CGSize(width: 400, height: 300)),
                 animal: animal
             )
             arrAnimal.append(loadData)
@@ -270,6 +281,35 @@ extension ListViewController {
             self.listTableView?.reloadData()
         }
     }
+
+    private func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+       let size = image.size
+
+       let widthRatio  = targetSize.width  / size.width
+       let heightRatio = targetSize.height / size.height
+
+       // Figure out what our orientation is, and use that to form the rectangle
+       var newSize: CGSize
+       if widthRatio > heightRatio {
+           newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+       } else {
+           newSize = CGSize(
+                width: size.width * widthRatio,
+                height: size.height * widthRatio
+           )
+       }
+
+       // This is the rect that we've calculated out and this is what is actually used below
+       let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+       // Actually do the resizing to the rect using the ImageContext stuff
+       UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+       image.draw(in: rect)
+       let newImage = UIGraphicsGetImageFromCurrentImageContext()
+       UIGraphicsEndImageContext()
+
+       return newImage!
+   }
 }
 
 enum TableCellType: Int {
