@@ -6,16 +6,27 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ListPetViewController: UIViewController {
     @IBOutlet weak var listPetTableView: UITableView?
 
-    let logoCell: String = "logoListCell"
     let listCell: String = "listPetCell"
+    private var petInformations: [PetInformation] = []
+    private let userManager = UserManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        let loadingView = LoadingView(nibName: String(describing: LoadingView.self), bundle: .main)
+        loadingView.modalTransitionStyle = .crossDissolve
+        loadingView.modalPresentationStyle = .overCurrentContext
+
+        self.present(loadingView, animated: true)
+        initPetData(loadingView)
     }
 }
 
@@ -30,14 +41,6 @@ extension ListPetViewController {
         navigationItem.rightBarButtonItem = addPetButton
         listPetTableView?.delegate = self
         listPetTableView?.dataSource = self
-        listPetTableView?.register(
-            UINib(
-                nibName: String(
-                    describing: LogoListTableViewCell.self
-                ),
-                bundle: nil
-            ),
-            forCellReuseIdentifier: logoCell)
         listPetTableView?.register(
             UINib(
                 nibName: String(
@@ -62,19 +65,16 @@ extension ListPetViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            break
-        default:
-            navigationController?.pushViewController(InformationPetViewController(), animated: true)
-        }
+        let inforPetVC = InformationPetViewController(nibName: "InformationPetViewController", bundle: .main)
+        inforPetVC.setPetInfor(petInformations[indexPath.row])
+            navigationController?.pushViewController(inforPetVC, animated: true)
         listPetTableView?.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension ListPetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return petInformations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,6 +82,54 @@ extension ListPetViewController: UITableViewDataSource {
             withIdentifier: listCell) as? ListPetTableViewCell else {
             return ListPetTableViewCell()
         }
+        listCell.configPetData(petInformations[indexPath.row])
         return listCell
+    }
+}
+
+extension ListPetViewController {
+    func initPetData(_ loadingView: LoadingView) {
+        let dbFirestore = Firestore.firestore()
+        dbFirestore
+            .collection("myPet")
+            .getDocuments { [weak self] (querySnapshot, err) in
+
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let querySnapshot = querySnapshot
+                else {
+                    return
+                }
+                self?.setPetData(querySnapshot)
+            }
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    loadingView.didDismissView()
+                }
+        }
+    }
+
+    func setPetData(_ querySnapshot: QuerySnapshot) {
+        var petInformations: [PetInformation] = []
+        for document in querySnapshot.documents {
+            let petInfor = PetInformation()
+
+            let data = document.data()
+            petInfor.name = data["name"] as? String ?? ""
+            petInfor.birthday = data["birthday"] as? String ?? ""
+            petInfor.color = data["color"] as? String ?? ""
+            petInfor.sex = data["sex"] as? String ?? ""
+            petInfor.species = data["species"] as? String ?? ""
+            petInfor.uId = data["uId"] as? String ?? ""
+
+            if petInfor.uId == userManager.getUserInfo().uid {
+                petInformations.append(petInfor)
+            }
+        }
+        DispatchQueue.main.async {
+            self.petInformations = petInformations
+            self.listPetTableView?.reloadData()
+        }
     }
 }

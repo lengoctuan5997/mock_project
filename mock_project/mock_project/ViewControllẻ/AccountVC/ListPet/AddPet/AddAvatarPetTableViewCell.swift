@@ -9,6 +9,7 @@ import UIKit
 
 class AddAvatarPetTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarPet: UIImageView?
+    var pickerClosure: () -> () = {}
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,9 +21,15 @@ class AddAvatarPetTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        avatarPet?.layer.cornerRadius = (avatarPet?.frame.height ?? 100) / 2
+    }
 }
 
 extension AddAvatarPetTableViewCell {
     @IBAction func didTapAddPhotoPet(_ sender: Any) {
+      pickerClosure()
     }
 }
