@@ -225,12 +225,13 @@ class SignUpViewController: UIViewController {
            } else {
                let dbUser = Firestore.firestore()
                dbUser.collection("users").addDocument(data: [
-                "uid": authResult?.user.uid ?? "",
-                "fullName": fullName,
-                "password": password,
-                "email": email,
-                "phoneNumber": phoneNumber,
-                "isAdmin": false]
+                    "uid": authResult?.user.uid ?? "",
+                    "fullName": fullName,
+                    "password": password,
+                    "email": email,
+                    "phoneNumber": phoneNumber,
+                    "image": nil,
+                    "isAdmin": false]
                ) {(error) in
                    if error != nil {
                        print("User not save")
