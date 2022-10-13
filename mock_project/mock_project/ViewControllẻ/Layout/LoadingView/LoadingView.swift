@@ -20,7 +20,7 @@ class LoadingView: UIViewController {
     }
 
     deinit {
-        view.layer.removeAllAnimations()
+        view?.layer.removeAllAnimations()
     }
 
     func didDismissView() {

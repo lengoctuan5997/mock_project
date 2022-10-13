@@ -92,7 +92,7 @@ extension UserDetailVC {
         nameTextField?.text = user.fullName
         phoneTextField?.text = user.phoneNumber
         emailTextField?.text = user.email
-        userImage?.image = user.image
+        userImage?.image = user.image ?? UIImage(systemName: "person")?.withTintColor(.white, renderingMode: .alwaysOriginal)
     }
 
     private func getUserImage() {

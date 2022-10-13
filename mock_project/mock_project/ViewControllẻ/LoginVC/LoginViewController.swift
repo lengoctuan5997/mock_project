@@ -180,40 +180,39 @@ extension LoginViewController {
                         guard let email = document["email"] as? String else {
                             return
                         }
-                        
+
                         let storage = Storage.storage().reference().child("user_avatar/\(uid).jpg")
 
                         storage.getData(maxSize: 15 * 1024 * 1024) { data, error in
                             if error != nil {
                                 print(error?.localizedDescription ?? "errror")
-                            } else {
-                                let image = UIImage(data: data ?? Data())
-                                let user = User(
-                                    fullName: fullName,
-                                    phoneNumber: phoneNumber,
-                                    isAdmin: isAdmin,
-                                    password: password,
-                                    uid: uid,
-                                    email: email,
-                                    image: image
-                                )
-
-                                DispatchQueue.main.async {
-                                    self?.userManager.setUserInfo(user)
-                                    self?.loadingView.didDismissView()
-                                }
-
-                                let tabbarVC = TabbarController(
-                                    nibName: "TabbarController",
-                                    bundle: nil
-                                )
-                                tabbarVC.modalPresentationStyle = .fullScreen
-                                self?.present(
-                                    tabbarVC,
-                                    animated: true,
-                                    completion: nil
-                                )
                             }
+                            let image = UIImage(data: data ?? Data())
+                            let user = User(
+                                fullName: fullName,
+                                phoneNumber: phoneNumber,
+                                isAdmin: isAdmin,
+                                password: password,
+                                uid: uid,
+                                email: email,
+                                image: data == nil ? nil : image
+                            )
+
+                            DispatchQueue.main.async {
+                                self?.userManager.setUserInfo(user)
+                                self?.loadingView.didDismissView()
+                            }
+
+                            let tabbarVC = TabbarController(
+                                nibName: "TabbarController",
+                                bundle: nil
+                            )
+                            tabbarVC.modalPresentationStyle = .fullScreen
+                            self?.present(
+                                tabbarVC,
+                                animated: true,
+                                completion: nil
+                            )
                         }
 
                     }
@@ -248,7 +247,7 @@ extension LoginViewController {
                     guard let email = document["email"] as? String else {
                         return
                     }
-                    
+
                     let storage = Storage.storage().reference().child("user_avatar/\(uid).jpg")
 
                     storage.getData(maxSize: 15 * 1024 * 1024) { data, error in

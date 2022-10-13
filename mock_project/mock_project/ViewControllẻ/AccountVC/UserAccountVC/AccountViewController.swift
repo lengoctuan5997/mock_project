@@ -18,8 +18,11 @@ class AccountViewController: UIViewController {
     private let informationCell: String = "informationCell"
     private let petPageCell: String = "petPageCell"
     private let logOutCell: String = "logOutCell"
+    private let userLeaveCell: String = "userLeaveCell"
+    private let deleteAccCell: String = "deleteAccCell"
     private var inforAccount: [String] = ["Tên", "Số điện thoại", "Email"]
     private var petPage: [String] = ["Thú cưng của tôi", "Sổ sức khoẻ thú cưng", "Yêu thích"]
+    private var leavePage: [String] = ["Xoá tài khoản", "Đăng xuất"]
     private var userInfo: [String] = []
     private let userManager = UserManager.shared
 
@@ -55,13 +58,27 @@ extension AccountViewController {
         )
         accountTableView?.register(
             UINib(
-                nibName: String(describing: LogOutTableViewCell.self),
+                nibName: String(describing: UserLeaveTableViewCell.self),
                 bundle: nil
             ),
-            forCellReuseIdentifier: logOutCell
+            forCellReuseIdentifier: userLeaveCell
         )
+//        accountTableView?.register(
+//            UINib(
+//                nibName: String(describing: DeleteAccountTableViewCell.self),
+//                bundle: nil
+//            ),
+//            forCellReuseIdentifier: deleteAccCell
+//        )
+//        accountTableView?.register(
+//            UINib(
+//                nibName: String(describing: LogOutTableViewCell.self),
+//                bundle: nil
+//            ),
+//            forCellReuseIdentifier: logOutCell
+//        )
         initHeaderTableView()
-        
+
         NotificationCenter.default.addObserver(
             self, 
             selector: #selector(didShowTabbar), 
@@ -81,7 +98,11 @@ extension AccountViewController {
         )
         let userImage = UIImageView()
         userImage.translatesAutoresizingMaskIntoConstraints = false
-        userImage.image = userManager.getUserInfo().image
+        
+        userImage.image = userManager.getUserInfo().image ?? UIImage(systemName: "person")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        
+        print(" Check \(userManager.getUserInfo().image)")
+        //UIImage(named: "person")
 
         headerTableView.containerView.addSubview(userImage)
         userImage.centerYAnchor.constraint(equalTo: headerTableView.containerView.centerYAnchor).isActive = true
@@ -194,6 +215,35 @@ extension AccountViewController: UITableViewDelegate {
             navigationController?.pushViewController(favoriteVC, animated: true)
         }
         if indexPath.section == 2 && indexPath.row == 0 {
+            let alert = UIAlertController(title: "Xoá tài khoản", message: "Bạn chắn chắn muốn xoá tài khoản ?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Chắc chắn", style: .default, handler: { action in
+                let user = Auth.auth().currentUser
+                user?.delete { error in
+                  if let error = error {
+                    // An error happened.
+                  } else {
+                      do {
+                          try Auth.auth().signOut()
+                          let loginVC = LoginViewController(
+                              nibName: String(describing: LoginViewController.self),
+                              bundle: .main
+                          )
+                          self.navigationController?.pushViewController(loginVC, animated: true)
+                      } catch {
+                          print("Sign out error")
+                      }
+                  }
+                }
+            })
+            let cancel = UIAlertAction(title: "Huỷ", style: .default, handler: { action in
+            })
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            DispatchQueue.main.async(execute: {
+                self.present(alert, animated: true)
+            })
+        }
+        if indexPath.section == 2 && indexPath.row == 1 {
             print("Log out")
             do {
                 try Auth.auth().signOut()
@@ -225,7 +275,7 @@ extension AccountViewController: UITableViewDataSource {
         case 0:
             return userInfo.count
         case 2:
-            return 1
+            return 2
         default:
             return 3
         }
@@ -253,12 +303,13 @@ extension AccountViewController: UITableViewDataSource {
             petPageCell.titlePetPageLabel?.text = petPage[indexPath.row]
             return petPageCell
         default:
-            guard let logOutCell = accountTableView?.dequeueReusableCell(
-                withIdentifier: logOutCell
-            ) as? LogOutTableViewCell else {
+            guard let userLeaveCell = accountTableView?.dequeueReusableCell(
+                withIdentifier: userLeaveCell
+            ) as? UserLeaveTableViewCell else {
                 return UITableViewCell()
             }
-            return logOutCell
+            userLeaveCell.titleLabel?.text = leavePage[indexPath.row]
+            return userLeaveCell
         }
     }
 

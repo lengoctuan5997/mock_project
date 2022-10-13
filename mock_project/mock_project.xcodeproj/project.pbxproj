@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06A1C29F2B9E96AA6A148992 /* Pods_mock_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43026E7DC099FE8F1BEAF6D5 /* Pods_mock_project.framework */; };
+		90C0E0EB28F7B0BB007AC232 /* UserLeaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0E0E928F7B0BB007AC232 /* UserLeaveTableViewCell.swift */; };
+		90C0E0EC28F7B0BB007AC232 /* UserLeaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C0E0EA28F7B0BB007AC232 /* UserLeaveTableViewCell.xib */; };
+		90C4D3E628F7A509004AEEC0 /* DeleteAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4D3E428F7A509004AEEC0 /* DeleteAccountTableViewCell.swift */; };
+		90C4D3E728F7A509004AEEC0 /* DeleteAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C4D3E528F7A509004AEEC0 /* DeleteAccountTableViewCell.xib */; };
 		90E6CABE28F65CB700BA8AE5 /* ListPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90E6CAB828F65CB700BA8AE5 /* ListPetViewController.xib */; };
 		90E6CABF28F65CB700BA8AE5 /* ListPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E6CAB928F65CB700BA8AE5 /* ListPetViewController.swift */; };
 		90E6CAC128F65CB700BA8AE5 /* ListPetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E6CABB28F65CB700BA8AE5 /* ListPetTableViewCell.swift */; };
@@ -143,6 +147,10 @@
 /* Begin PBXFileReference section */
 		20BA77867C9DC9937C77E627 /* Pods-mock_project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mock_project.release.xcconfig"; path = "Target Support Files/Pods-mock_project/Pods-mock_project.release.xcconfig"; sourceTree = "<group>"; };
 		43026E7DC099FE8F1BEAF6D5 /* Pods_mock_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mock_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C0E0E928F7B0BB007AC232 /* UserLeaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLeaveTableViewCell.swift; sourceTree = "<group>"; };
+		90C0E0EA28F7B0BB007AC232 /* UserLeaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserLeaveTableViewCell.xib; sourceTree = "<group>"; };
+		90C4D3E428F7A509004AEEC0 /* DeleteAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountTableViewCell.swift; sourceTree = "<group>"; };
+		90C4D3E528F7A509004AEEC0 /* DeleteAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteAccountTableViewCell.xib; sourceTree = "<group>"; };
 		90E6CAB828F65CB700BA8AE5 /* ListPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPetViewController.xib; sourceTree = "<group>"; };
 		90E6CAB928F65CB700BA8AE5 /* ListPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPetViewController.swift; sourceTree = "<group>"; };
 		90E6CABB28F65CB700BA8AE5 /* ListPetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPetTableViewCell.swift; sourceTree = "<group>"; };
@@ -296,6 +304,25 @@
 				43026E7DC099FE8F1BEAF6D5 /* Pods_mock_project.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90C0E0E828F7AFCC007AC232 /* LeaveCell */ = {
+			isa = PBXGroup;
+			children = (
+				90C4D3E328F7A4D0004AEEC0 /* DeleteAccountCell */,
+				90C0E0E928F7B0BB007AC232 /* UserLeaveTableViewCell.swift */,
+				90C0E0EA28F7B0BB007AC232 /* UserLeaveTableViewCell.xib */,
+			);
+			path = LeaveCell;
+			sourceTree = "<group>";
+		};
+		90C4D3E328F7A4D0004AEEC0 /* DeleteAccountCell */ = {
+			isa = PBXGroup;
+			children = (
+				90C4D3E428F7A509004AEEC0 /* DeleteAccountTableViewCell.swift */,
+				90C4D3E528F7A509004AEEC0 /* DeleteAccountTableViewCell.xib */,
+			);
+			path = DeleteAccountCell;
 			sourceTree = "<group>";
 		};
 		9D352FD928F1CA4A00793B80 /* Cell */ = {
@@ -665,6 +692,7 @@
 		9D8DD34428EC35F3002DEE57 /* UserAccountVC */ = {
 			isa = PBXGroup;
 			children = (
+				90C0E0E828F7AFCC007AC232 /* LeaveCell */,
 				9DEEFCB128F536FA00DBB3D6 /* UserImageView */,
 				9D8DD34C28EC35F3002DEE57 /* AccountViewController.swift */,
 				9D8DD34528EC35F3002DEE57 /* AccountViewController.xib */,
@@ -935,6 +963,7 @@
 				9D8DD35228EC35F3002DEE57 /* InformationTableViewCell.xib in Resources */,
 				9D8270F128EE72D100C9D6D3 /* HealthBookTableViewCell.xib in Resources */,
 				90E6CADC28F65D5000BA8AE5 /* AddAvatarPetTableViewCell.xib in Resources */,
+				90C4D3E728F7A509004AEEC0 /* DeleteAccountTableViewCell.xib in Resources */,
 				90E6CAE628F65DCC00BA8AE5 /* InforPetTableViewCell.xib in Resources */,
 				9D352FE428F1D43800793B80 /* NewPetHeathVC.xib in Resources */,
 				9D36D48428E5B20E009B4061 /* LaunchScreen.storyboard in Resources */,
@@ -958,6 +987,7 @@
 				9D8DD3BA28EDA034002DEE57 /* InforPetsCell.xib in Resources */,
 				9D8DD3B728EDA034002DEE57 /* DescriptionTableViewCell.xib in Resources */,
 				9D8DD3B428EDA034002DEE57 /* DetailItemViewController.xib in Resources */,
+				90C0E0EC28F7B0BB007AC232 /* UserLeaveTableViewCell.xib in Resources */,
 				90E6CAD628F65D5000BA8AE5 /* AddPetViewController.xib in Resources */,
 				9D7BA92628E959A600319CCE /* LibraryTableCell.xib in Resources */,
 				9D36D47C28E5B20C009B4061 /* Main.storyboard in Resources */,
@@ -1057,6 +1087,7 @@
 				9D82711728EE81E200C9D6D3 /* SignUpViewController.swift in Sources */,
 				9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */,
 				9D8270F228EE72D100C9D6D3 /* HealthBookTableViewCell.swift in Sources */,
+				90C4D3E628F7A509004AEEC0 /* DeleteAccountTableViewCell.swift in Sources */,
 				9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */,
 				90E6CADF28F65D5000BA8AE5 /* AddColorTableViewCell.swift in Sources */,
 				90E6CAE928F65DCC00BA8AE5 /* InforPetTableViewCell.swift in Sources */,
@@ -1117,6 +1148,7 @@
 				9D4B693428F1659100C9C977 /* HandBookPostCell.swift in Sources */,
 				9D7BA92828EA042700319CCE /* PinterestLayout.swift in Sources */,
 				9D7BA93328EADD1500319CCE /* HandBookViewController.swift in Sources */,
+				90C0E0EB28F7B0BB007AC232 /* UserLeaveTableViewCell.swift in Sources */,
 				9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */,
 				9D82711C28EE81E200C9D6D3 /* SuccessViewController.swift in Sources */,
 				9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */,
