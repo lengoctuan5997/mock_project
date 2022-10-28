@@ -37,11 +37,11 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
 extension HomeViewController {
     func configView() {
         self.navigationController?.navigationBar.isHidden = true
-        _ = contentView?.applyGradient(30)
 //        contentView?.layer.masksToBounds = true
         contentView?.layer.cornerRadius = 30
         contentView?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         contentView?.cardShadow()
+        _ = contentView?.applyGradient(30)
     }
 
     func configTableView() {
@@ -235,6 +235,8 @@ extension HomeViewController: UITableViewDataSource {
                     ),
                     bundle: .main
                 )
+                let viewModel = HandBookViewModel(handBookUseCase: DIContainer.shared.handBookUseCase)
+                handBookVC.viewModel = viewModel
                 self?.navigationController?.pushViewController(handBookVC, animated: true)
             default:
                 let trainingVC = TrainingViewController(

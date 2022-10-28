@@ -29,18 +29,17 @@ class PostCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    override func prepareForReuse() {
-        postImage?.image = nil
-        postTitle?.text = nil
-        postDescription?.text = nil
-    }
-
 }
 
 // MARK: - CONFIG DATA
 extension PostCell {
     func didSetData(_ post: HandBook) {
-        postImage?.image = post.image
+        if let url = post.image {
+            let urlImage = URL(string: url)
+            postImage?.kf.setImage(with: urlImage, placeholder: UIImage(named: "noData"))
+        } else {
+            postImage?.isHidden = true
+        }
         postTitle?.text = post.title
         postDescription?.text = post.title
     }

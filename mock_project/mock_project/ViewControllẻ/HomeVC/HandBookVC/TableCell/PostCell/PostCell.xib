@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeB-b6-Prz">
                         <rect key="frame" x="20" y="10" width="280" height="178"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogF" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-dn-1kI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-dn-1kI">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="108"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IU3-dq-INU">
@@ -90,7 +90,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dogF" width="1541" height="925"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

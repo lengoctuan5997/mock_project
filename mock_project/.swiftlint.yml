@@ -5,3 +5,5 @@ cyclomatic_complexity:
 disabled_rules:
   - force_cast
   - identifier_name
+excluded:
+  - Pods

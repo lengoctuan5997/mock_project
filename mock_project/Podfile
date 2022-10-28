@@ -9,4 +9,6 @@ target 'mock_project' do
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'FirebaseStorage'
+  pod 'FirebaseFunctions'
+pod 'Kingfisher', '~> 7.0'
 end
