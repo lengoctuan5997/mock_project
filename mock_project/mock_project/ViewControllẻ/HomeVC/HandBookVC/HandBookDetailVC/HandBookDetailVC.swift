@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HandBookDetailVC: UIViewController {
     @IBOutlet weak var handBookDetailTable: UITableView?
@@ -48,8 +49,11 @@ extension HandBookDetailVC {
                 height: 300
             )
         )
-
-        headerView.imageView.image = handBook?.image
+        if let url = handBook?.image {
+            let urlImage = URL(string: url)
+            //        headerView.imageView.image = handBook?.image
+            headerView.imageView.kf.setImage(with: urlImage, placeholder: UIImage(named: "noData"))
+        }
         handBookDetailTable?.tableHeaderView = headerView
         handBookDetailTable?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }

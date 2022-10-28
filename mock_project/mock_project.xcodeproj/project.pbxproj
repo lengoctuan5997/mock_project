@@ -128,6 +128,11 @@
 		9DA6AB4528E5B75600718B19 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4328E5B75600718B19 /* TabbarController.swift */; };
 		9DA6AB4628E5B75600718B19 /* TabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4428E5B75600718B19 /* TabbarController.xib */; };
 		9DA6AB4928E5BE1100718B19 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6AB4828E5BE1100718B19 /* Extension.swift */; };
+		9DA83ED1290672A700C4CCE1 /* FireBaseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA83ED0290672A700C4CCE1 /* FireBaseName.swift */; };
+		9DA83ED3290673F100C4CCE1 /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA83ED2290673F100C4CCE1 /* FireBaseService.swift */; };
+		9DA83ED629077E3D00C4CCE1 /* HandBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA83ED529077E3D00C4CCE1 /* HandBookUseCase.swift */; };
+		9DA83ED829077F7B00C4CCE1 /* HandBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA83ED729077F7B00C4CCE1 /* HandBookViewModel.swift */; };
+		9DA83EDA290781A800C4CCE1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA83ED9290781A800C4CCE1 /* DIContainer.swift */; };
 		9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD17D328E6F62700296533 /* FavoriteCollectionCell.swift */; };
 		9DAD17D628E6F62700296533 /* FavoriteCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */; };
 		9DAD17DA28E6F69100296533 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD17D828E6F69100296533 /* CategoriesCell.swift */; };
@@ -269,6 +274,11 @@
 		9DA6AB4328E5B75600718B19 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9DA6AB4428E5B75600718B19 /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
 		9DA6AB4828E5BE1100718B19 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9DA83ED0290672A700C4CCE1 /* FireBaseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseName.swift; sourceTree = "<group>"; };
+		9DA83ED2290673F100C4CCE1 /* FireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
+		9DA83ED529077E3D00C4CCE1 /* HandBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookUseCase.swift; sourceTree = "<group>"; };
+		9DA83ED729077F7B00C4CCE1 /* HandBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookViewModel.swift; sourceTree = "<group>"; };
+		9DA83ED9290781A800C4CCE1 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		9DAD17D328E6F62700296533 /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
 		9DAD17D428E6F62700296533 /* FavoriteCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionCell.xib; sourceTree = "<group>"; };
 		9DAD17D828E6F69100296533 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
@@ -393,6 +403,7 @@
 		9D36D47328E5B20C009B4061 /* mock_project */ = {
 			isa = PBXGroup;
 			children = (
+				9DA83ECF2906723800C4CCE1 /* PetApi */,
 				9DEEFCA728F46D1B00DBB3D6 /* CoreData */,
 				9D82711F28EEC82600C9D6D3 /* GoogleService-Info.plist */,
 				9D7BA90F28E9561A00319CCE /* Model */,
@@ -546,6 +557,7 @@
 				9D7BA93528EAE9C700319CCE /* TableCell */,
 				9D7BA93128EADD1500319CCE /* HandBookViewController.swift */,
 				9D7BA93228EADD1500319CCE /* HandBookViewController.xib */,
+				9DA83ED729077F7B00C4CCE1 /* HandBookViewModel.swift */,
 			);
 			path = HandBookVC;
 			sourceTree = "<group>";
@@ -829,6 +841,25 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		9DA83ECF2906723800C4CCE1 /* PetApi */ = {
+			isa = PBXGroup;
+			children = (
+				9DA83ED429077E2A00C4CCE1 /* UseCase */,
+				9DA83ED0290672A700C4CCE1 /* FireBaseName.swift */,
+				9DA83ED2290673F100C4CCE1 /* FireBaseService.swift */,
+				9DA83ED9290781A800C4CCE1 /* DIContainer.swift */,
+			);
+			path = PetApi;
+			sourceTree = "<group>";
+		};
+		9DA83ED429077E2A00C4CCE1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				9DA83ED529077E3D00C4CCE1 /* HandBookUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		9DAD17D228E6F56700296533 /* FavoriteCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,6 +1117,7 @@
 				9D9121C328F3B4B40066943F /* TrainingViewController.swift in Sources */,
 				9D82711728EE81E200C9D6D3 /* SignUpViewController.swift in Sources */,
 				9D8DD39328ED3573002DEE57 /* StretchyTableHeaderView.swift in Sources */,
+				9DA83ED3290673F100C4CCE1 /* FireBaseService.swift in Sources */,
 				9D8270F228EE72D100C9D6D3 /* HealthBookTableViewCell.swift in Sources */,
 				90C4D3E628F7A509004AEEC0 /* DeleteAccountTableViewCell.swift in Sources */,
 				9D8DD30A28EC081B002DEE57 /* FavoriteViewController.swift in Sources */,
@@ -1093,6 +1125,7 @@
 				90E6CAE928F65DCC00BA8AE5 /* InforPetTableViewCell.swift in Sources */,
 				9DBA745A28F04C00005E7089 /* UserDetailVC.swift in Sources */,
 				9D352FF328F32A8700793B80 /* NewPetHeathCell.swift in Sources */,
+				9DA83ED629077E3D00C4CCE1 /* HandBookUseCase.swift in Sources */,
 				90E6CAD428F65D5000BA8AE5 /* AddPetViewController.swift in Sources */,
 				9D9121C628F3B4E70066943F /* Training.swift in Sources */,
 				9D352FEF28F27FA600793B80 /* HeathBook.swift in Sources */,
@@ -1120,6 +1153,7 @@
 				9D8DD3B628EDA034002DEE57 /* NameTableViewCell.swift in Sources */,
 				9DEEFCAB28F46D2800DBB3D6 /* Favorite+CoreDataProperties.swift in Sources */,
 				9D352FDE28F1D3CB00793B80 /* PetHeathDetailVC.swift in Sources */,
+				9DA83ED829077F7B00C4CCE1 /* HandBookViewModel.swift in Sources */,
 				9D8270F328EE72D100C9D6D3 /* PetHealthBookViewController.swift in Sources */,
 				90E6CAD528F65D5000BA8AE5 /* AddNamePetTableViewCell.swift in Sources */,
 				9D8DD3AC28EDA034002DEE57 /* ItemCollectionViewCell.swift in Sources */,
@@ -1138,6 +1172,7 @@
 				9D9121BE28F3B4AC0066943F /* TrainingPostCell.swift in Sources */,
 				9D4B692B28F1355F00C9C977 /* HandBook.swift in Sources */,
 				9DAD17D528E6F62700296533 /* FavoriteCollectionCell.swift in Sources */,
+				9DA83EDA290781A800C4CCE1 /* DIContainer.swift in Sources */,
 				9D8DD34E28EC35F3002DEE57 /* PetTableViewCell.swift in Sources */,
 				9D8DD3B028EDA034002DEE57 /* ListItemTableViewCell.swift in Sources */,
 				9DBA745528EFFC6D005E7089 /* LoadingView.swift in Sources */,
@@ -1152,6 +1187,7 @@
 				9D8DD3B828EDA034002DEE57 /* InforPetsCell.swift in Sources */,
 				9D82711C28EE81E200C9D6D3 /* SuccessViewController.swift in Sources */,
 				9D8DD30F28EC083C002DEE57 /* FavoriteCell.swift in Sources */,
+				9DA83ED1290672A700C4CCE1 /* FireBaseName.swift in Sources */,
 				9D9121BF28F3B4AC0066943F /* TrainingDetailVC.swift in Sources */,
 				9DEEFCB428F5372100DBB3D6 /* UserImageView.swift in Sources */,
 				9D8DD3CA28EDA178002DEE57 /* ListViewController.swift in Sources */,

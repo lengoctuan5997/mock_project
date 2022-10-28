@@ -636,6 +636,16 @@ PODS:
     - "gRPC-C++ (~> 1.44.0)"
     - leveldb-library (~> 1.22)
     - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseFunctions (9.6.0):
+    - FirebaseAppCheckInterop (~> 9.0)
+    - FirebaseAuthInterop (~> 9.0)
+    - FirebaseCore (~> 9.0)
+    - FirebaseCoreExtension (~> 9.0)
+    - FirebaseMessagingInterop (~> 9.0)
+    - FirebaseSharedSwift (~> 9.0)
+    - GTMSessionFetcher/Core (< 3.0, >= 1.7)
+  - FirebaseMessagingInterop (9.6.0)
+  - FirebaseSharedSwift (9.6.0)
   - FirebaseStorage (9.6.0):
     - FirebaseAppCheckInterop (~> 9.0)
     - FirebaseAuthInterop (~> 9.0)
@@ -716,6 +726,7 @@ PODS:
     - Libuv-gRPC (= 0.0.10)
   - gRPC-Core/Interface (1.44.0)
   - GTMSessionFetcher/Core (2.1.0)
+  - Kingfisher (7.4.0)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
     - Libuv-gRPC/Implementation (= 0.0.10)
@@ -733,7 +744,9 @@ PODS:
 DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
+  - FirebaseFunctions
   - FirebaseStorage
+  - Kingfisher (~> 7.0)
 
 SPEC REPOS:
   trunk:
@@ -747,6 +760,9 @@ SPEC REPOS:
     - FirebaseCoreExtension
     - FirebaseCoreInternal
     - FirebaseFirestore
+    - FirebaseFunctions
+    - FirebaseMessagingInterop
+    - FirebaseSharedSwift
     - FirebaseStorage
     - FirebaseStorageInternal
     - GoogleDataTransport
@@ -754,6 +770,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - Kingfisher
     - leveldb-library
     - Libuv-gRPC
     - nanopb
@@ -770,6 +787,9 @@ SPEC CHECKSUMS:
   FirebaseCoreExtension: e83465d1236b166d1d445bbf0e82b65acb30b73b
   FirebaseCoreInternal: bca76517fe1ed381e989f5e7d8abb0da8d85bed3
   FirebaseFirestore: c09ce6d050745a45fb75ebd901005ed3279c3caf
+  FirebaseFunctions: f9d4e4161f1c3bc331e3fc71a32fc06debf54e7b
+  FirebaseMessagingInterop: 348785028509e1a5a9af277123e7fc08b2d17306
+  FirebaseSharedSwift: 2269c2ddc7a5efb7fb5f3f3177e790613b52dfda
   FirebaseStorage: 1fead543a1f441c3b434c1c9f12560dd82f8b568
   FirebaseStorageInternal: 81d8a597324ccd06c41a43c5700bc1185a2fc328
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
@@ -777,11 +797,12 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  Kingfisher: 596b207973051aae5e4c54a1c1cb39837ea10d36
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: ec049d2ec87e6e10ca1d507a40f6564a740b09e0
+PODFILE CHECKSUM: 29fe16e86db12f17e03723973b62fb473ee2bd2a
 
 COCOAPODS: 1.11.3
